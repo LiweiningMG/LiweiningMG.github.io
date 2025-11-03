@@ -50,16 +50,19 @@ redirect_from:
 
 ## <img src="/images/paper-publications.svg" width="30px"> 文章发表
 
-- LI W, LI S, DU H, et al. Improving multi-breed genomic selection by modeling heterogeneous genetic (co)variance blockwise accounting for linkage disequilibrium[J].Bioinformatics , 2024. (Under review)
-- LI W, Zhang M, DU H, et al. Multi-trait Bayesian models enhance accuracy of genomic pre-diction in multi-breed reference population[J]a. gricultural , 2024, 14(4), 626. (IF=3.6，中科院二区)
-- LI W, WANG Z, LUO S, et al. Genome-Wide Association Analysis and Genetic Parameters for Feed Efficiency and Related Traits in Yorkshire and Duroc Pigs[J]A. nimals , 2022,12(15): 1902. (IF=3.2，中
+- **LI W**, LI S, DU H, et al. Improving multi-breed genomic selection by modeling heterogeneous genetic (co)variance blockwise accounting for linkage disequilibrium[J].Journal of Animal Science and Biotechnology, 2025. (Accepted)
+- **LI W**, Zhang M, DU H, et al. Multi-trait Bayesian models enhance accuracy of genomic pre-diction in multi-breed reference population[J]a. gricultural , 2024, 14(4), 626. (IF=3.6，中科院二区)
+- **LI W**, WANG Z, LUO S, et al. Genome-Wide Association Analysis and Genetic Parameters for Feed Efficiency and Related Traits in Yorkshire and Duroc Pigs[J]A. nimals , 2022,12(15): 1902. (IF=3.2，中
 科院二区)
-- 李伟宁, 刘刚, 周荣, 等. MGISEQ-2000、HiSeq 2000与NovaSeq 6000平台全基因组重测序数据的比较分析[J]. 中国畜牧杂志, 2021,57(11): 156-162.
-- 李伟宁, 周磊, 李步高, 等. 智能化饲喂对晋汾白猪哺乳母猪生产性能的影响[J]. 现代畜牧兽医, 2020(11): 27-31.
-- 李伟宁, 李思雨, 刘剑锋. 考虑协方差异质的多品种基因组选择贝叶斯模型: 第二十二次全国动物遗传育种学术讨论会[C]. 山西, 2023. (获评优秀论文)
-- GUAN S, LI W, JIN H, et al. Development and Validation of a 54K Genome‐Wide Liquid SNP Chip Panel by Target Sequencing for Dairy Goat: Genes[Z]. 2023: 14.
-- XUE Y, LIU S, LI W, et al. Genome-Wide Association Study Reveals Additive and Non-Additive Effects on Growth Traits in Duroc Pigs: Genes[Z]. 2022: 13.
-- 王俊健, 王晓凤, 李伟宁, 等. 北京地区生长育肥猪采食、排泄及生长性状间的典型相关分析[J]. 中国畜牧杂志,2020,56(01): 100-104.
+- **李伟宁**, 刘刚, 周荣, 等. MGISEQ-2000、HiSeq 2000与NovaSeq 6000平台全基因组重测序数据的比较分析[J]. 中国畜牧杂志, 2021,57(11): 156-162.
+- **李伟宁**, 周磊, 李步高, 等. 智能化饲喂对晋汾白猪哺乳母猪生产性能的影响[J]. 现代畜牧兽医, 2020(11): 27-31.
+- **李伟宁**, 李思雨, 刘剑锋. 考虑协方差异质的多品种基因组选择贝叶斯模型: 第二十二次全国动物遗传育种学术讨论会[C]. 山西, 2023. (获评优秀论文)
+
+- GUAN S, **LI W**, JIN H, et al. Development and Validation of a 54K Genome‐Wide Liquid SNP Chip Panel by Target Sequencing for Dairy Goat: Genes[Z]. 2023: 14.
+- XUE Y, LIU S, **LI W**, et al. Genome-Wide Association Study Reveals Additive and Non-Additive Effects on Growth Traits in Duroc Pigs: Genes[Z]. 2022: 13.
+- Diao C, Zhuo Y, Mao R, **Li W**, Du H,  Zhou L et al. Weighted kernel ridge regression to improve genomic prediction. Agriculture. 2025;15(5).
+- Zhuo Y, Du H, Diao C, **Li W**, Zhou L,  Jiang L et al. Mage: metafounders-assisted genomic estimation of breeding value, a novel additive-dominance single-step model in crossbreeding systems. Bioinformatics. 2024;40(2):btae44.
+- 王俊健, 王晓凤, **李伟宁**, 等. 北京地区生长育肥猪采食、排泄及生长性状间的典型相关分析[J]. 中国畜牧杂志,2020,56(01): 100-104.
 
 ## <img src="/images/award-svgrepo-com.svg" width="30px"> 所获奖励
 

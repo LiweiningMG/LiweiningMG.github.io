@@ -44,14 +44,16 @@ redirect_from:
 
 ## <img src="/images/graduation-cap-solid.svg" width="30px"> 教育经历
 
-- 博士，中国农业大学，动物遗传育种与繁殖，2020.9 ~ 2024.7
-- 硕士，中国农业大学，畜牧，2018.9 ~ 2020.7
-- 学士，华南农业大学，动物科学，2014.9~2018.6
+| 时间 | 学位 | 院校 | 专业 | 导师 |
+|------|------|------|------|------|
+| 2014-09 ~ 2018-06 | 学士 | 华南农业大学 | 动物科学 | 张常明 |
+| 2018-09 ~ 2020-07 | 硕士 | 中国农业大学 | 畜牧 | [刘剑锋](https://liulab.cau.edu.cn/) |
+| 2020-09 ~ 2024-07 | 博士 | 中国农业大学 | 动物遗传育种与繁殖 | [刘剑锋](https://liulab.cau.edu.cn/) |
 
 ## <img src="/images/paper-publications.svg" width="30px"> 文章发表
 
 - **LI W**, Li S, Du H, Huang Q, Zhuo Y, Zhou L, et al. Improving multibreed genomic prediction for breeds with small populations by modeling heterogeneous genetic (co)variance blockwise accounting for linkage disequilibrium. *Journal of Animal Science and Biotechnology*. 2025;16(1):176. [10.1186/s40104-025-01303-9](https://doi.org/10.1186/s40104-025-01303-9). (IF=6.5，中科院一区TOP)
-- **Li W**, Zhang M, Du H, Wu J, Zhou L, Liu J. Multi-Trait Bayesian Models Enhance the Accuracy of Genomic Prediction in Multi-Breed Reference Populations. Agriculture. 2024;14(4):626. [10.3390/agriculture14040626](https://doi.org/10.3390/agriculture14040626). (IF=3.6，中科院二区)
+- **LI W**, Zhang M, Du H, Wu J, Zhou L, Liu J. Multi-Trait Bayesian Models Enhance the Accuracy of Genomic Prediction in Multi-Breed Reference Populations. Agriculture. 2024;14(4):626. [10.3390/agriculture14040626](https://doi.org/10.3390/agriculture14040626). (IF=3.6，中科院二区)
 - **LI W**, Wang Z, Luo S, Wu J, Zhou L, Liu J. Genome-Wide Association Analysis and Genetic Parameters for Feed Efficiency and Related Traits in Yorkshire and Duroc Pigs. Animals (Basel). 2022;12(15):1902. [10.3390/ani12151902](https://www.mdpi.com/2076-2615/12/15/1902). (IF=3.2，中科院二区)
 - **李伟宁**, 刘刚, 周荣, 等. MGISEQ-2000、HiSeq 2000与NovaSeq 6000平台全基因组重测序数据的比较分析[J]. 中国畜牧杂志, 2021,57(11): 156-162.
 - **李伟宁**, 周磊, 李步高, 等. 智能化饲喂对晋汾白猪哺乳母猪生产性能的影响[J]. 现代畜牧兽医, 2020(11): 27-31.

@@ -50,15 +50,15 @@ redirect_from:
 
 ## <img src="/images/paper-publications.svg" width="30px"> 文章发表
 
-- **LI W**, LI S, DU H, et al. Improving multi-breed genomic selection by modeling heterogeneous genetic (co)variance blockwise accounting for linkage disequilibrium[J].Journal of Animal Science and Biotechnology, 2025. (Accepted)
-- **LI W**, Zhang M, DU H, et al. Multi-trait Bayesian models enhance accuracy of genomic pre-diction in multi-breed reference population[J]a. gricultural , 2024, 14(4), 626. (IF=3.6，中科院二区)
-- **LI W**, WANG Z, LUO S, et al. Genome-Wide Association Analysis and Genetic Parameters for Feed Efficiency and Related Traits in Yorkshire and Duroc Pigs[J]A. nimals , 2022,12(15): 1902. (IF=3.2，中
-科院二区)
+- **LI W**, Li S, Du H, Huang Q, Zhuo Y, Zhou L, et al. Improving multibreed genomic prediction for breeds with small populations by modeling heterogeneous genetic (co)variance blockwise accounting for linkage disequilibrium. *Journal of Animal Science and Biotechnology*. 2025;16(1):176. [10.1186/s40104-025-01303-9](https://doi.org/10.1186/s40104-025-01303-9). (IF=6.5，中科院一区TOP)
+- **Li W**, Zhang M, Du H, Wu J, Zhou L, Liu J. Multi-Trait Bayesian Models Enhance the Accuracy of Genomic Prediction in Multi-Breed Reference Populations. Agriculture. 2024;14(4):626. [10.3390/agriculture14040626](https://doi.org/10.3390/agriculture14040626). (IF=3.6，中科院二区)
+- **LI W**, Wang Z, Luo S, Wu J, Zhou L, Liu J. Genome-Wide Association Analysis and Genetic Parameters for Feed Efficiency and Related Traits in Yorkshire and Duroc Pigs. Animals (Basel). 2022;12(15):1902. [10.3390/ani12151902](https://www.mdpi.com/2076-2615/12/15/1902). (IF=3.2，中科院二区)
 - **李伟宁**, 刘刚, 周荣, 等. MGISEQ-2000、HiSeq 2000与NovaSeq 6000平台全基因组重测序数据的比较分析[J]. 中国畜牧杂志, 2021,57(11): 156-162.
 - **李伟宁**, 周磊, 李步高, 等. 智能化饲喂对晋汾白猪哺乳母猪生产性能的影响[J]. 现代畜牧兽医, 2020(11): 27-31.
 - **李伟宁**, 李思雨, 刘剑锋. 考虑协方差异质的多品种基因组选择贝叶斯模型: 第二十二次全国动物遗传育种学术讨论会[C]. 山西, 2023. (获评优秀论文)
 
-- GUAN S, **LI W**, JIN H, et al. Development and Validation of a 54K Genome‐Wide Liquid SNP Chip Panel by Target Sequencing for Dairy Goat: Genes[Z]. 2023: 14.
+- Fu Y, **Li W**, Dai C, Liao C, Cheng J, Li H, et al. Genome-Wide Association Study of First-Parity Reproductive Traits in Suzi Pig. Genes (Basel). 2025;16(11):1335. [10.3390/genes16111335](https://doi.org/10.3390/genes16111335).
+- Guan S, **Li W**, Jin H, Zhang L, Liu G. Development and Validation of a 54K Genome-Wide Liquid SNP Chip Panel by Target Sequencing for Dairy Goat. Genes (Basel). 2023;14(5):1122. [10.3390/genes14051122](https://www.mdpi.com/2073-4425/14/5/1122)
 - XUE Y, LIU S, **LI W**, et al. Genome-Wide Association Study Reveals Additive and Non-Additive Effects on Growth Traits in Duroc Pigs: Genes[Z]. 2022: 13.
 - Diao C, Zhuo Y, Mao R, **Li W**, Du H,  Zhou L et al. Weighted kernel ridge regression to improve genomic prediction. Agriculture. 2025;15(5).
 - Zhuo Y, Du H, Diao C, **Li W**, Zhou L,  Jiang L et al. Mage: metafounders-assisted genomic estimation of breeding value, a novel additive-dominance single-step model in crossbreeding systems. Bioinformatics. 2024;40(2):btae44.

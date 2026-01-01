@@ -59,9 +59,9 @@ redirect_from:
 
 - Fu Y, **Li W**, Dai C, Liao C, Cheng J, Li H, et al. Genome-Wide Association Study of First-Parity Reproductive Traits in Suzi Pig. Genes (Basel). 2025;16(11):1335. [10.3390/genes16111335](https://doi.org/10.3390/genes16111335).
 - Guan S, **Li W**, Jin H, Zhang L, Liu G. Development and Validation of a 54K Genome-Wide Liquid SNP Chip Panel by Target Sequencing for Dairy Goat. Genes (Basel). 2023;14(5):1122. [10.3390/genes14051122](https://www.mdpi.com/2073-4425/14/5/1122)
-- XUE Y, LIU S, **LI W**, et al. Genome-Wide Association Study Reveals Additive and Non-Additive Effects on Growth Traits in Duroc Pigs: Genes[Z]. 2022: 13.
-- Diao C, Zhuo Y, Mao R, **Li W**, Du H,  Zhou L et al. Weighted kernel ridge regression to improve genomic prediction. Agriculture. 2025;15(5).
-- Zhuo Y, Du H, Diao C, **Li W**, Zhou L,  Jiang L et al. Mage: metafounders-assisted genomic estimation of breeding value, a novel additive-dominance single-step model in crossbreeding systems. Bioinformatics. 2024;40(2):btae44.
+- Xue Y, Liu S, Li W, Mao R, Zhuo Y, Xing W, et al. Genome-Wide Association Study Reveals Additive and Non-Additive Effects on Growth Traits in Duroc Pigs. Genes (Basel). 2022;13(8):1454. [10.3390/genes13081454](https://www.mdpi.com/2073-4425/13/8/1454).
+- Diao C, Zhuo Y, Mao R, **Li W**, Du H, Zhou L, et al. Weighted Kernel Ridge Regression to Improve Genomic Prediction. Agriculture. 2025;15(5). [10.3390/agriculture15050445](https://doi.org/10.3390/agriculture15050445).
+- Zhuo Y, Du H, Diao C, **Li W**, Zhou L, Jiang L, et al. MAGE: metafounders-assisted genomic estimation of breeding value, a novel additive-dominance single-step model in crossbreeding systems. Bioinformatics. 2024;40(2):btae044. [10.1093/bioinformatics/btae044](https://doi.org/10.1093/bioinformatics/btae044).
 - 王俊健, 王晓凤, **李伟宁**, 等. 北京地区生长育肥猪采食、排泄及生长性状间的典型相关分析[J]. 中国畜牧杂志,2020,56(01): 100-104.
 
 ## <img src="/images/award-svgrepo-com.svg" width="30px"> 所获奖励

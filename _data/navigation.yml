@@ -17,11 +17,11 @@ main:
   - title: "教程文章"
     url: /teaching/    
     
-  - title: "烹饪"
-    url: /portfolio/
-        
-  # - title: "运动"
-  #   url: /year-archive/
+  # - title: "烹饪"
+    # url: /portfolio/
 
-  - title: "运动"
-    url: /sport/
+  # - title: "运动"
+    # url: /sport/
+
+  - title: "个人生活"
+    url: /personal-life/

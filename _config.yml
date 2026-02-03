@@ -218,12 +218,12 @@ collections:
   publications:
     output: true
     permalink: /:collection/:path/
-  portfolio:
-    output: true
-    permalink: /:collection/:path/
-  sport:
-    output: true
-    permalink: /:collection/:path/
+  # portfolio:
+    # output: true
+    # permalink: /:collection/:path/
+  # sport:
+    # output: true
+    # permalink: /:collection/:path/
   talks:
     output: true
     permalink: /:collection/:path/

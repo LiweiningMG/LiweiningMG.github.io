@@ -1,5 +1,5 @@
 ---
-title: "Multi-Trait Bayesian Models Enhance the Accuracy of Genomic Prediction in Multi-Breed Reference Populations"
+title: Multi-Trait Bayesian Models Enhance the Accuracy of Genomic Prediction in Multi-Breed Reference Populations
 collection: publications
 category: manuscripts
 permalink: /publication/2024-04-16-Agriculture

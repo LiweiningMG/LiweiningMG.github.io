@@ -41,6 +41,7 @@ redirect_from:
 ## <img src="/images/briefcase-solid.svg" width="30px"> 工作经历
 
 - 博士后，江苏省农业科学院畜牧研究所，猪育种与生产创新团队，2024.8 ~ 2027.1 （当前在站）
+- 技术顾问，江苏立华食品集团有限公司，养猪部育种室，2025.11 至今
 
 ## <img src="/images/graduation-cap-solid.svg" width="30px"> 教育经历
 
@@ -54,10 +55,13 @@ redirect_from:
 
 - **LI W**, Li S, Du H, Huang Q, Zhuo Y, Zhou L, et al. Improving multibreed genomic prediction for breeds with small populations by modeling heterogeneous genetic (co)variance blockwise accounting for linkage disequilibrium. *Journal of Animal Science and Biotechnology*. 2025;16(1):176. [10.1186/s40104-025-01303-9](https://doi.org/10.1186/s40104-025-01303-9). (IF=6.5，中科院一区TOP)
 - **LI W**, Zhang M, Du H, Wu J, Zhou L, Liu J. Multi-Trait Bayesian Models Enhance the Accuracy of Genomic Prediction in Multi-Breed Reference Populations. Agriculture. 2024;14(4):626. [10.3390/agriculture14040626](https://doi.org/10.3390/agriculture14040626). (IF=3.6，中科院二区)
-- **LI W**, Wang Z, Luo S, Wu J, Zhou L, Liu J. Genome-Wide Association Analysis and Genetic Parameters for Feed Efficiency and Related Traits in Yorkshire and Duroc Pigs. Animals (Basel). 2022;12(15):1902. [10.3390/ani12151902](https://www.mdpi.com/2076-2615/12/15/1902). (IF=3.2，中科院二区)
+- **LI W**, Wang Z, Luo S, Wu J, Zhou L, Liu J. Genome-Wide Association Analysis and Genetic Parameters for Feed Efficiency and Related Traits in Yorkshire and Duroc Pigs. Animals (Basel). 2022;12(15):1902. [10.3390/ani12151902](https://www.mdpi.com/2076-2615/12/15/1902). (IF=3.2，中科院二区)<br>
+
+- **李伟宁**, 郁辰龙, 付言峰, 等. 参考群构建策略对苏紫猪基因型填充准确性的影响. 中国农业大学学报 2026;31(5):143-153.
+- **李伟宁**, 李思雨, 刘剑锋. 考虑协方差异质的多品种基因组选择贝叶斯模型: 第二十二次全国动物遗传育种学术讨论会[C]. 山西, 2023. (优秀汇报论文)
 - **李伟宁**, 刘刚, 周荣, 等. MGISEQ-2000、HiSeq 2000与NovaSeq 6000平台全基因组重测序数据的比较分析[J]. 中国畜牧杂志, 2021,57(11): 156-162.
-- **李伟宁**, 周磊, 李步高, 等. 智能化饲喂对晋汾白猪哺乳母猪生产性能的影响[J]. 现代畜牧兽医, 2020(11): 27-31.
-- **李伟宁**, 李思雨, 刘剑锋. 考虑协方差异质的多品种基因组选择贝叶斯模型: 第二十二次全国动物遗传育种学术讨论会[C]. 山西, 2023. (优秀汇报论文)<br><br>
+- **李伟宁**, 周磊, 李步高, 等. 智能化饲喂对晋汾白猪哺乳母猪生产性能的影响[J]. 现代畜牧兽医, 2020(11): 27-31.<br><br>
+
 
 - Fu Y, **Li W**, Dai C, Liao C, Cheng J, Li H, et al. Genome-Wide Association Study of First-Parity Reproductive Traits in Suzi Pig. Genes (Basel). 2025;16(11):1335. [10.3390/genes16111335](https://doi.org/10.3390/genes16111335).
 - Guan S, **Li W**, Jin H, Zhang L, Liu G. Development and Validation of a 54K Genome-Wide Liquid SNP Chip Panel by Target Sequencing for Dairy Goat. Genes (Basel). 2023;14(5):1122. [10.3390/genes14051122](https://www.mdpi.com/2073-4425/14/5/1122)

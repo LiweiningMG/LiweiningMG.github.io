@@ -81,6 +81,11 @@ redirect_from:
 - Zhuo Y, Du H, Diao C, **Li W**, Zhou L, Jiang L, et al. MAGE: metafounders-assisted genomic estimation of breeding value, a novel additive-dominance single-step model in crossbreeding systems. Bioinformatics. 2024;40(2):btae044. [10.1093/bioinformatics/btae044](https://doi.org/10.1093/bioinformatics/btae044).
 - 王俊健, 王晓凤, **李伟宁**, 等. 北京地区生长育肥猪采食、排泄及生长性状间的典型相关分析[J]. 中国畜牧杂志,2020,56(01): 100-104.
 
+## <img src="/images/Academic-Affiliations.png" width="30px"> 学术兼职
+
+Animal期刊审稿人
+中国畜牧兽医青年编委
+
 ## <img src="/images/project-diagram-solid.svg" width="30px"> 实践经历
 
 | 时间 | 实习单位 | 实习内容 |
@@ -112,7 +117,7 @@ redirect_from:
 - 研究生二等学业奖学金4次
 - 国家励志奖学金
 - 温氏奖学金、溢多利奖学金
-- 乒乓球“新生杯”男子单打季军校
+- 校乒乓球“新生杯”男子单打季军
 - 乒乓球院际赛亚军
 
 ## <img src="/images/tools-solid.svg" width="30px"> 分析技能

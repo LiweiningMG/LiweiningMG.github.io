@@ -227,7 +227,9 @@ collections:
   talks:
     output: true
     permalink: /:collection/:path/
-
+  personal-life:
+    output: true
+    permalink: /personal-life/:path/
 
 # These settings control how pages and collections are included in the site
 defaults:

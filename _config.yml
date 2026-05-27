@@ -287,6 +287,15 @@ defaults:
       author_profile: true
       share: true
       comment: true
+  # _personal-life
+  - scope:
+      path: ""
+      type: personal-life
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comment: true
   # _talks
   - scope:
       path: ""

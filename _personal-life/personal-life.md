@@ -2,6 +2,7 @@
 title: "个人生活"
 layout: full-width
 permalink: /personal-life/
+published: false
 ---
 
 ## 🍳 烹饪

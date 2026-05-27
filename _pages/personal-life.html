@@ -1,0 +1,13 @@
+---
+layout: archive
+title: "个人生活"
+permalink: /personal-life/
+author_profile: true
+---
+
+{% include base_path %}
+
+{% assign personal_life_collection = site.collections | where: "label", "personal-life" | first %}
+{% for post in personal_life_collection.docs %}
+  {% include archive-single.html %}
+{% endfor %}

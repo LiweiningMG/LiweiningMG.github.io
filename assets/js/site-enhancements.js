@@ -8,12 +8,18 @@
     }
 
     var today = new Date().toISOString().slice(0, 10);
-    var total = parseInt(localStorage.getItem('liweiningmg_total_visits') || '0', 10) + 1;
+    var lastCountedDate = localStorage.getItem('liweiningmg_last_counted_date');
+    var total = parseInt(localStorage.getItem('liweiningmg_total_visits') || '0', 10);
     var todayKey = 'liweiningmg_today_visits_' + today;
-    var todayTotal = parseInt(localStorage.getItem(todayKey) || '0', 10) + 1;
+    var todayTotal = parseInt(localStorage.getItem(todayKey) || '0', 10);
 
-    localStorage.setItem('liweiningmg_total_visits', String(total));
-    localStorage.setItem(todayKey, String(todayTotal));
+    if (lastCountedDate !== today) {
+      total += 1;
+      todayTotal += 1;
+      localStorage.setItem('liweiningmg_total_visits', String(total));
+      localStorage.setItem(todayKey, String(todayTotal));
+      localStorage.setItem('liweiningmg_last_counted_date', today);
+    }
 
     totalEl.textContent = total;
     todayEl.textContent = todayTotal;

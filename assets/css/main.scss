@@ -38,4 +38,74 @@
 @import "vendor/font-awesome/solid";
 @import "vendor/font-awesome/brands";
 @import "vendor/magnific-popup/magnific-popup";
+
+.site-visit-stats {
+  display: inline-block;
+  margin-bottom: 0.5em;
+}
+
+.guestbook-form label {
+  display: block;
+  margin-top: 1em;
+  font-weight: bold;
+}
+
+.guestbook-form input,
+.guestbook-form textarea {
+  width: 100%;
+}
+
+.guestbook-message {
+  margin: 1em 0;
+  padding-bottom: 1em;
+  border-bottom: 1px solid #f2f3f3;
+}
+
+.guestbook-message h3 {
+  margin-bottom: 0.25em;
+}
+
+.guestbook-message time {
+  display: block;
+  margin-bottom: 0.75em;
+  color: #7a8288;
+  font-size: 0.75em;
+}
+
+.wechat-share-dialog {
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.wechat-share-dialog__panel {
+  position: relative;
+  max-width: 320px;
+  padding: 1.25em;
+  text-align: center;
+  background: #fff;
+  border-radius: 4px;
+}
+
+.wechat-share-dialog__panel h2 {
+  margin-top: 0;
+}
+
+.wechat-share-dialog__close {
+  position: absolute;
+  top: 0.25em;
+  right: 0.5em;
+  border: 0;
+  background: transparent;
+  font-size: 1.5em;
+  line-height: 1;
+}
 @import "print";

@@ -26,8 +26,11 @@ author:
   pronouns         : # example: "she/her"  
   bio              : "博士后"
   location         : "江苏南京"
+  location_url     : "https://zh-classical.wikipedia.org/wiki/%E5%8D%97%E4%BA%AC%E5%B8%82"
   employer         : "江苏省农科院畜牧所"
-  uri              : "https://newias.jaas.ac.cn/"
+  employer_url     : "https://newias.jaas.ac.cn/"
+  uri              : "http://www.lihuamuye.com/"
+  uri_label        : "江苏立华食品集团股份有限公司"
   email            : "liwn@jaas.ac.cn" 
 
   # Academic websites
@@ -118,6 +121,7 @@ staticman:
         format           : "iso8601" # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
 atom_feed:
   hide                   : false     # change to true to hide the RSS feed in the footer
+  hide                   : true
   path                   : "feed.xml"  # blank (default) uses 
 
 

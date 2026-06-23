@@ -19,7 +19,7 @@ author_profile: true
 
   init({
     el: '#waline',
-    serverURL: 'https://waline-comments-snowy.vercel.app',
+    serverURL: 'https://comments.liweining.cn',
     lang: 'zh-CN',
     path: '/guestbook/',
   });

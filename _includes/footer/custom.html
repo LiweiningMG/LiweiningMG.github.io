@@ -1,7 +1,25 @@
 <!-- start custom footer snippets -->
 <span class="site-visit-stats">
-  历史访问人数：<span id="site-total-visits">--</span>
+  累计访问量：
+  <span class="waline-site-total-count" data-path="/__site_total__">--</span>
   <span aria-hidden="true"> | </span>
-  当天访问人数：<span id="site-today-visits">--</span>
+  当前页面访问量：
+  <span class="waline-current-page-count">--</span>
 </span>
+
+<script type="module">
+  import { pageviewCount } from 'https://unpkg.com/@waline/client@v3/dist/pageview.js';
+
+  pageviewCount({
+    serverURL: 'https://waline-comments-snowy.vercel.app',
+    path: '/__site_total__',
+    selector: '.waline-site-total-count',
+  });
+
+  pageviewCount({
+    serverURL: 'https://waline-comments-snowy.vercel.app',
+    path: window.location.pathname,
+    selector: '.waline-current-page-count',
+  });
+</script>
 <!-- end custom footer snippets -->

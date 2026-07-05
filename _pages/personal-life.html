@@ -1,13 +1,146 @@
 ---
-layout: archive
-title: "个人生活"
+layout: single
+title: ""
 permalink: /personal-life/
-author_profile: true
+author_profile: false
+classes: wide
 ---
 
-{% include base_path %}
+<section class="life-page">
+  <section class="life-hero">
+    <div class="life-hero__copy">
+      <h1>工作之外，也在认真生活</h1>
+      <p>跑一段路、打一场球、做一桌饭、修一台小家电；偶尔开黑，追番，看电影，听老歌，生活不用一直宏大，但要有热气</p>
+      <div class="life-tags" aria-label="生活关键词">
+        <span>跑步</span>
+        <span>乒乓球</span>
+        <span>羽毛球</span>
+        <span>骑行</span>
+        <span>烹饪</span>
+        <span>动漫电影</span>
+        <span>音乐</span>
+        <span>动手修整</span>
+      </div>
+      <div class="life-actions">
+        <a class="life-button life-button--dark" href="#life-motion">看生活切片</a>
+        <a class="life-button" href="/guestbook/">去留言板聊两句</a>
+      </div>
+    </div>
+    <div class="life-collage" aria-label="个人生活照片">
+      <figure class="life-photo life-photo--main">
+        <img src="/images/personal-life/pingpong.jpg" alt="乒乓球活动照片">
+        <figcaption>动起来</figcaption>
+      </figure>
+      <figure class="life-photo">
+        <img src="/images/personal-life/food-west-1.jpg" alt="西点烘焙照片">
+        <figcaption>会吃也会做</figcaption>
+      </figure>
+      <figure class="life-photo">
+        <img src="/images/personal-life/repair.jpg" alt="动手修整照片">
+        <figcaption>动手修整</figcaption>
+      </figure>
+    </div>
+  </section>
 
-{% assign personal_life_collection = site.collections | where: "label", "personal-life" | first %}
-{% for post in personal_life_collection.docs %}
-  {% include archive-single.html %}
-{% endfor %}
+  <section id="life-motion" class="life-section">
+    <div class="life-section__heading">
+      <h2>动起来：身体先替大脑通个风</h2>
+      <p>点击卡片预览更多照片</p>
+    </div>
+    <div class="life-sport-grid">
+      <button class="life-sport-card life-gallery-card" type="button" data-gallery-title="跑步" data-gallery-images="/images/personal-life/running-3k.jpg|/images/personal-life/running-5k.jpg|/images/personal-life/running-10k.jpg|/images/personal-life/running-15k.jpg|/images/personal-life/running-total.jpg">
+        <img src="/images/personal-life/running-total.jpg" alt="跑步总里程记录截图">
+        <div><h3>跑步</h3><p>3、5、10、15 公里都算，重要的是出门</p><span>查看 5 张图</span></div>
+      </button>
+      <button class="life-sport-card life-gallery-card" type="button" data-gallery-title="乒乓球" data-gallery-images="/images/personal-life/pingpong-1.jpg|/images/personal-life/pingpong-2.jpg|/images/personal-life/pingpong-3.jpg">
+        <img src="/images/personal-life/pingpong-1.jpg" alt="乒乓球活动照片">
+        <div><h3>乒乓球</h3><p>一来一回之间，专注度很快被拉满</p><span>查看 3 张图</span></div>
+      </button>
+      <button class="life-sport-card life-gallery-card" type="button" data-gallery-title="羽毛球" data-gallery-images="/images/personal-life/badminton-1.jpg|/images/personal-life/badminton-2.jpg|/images/personal-life/badminton-3.jpg|/images/personal-life/badminton-4.jpg">
+        <img src="/images/personal-life/badminton-2.jpg" alt="羽毛球活动照片">
+        <div><h3>羽毛球</h3><p>轻快、直接，适合把压力打散</p><span>查看 4 张图</span></div>
+      </button>
+      <button class="life-sport-card life-gallery-card" type="button" data-gallery-title="骑行" data-gallery-images="/images/personal-life/cycling-1.jpeg|/images/personal-life/cycling-2.jpeg">
+        <img src="/images/personal-life/cycling-2.jpeg" alt="骑行照片">
+        <div><h3>骑行</h3><p>换个速度看城市，也换个角度看自己</p><span>查看 2 张图</span></div>
+      </button>
+    </div>
+  </section>
+
+  <section class="life-section life-food-section">
+    <div class="life-section__heading">
+      <h2>会吃，也会做</h2>
+      <p>二维码 / 日常中餐 / 西点烘焙</p>
+    </div>
+    <div class="life-food-grid life-food-grid--with-qr">
+      <article class="life-qr-card">
+        <div class="life-qr-frame">
+          <img src="/images/personal-life/food-qr.jpg" alt="独家御膳房菜谱小程序二维码">
+        </div>
+        <h3>独家御膳房</h3>
+        <p>扫一眼我的菜谱小店，看看最近又在厨房折腾什么</p>
+      </article>
+      <button class="life-image-card life-gallery-card" type="button" data-gallery-title="日常中餐" data-gallery-images="/images/personal-life/food-cn-1.jpg|/images/personal-life/food-cn-2.jpg|/images/personal-life/food-cn-3.jpg|/images/personal-life/food-cn-4.jpg|/images/personal-life/food-cn-5.jpg|/images/personal-life/food-cn-6.jpg|/images/personal-life/food-cn-7.jpg|/images/personal-life/food-cn-8.jpg|/images/personal-life/food-cn-9.jpg|/images/personal-life/food-cn-10.jpg|/images/personal-life/food-cn-11.jpg|/images/personal-life/food-cn-12.jpg|/images/personal-life/food-cn-13.jpg|/images/personal-life/food-cn-14.jpg|/images/personal-life/food-cn-15.jpg">
+        <img src="/images/personal-life/food-cn-1.jpg" alt="中餐菜品照片">
+        <h3>日常中餐</h3>
+        <p>家常菜、朋友局和认真吃饭的日子</p>
+        <span>点开看中餐</span>
+      </button>
+      <button class="life-image-card life-gallery-card" type="button" data-gallery-title="西点烘焙" data-gallery-images="/images/personal-life/food-west-1.jpg|/images/personal-life/food-west-2.jpg|/images/personal-life/food-west-3.jpg|/images/personal-life/food-west-4.jpg|/images/personal-life/food-west-5.jpg|/images/personal-life/food-west-6.jpg|/images/personal-life/food-west-7.jpg">
+        <img src="/images/personal-life/food-west-6.jpg" alt="西点烘焙照片">
+        <h3>西点烘焙</h3>
+        <p>面包、蛋糕和一点点等待发酵的耐心</p>
+        <span>点开看烘焙</span>
+      </button>
+    </div>
+  </section>
+
+  <section class="life-section life-culture-section">
+    <div class="life-section__heading">
+      <h2>游戏、电影、动漫和音乐</h2>
+      <p>热血、港片、老歌和方言里的生活感</p>
+    </div>
+    <div class="life-culture-grid">
+      <button class="life-poster life-poster--game life-gallery-card" type="button" data-gallery-title="游戏与放松" data-gallery-images="/images/personal-life/gaming-1.jpg|/images/personal-life/gaming-2.jpg|/images/personal-life/gaming-3.jpg|/images/personal-life/gaming-4.jpg">
+        <span>GAME</span>
+        <h3>绝地求生和周末放松</h3>
+        <p>偶尔开黑，给脑子换个频道</p>
+      </button>
+      <article class="life-poster life-poster--anime">
+        <span>ANIME</span>
+        <h3>剑来、仙逆、秦时明月</h3>
+        <p>也看海贼王、魔法奇兵，热血和江湖都要有</p>
+      </article>
+      <article class="life-poster life-poster--movie">
+        <span>MOVIE</span>
+        <h3>周星驰、成龙</h3>
+        <p>喜剧、动作、港片记忆，是很稳定的快乐来源</p>
+      </article>
+      <article class="life-poster life-poster--music">
+        <span>MUSIC</span>
+        <h3>粤语、英语、潮汕话、客家歌</h3>
+        <p>陈奕迅、BEYOND、杨千嬅、许嵩、汪苏泷、薛之谦，也听方言里的生活感</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="life-repair">
+    <div class="life-repair__media">
+      <img src="/images/personal-life/repair-1.jpg" alt="动手修整物件照片一">
+      <img src="/images/personal-life/repair-3.jpg" alt="动手修整物件照片二">
+    </div>
+    <div>
+      <h2>拆装与修补：能拆，也尽量能装回去</h2>
+      <p>家电、小物件、各种临时问题，能自己摸索解决的时候，会有一点很真实的成就感</p>
+      <button class="life-button life-gallery-card" type="button" data-gallery-title="拆装与修补" data-gallery-images="/images/personal-life/repair-1.jpg|/images/personal-life/repair-2.jpg|/images/personal-life/repair-3.jpg|/images/personal-life/repair-4.jpg">查看修补图集</button>
+    </div>
+  </section>
+
+  <section class="life-closing">
+    <div>
+      <strong>认真科研，也认真生活</strong>
+      <span>运动、做饭、交朋友、游戏、音乐和动手修整，都是给生活续航的方式</span>
+    </div>
+    <a href="/guestbook/">来留言板坐坐</a>
+  </section>
+</section>

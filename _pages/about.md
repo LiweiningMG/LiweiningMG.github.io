@@ -28,9 +28,9 @@ redirect_from:
     </div>
 
     <div class="home-collage" aria-label="个人照片拼贴">
-      <img class="home-collage__photo home-collage__photo--main" src="/images/home-page-6.jpg" alt="首页照片">
-      <img class="home-collage__photo home-collage__photo--small home-collage__photo--top" src="/images/personal-life/badminton-2.jpg" alt="羽毛球活动照片">
-      <img class="home-collage__photo home-collage__photo--small home-collage__photo--bottom" src="/images/personal-life/food-cn-11.jpg" alt="日常美食照片">
+      <img fetchpriority="high" loading="eager" decoding="async" class="home-collage__photo home-collage__photo--main" src="/images/optimized/thumbs/home-page-6.webp" alt="首页照片">
+      <img loading="eager" decoding="async" class="home-collage__photo home-collage__photo--small home-collage__photo--top" src="/images/optimized/thumbs/personal-life/badminton-2.webp" alt="羽毛球活动照片">
+      <img loading="eager" decoding="async" class="home-collage__photo home-collage__photo--small home-collage__photo--bottom" src="/images/optimized/thumbs/personal-life/food-cn-11.webp" alt="日常美食照片">
     </div>
   </div>
 
@@ -46,9 +46,9 @@ redirect_from:
         <p>跑步、球类和骑行，把身体先叫醒</p>
       </div>
       <div class="home-photo-strip">
-        <img src="/images/personal-life/running-total.jpg" alt="跑步总里程记录">
-        <img src="/images/personal-life/pingpong.jpg" alt="乒乓球活动">
-        <img src="/images/personal-life/badminton.jpg" alt="羽毛球活动">
+        <img loading="lazy" decoding="async" src="/images/optimized/thumbs/personal-life/running-total.webp" alt="跑步总里程记录">
+        <img loading="lazy" decoding="async" src="/images/optimized/thumbs/personal-life/pingpong.webp" alt="乒乓球活动">
+        <img loading="lazy" decoding="async" src="/images/optimized/thumbs/personal-life/badminton.webp" alt="羽毛球活动">
       </div>
     </div>
 
@@ -58,9 +58,9 @@ redirect_from:
         <p>会吃，也愿意花时间把饭做好</p>
       </div>
       <div class="home-photo-strip">
-        <img src="/images/personal-life/cooking-cn.jpg" alt="中餐菜品">
-        <img src="/images/personal-life/baking.jpg" alt="烘焙或西餐">
-        <img src="/images/Toast-500x300.jpg" alt="烘焙照片">
+        <img loading="lazy" decoding="async" src="/images/optimized/thumbs/personal-life/cooking-cn.webp" alt="中餐菜品">
+        <img loading="lazy" decoding="async" src="/images/optimized/thumbs/personal-life/baking.webp" alt="烘焙或西餐">
+        <img loading="lazy" decoding="async" src="/images/optimized/thumbs/Toast-500x300.webp" alt="烘焙照片">
       </div>
     </div>
 
@@ -70,9 +70,9 @@ redirect_from:
         <p>走出去看风景，也给日常换个空气</p>
       </div>
       <div class="home-photo-strip">
-        <img src="/images/home-page-2.jpg" alt="旅行照片一">
-        <img src="/images/home-page-4.jpg" alt="旅行照片二">
-        <img src="/images/home-page-5.jpg" alt="旅行照片三">
+        <img loading="lazy" decoding="async" src="/images/optimized/thumbs/home-page-2.webp" alt="旅行照片一">
+        <img loading="lazy" decoding="async" src="/images/optimized/thumbs/home-page-4.webp" alt="旅行照片二">
+        <img loading="lazy" decoding="async" src="/images/optimized/thumbs/home-page-5.webp" alt="旅行照片三">
       </div>
     </div>
   </section>
@@ -82,21 +82,21 @@ redirect_from:
       <h2>最近的成果</h2>
       <a href="/publications/">全部成果</a>
     </div>
-    <div class="home-publications">
+    <div class="home-publications home-publications--citations">
       <a href="/publication/2025-12-20-JASB">
         <span>2025</span>
-        <strong>Journal of Animal Science and Biotechnology</strong>
-        <em>多品种基因组预测相关研究</em>
+        <strong>LI W, Li S, Du H, Huang Q, Zhuo Y, Zhou L, et al. Improving multibreed genomic prediction for breeds with small populations by modeling heterogeneous genetic (co)variance blockwise accounting for linkage disequilibrium. <em>Journal of Animal Science and Biotechnology</em>. 2025;16(1):176.</strong>
+        <p>提出 mbBayesABLD，用 LD 区块显式建模异质遗传协方差，在多品种联合预测中提升小规模品种的基因组预测准确性</p>
       </a>
       <a href="/publication/2024-04-16-Agriculture">
         <span>2024</span>
-        <strong>Agriculture</strong>
-        <em>多性状贝叶斯模型与多品种参考群体</em>
+        <strong>Li W, Zhang M, Du H, Wu J, Zhou L, Liu J. Multi-Trait Bayesian Models Enhance the Accuracy of Genomic Prediction in Multi-Breed Reference Populations. <em>Agriculture</em>. 2024;14(4):626.</strong>
+        <p>将不同品种的同一性状视为遗传相关性状，并结合区块异质协方差建模，提高多品种参考群体中的预测表现</p>
       </a>
       <a href="/publication/2022-07-26-Animals">
         <span>2022</span>
-        <strong>Animals</strong>
-        <em>饲料效率相关性状的遗传参数与全基因组关联分析</em>
+        <strong>Li W, Wang Z, Luo S, Wu J, Zhou L, Liu J. Genome-Wide Association Analysis and Genetic Parameters for Feed Efficiency and Related Traits in Yorkshire and Duroc Pigs. <em>Animals</em>. 2022;12(15):1902.</strong>
+        <p>围绕猪饲料效率及相关性状估计遗传参数，鉴定显著 SNP 和候选基因，为提高饲料效率提供遗传线索</p>
       </a>
     </div>
   </section>
@@ -109,14 +109,21 @@ redirect_from:
     <p>最近大概就是这样：继续做事，继续学习，继续往前走</p>
   </section>
 
-  <section class="home-section home-section--guestbook">
-    <div class="home-guestbook-copy">
-      <h2>留言板</h2>
-      <p>最新的 3 条留言会展示在这里</p>
+  <section class="home-guestbook" aria-labelledby="home-guestbook-title">
+    <div class="home-guestbook__intro">
+      <div class="home-guestbook__icon" aria-hidden="true">•••</div>
+      <h2 id="home-guestbook-title">留言板</h2>
+      <p>路过这里的话，欢迎留下一句问候、建议，或分享最近的小确幸。</p>
+      <div class="home-guestbook__decoration" aria-hidden="true"></div>
     </div>
-    <div class="home-guestbook-preview" id="home-guestbook-preview" aria-live="polite">
-      <p class="home-guestbook-empty">暂无留言，欢迎来留言板坐坐</p>
+
+    <div class="home-guestbook__latest">
+      <div class="home-guestbook__eyebrow">最新留言</div>
+      <div class="home-guestbook__messages" id="home-guestbook-preview" aria-live="polite">
+        <p class="home-guestbook__empty">正在读取最近留言...</p>
+      </div>
     </div>
-    <a class="home-button home-button--primary" href="/guestbook/">去留言板</a>
+
+    <a class="home-guestbook__button" href="/guestbook/">去留言板</a>
   </section>
 </section>

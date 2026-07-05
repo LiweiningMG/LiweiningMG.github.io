@@ -11,15 +11,122 @@
     });
   }
 
+  function sanitizeCommentHtml(comment) {
+    var holder = document.createElement('div');
+    holder.innerHTML = comment || '';
+
+    Array.prototype.forEach.call(holder.querySelectorAll('script, iframe, style, object, embed'), function (node) {
+      node.remove();
+    });
+
+    Array.prototype.forEach.call(holder.querySelectorAll('*'), function (node) {
+      Array.prototype.slice.call(node.attributes).forEach(function (attr) {
+        var name = attr.name.toLowerCase();
+        var value = attr.value || '';
+
+        if (name.indexOf('on') === 0) {
+          node.removeAttribute(attr.name);
+          return;
+        }
+
+        if ((name === 'href' || name === 'src') && /^javascript:/i.test(value.trim())) {
+          node.removeAttribute(attr.name);
+        }
+      });
+    });
+
+    Array.prototype.forEach.call(holder.querySelectorAll('img'), function (img) {
+      var src = img.getAttribute('src') || '';
+      if (src.indexOf('//') === 0) {
+        img.setAttribute('src', 'https:' + src);
+      }
+      img.setAttribute('loading', 'lazy');
+      img.setAttribute('decoding', 'async');
+      if (!img.getAttribute('alt')) {
+        img.setAttribute('alt', '');
+      }
+    });
+
+    return holder.innerHTML;
+  }
+
+  function formatCommentDate(value) {
+    var date = value ? new Date(value) : null;
+    if (!date || Number.isNaN(date.getTime())) {
+      return '';
+    }
+    var year = date.getFullYear();
+    var month = String(date.getMonth() + 1).padStart(2, '0');
+    var day = String(date.getDate()).padStart(2, '0');
+    return year + '/' + month + '/' + day;
+  }
+
+  function withLocalGuestbookSamples(comments) {
+    var isLocalPreview = ['127.0.0.1', 'localhost'].indexOf(window.location.hostname) !== -1;
+    if (!isLocalPreview || comments.length >= 3) {
+      return comments;
+    }
+
+    return comments.concat([
+      {
+        nick: '朋友 A',
+        comment: '<p>网站越来越有生活气了，路过打个招呼。</p>',
+        insertedAt: '2026-06-22T10:30:00.000Z',
+        like: 1
+      },
+      {
+        nick: '朋友 B',
+        comment: '<p>祝科研顺利，也祝厨房继续高产。</p>',
+        insertedAt: '2026-06-21T08:00:00.000Z',
+        like: 0
+      }
+    ]).slice(0, 3);
+  }
+
   function renderHomeGuestbookPreview() {
     var preview = document.getElementById('home-guestbook-preview');
     if (!preview) {
       return;
     }
 
-    preview.innerHTML = '<p class="home-guestbook-empty">' +
-      '留言板已升级为 Waline 评论系统，欢迎前往 <a href="/guestbook/">留言板</a> 交流。' +
-      '</p>';
+    var endpoint = 'https://comments.liweining.cn/comment?path=/guestbook/&page=1&pageSize=3&sortBy=insertedAt_desc';
+    preview.innerHTML = '<p class="home-guestbook__empty">正在读取最近留言...</p>';
+
+    fetch(endpoint)
+      .then(function (response) {
+        if (!response.ok) {
+          throw new Error('Waline request failed');
+        }
+        return response.json();
+      })
+      .then(function (payload) {
+        var comments = withLocalGuestbookSamples(Array.isArray(payload.data) ? payload.data : []);
+        if (!comments.length) {
+          preview.innerHTML = '<p class="home-guestbook__empty">暂无留言，欢迎来留言板坐坐</p>';
+          return;
+        }
+
+        preview.innerHTML = comments.map(function (item) {
+          var html = sanitizeCommentHtml(item.comment || item.orig || '');
+          var nick = item.nick || '访客';
+          var date = formatCommentDate(item.insertedAt || item.time);
+          var like = Number(item.like || 0);
+          return '<article class="home-guestbook__message">' +
+            '<div class="home-guestbook__avatar" aria-hidden="true">🌱</div>' +
+            '<div>' +
+            '<h3>' + escapeHtml(nick) + '</h3>' +
+            '<p>' + (html || escapeHtml('留下了一条留言')) + '</p>' +
+            '<div class="home-guestbook__meta">' +
+            '<span>' + escapeHtml(date) + '</span>' +
+            '<span>' + (like ? like + ' 个赞' : '欢迎') + '</span>' +
+            '</div>' +
+            '</div>' +
+            '</article>';
+        }).join('');
+      })
+      .catch(function () {
+        preview.innerHTML = '<p class="home-guestbook__empty">暂时没有读取到留言，可前往 <a href="/guestbook/">留言板</a> 查看</p>';
+      });
   }
 
   function setupLifeGalleries() {
@@ -56,7 +163,7 @@
       '<button class="life-gallery-dialog__close" type="button" aria-label="关闭">×</button>' +
       '<header><h2>' + escapeHtml(title) + '</h2><p>点击空白处或按 Esc 关闭</p></header>' +
       '<div class="life-gallery-dialog__grid">' + images.map(function (src, index) {
-        return '<figure><img src="' + escapeHtml(src) + '" alt="' + escapeHtml(title) + '照片 ' + (index + 1) + '"></figure>';
+        return '<figure><img loading="lazy" decoding="async" src="' + escapeHtml(src) + '" alt="' + escapeHtml(title) + '照片 ' + (index + 1) + '"></figure>';
       }).join('') + '</div>' +
       '</div>';
 

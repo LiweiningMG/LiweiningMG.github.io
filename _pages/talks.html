@@ -1,16 +1,22 @@
 ---
-layout: archive
+layout: single
 title: ""
 permalink: /talks/
 author_profile: true
 ---
 
-{% if site.talkmap_link == true %}
-
-<p style="text-decoration:underline;"><a href="/talkmap.html">See a map of all the places I've given a talk!</a></p>
-
-{% endif %}
-
-{% for post in site.talks reversed %}
-  {% include archive-single-talk.html %}
-{% endfor %}
+<section class="talk-feature">
+  <div class="talk-feature__media">
+    <img loading="lazy" decoding="async" src="/images/optimized/thumbs/talks/genetics-conference.webp" alt="第二十二次全国动物遗传育种学术讨论会报告照片">
+  </div>
+  <div class="talk-feature__body">
+    <p class="talk-feature__eyebrow">学术报告</p>
+    <h1>考虑协方差异质的多品种基因组选择贝叶斯模型</h1>
+    <div class="talk-feature__facts">
+      <div><span>会议</span><strong>第二十二次全国动物遗传育种学术讨论会</strong></div>
+      <div><span>地点</span><strong>山西太原</strong></div>
+      <div><span>时间</span><strong>2023 年 8 月</strong></div>
+    </div>
+    <p>本报告介绍多品种联合评估方法 mbBayesAS：将不同品种的同一性状视为存在遗传相关的不同性状，结合连锁不平衡信息进行染色体区块划分，并通过贝叶斯抽样估计个体基因组育种值。</p>
+  </div>
+</section>

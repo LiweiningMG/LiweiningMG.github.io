@@ -14,7 +14,7 @@ redirect_from:
      <div>
          <span>
              <img src="/images/envelope-solid.svg" width="18px">
-             liwn@jaas.ac.cn
+             <a href="mailto:liwn@jaas.ac.cn">liwn@jaas.ac.cn</a>
          </span>
          ·
          <span>
@@ -23,8 +23,8 @@ redirect_from:
          </span>
          ·
          <span>
-             <img src="/images/rss-solid.svg" width="18px">
-             <a href="https://liweining.cn">个人网站</a>
+             <i class="ai ai-orcid ai-fw" aria-hidden="true"></i>
+             <a href="https://orcid.org/0000-0002-0578-3812">ORCID</a>
          </span>
      </div>
  </center>
@@ -32,7 +32,7 @@ redirect_from:
 
 ## <img src="/images/info-circle-solid.svg" width="30px"> 基本信息 
 
- - 男，1995年出生，广东梅州人
+ - 男，1995年出生，[广东梅州](https://baike.baidu.com/item/%E6%A2%85%E5%B7%9E%E5%B8%82/2756364)人
  - 最高学历：博士研究生
  - 最高学位：农学博士
  - 政治面貌：中共党员
@@ -40,16 +40,16 @@ redirect_from:
 
 ## <img src="/images/briefcase-solid.svg" width="30px"> 工作经历
 
-- 博士后，江苏省农业科学院畜牧研究所，猪育种与生产创新团队，2024.8 ~ 2027.1 （当前在站）
-- 技术顾问，江苏立华食品集团有限公司，养猪部育种室，2025.11 至今
+- 博士后，[江苏省农业科学院畜牧研究所](https://newias.jaas.ac.cn/)，猪育种与生产创新团队，2024.8 ~ 2027.1 （当前在站）
+- 技术顾问，[江苏立华食品集团股份有限公司](http://www.lihuamuye.com/)，养猪部育种室，2025.11 至今
 
 ## <img src="/images/graduation-cap-solid.svg" width="30px"> 教育经历
 
 | 时间 | 学位 | 院校 | 专业 | 导师 |
 |------|------|------|------|------|
-| 2014-09 ~ 2018-06 | 学士 | 华南农业大学 | 动物科学 | 张常明 |
-| 2018-09 ~ 2020-07 | 硕士 | 中国农业大学 | 畜牧 | [刘剑锋](https://liulab.cau.edu.cn/) |
-| 2020-09 ~ 2024-07 | 博士 | 中国农业大学 | 动物遗传育种与繁殖 | [刘剑锋](https://liulab.cau.edu.cn/) |
+| 2014-09 ~ 2018-06 | 学士 | [华南农业大学](https://www.scau.edu.cn/) | 动物科学 | 张常明 |
+| 2018-09 ~ 2020-07 | 硕士 | [中国农业大学](https://www.cau.edu.cn/) | 畜牧 | [刘剑锋](https://liulab.cau.edu.cn/) |
+| 2020-09 ~ 2024-07 | 博士 | [中国农业大学](https://www.cau.edu.cn/) | 动物遗传育种与繁殖 | [刘剑锋](https://liulab.cau.edu.cn/) |
 
 ## <img src="/images/icons8-project.png" width="30px"> 科研项目
 
@@ -83,8 +83,10 @@ redirect_from:
 
 ## <img src="/images/Academic-Affiliations.png" width="30px"> 学术兼职
 
-Animal期刊审稿人
-中国畜牧兽医青年编委
+<div class="cv-affiliation-grid">
+  <article><a href="https://animal-journal.eu/animal-journal/"><strong>Animal</strong><span>期刊审稿人</span></a></article>
+  <article><a href="http://zgxmsy.ndhx.net/"><strong>中国畜牧兽医</strong><span>青年编委</span></a></article>
+</div>
 
 ## <img src="/images/project-diagram-solid.svg" width="30px"> 实践经历
 
@@ -93,13 +95,13 @@ Animal期刊审稿人
 | 2016.07 ~ 2016.08 | 云城温氏畜牧大坪种鸭场 | 轮岗实习（温氏班） |
 | 2017.07 ~ 2017.08 | 江西信丰温氏阳光种猪场 | 毕业轮岗实习 |
 | 2018.06 ~ 2018.09 | 北京天鹏兴旺养殖有限公司 | 猪代谢试验（节能减排） |
-| 2018.10 ~ 2019.12 | 深圳金新农旗下国家核心场 | 常规评估和基因组选择 |
+| 2018.10 ~ 2019.12 | [深圳金新农旗下国家核心场](http://www.chengnong.com/) | 常规评估和基因组选择 |
 | 2019.10 ~ 2020.01 | 平定华亿痩肉型种猪饲养场 | 毕业设计-母猪智能饲喂（晋汾白猪） |
-| 2020.01 ~ 2020.06 | 全国畜牧总站 | 借调-协助技术性工作 |
-| 2020.07 ~ 2020.08 | 河北承德壹号土猪 | 智能环控与液态饲喂调研（陆川猪） |
+| 2020.01 ~ 2020.06 | [全国畜牧总站](https://www.nahs.org.cn/) | 借调-协助技术性工作 |
+| 2020.07 ~ 2020.08 | [河北承德壹号土猪](https://www.gdyhsp.com/) | 智能环控与液态饲喂调研（陆川猪） |
 | 2020.10 ~ 2020.11 | 河北正农牧业有限公司 | 调研及整理育种数据（深县猪） |
 | 2022.01 ~ 2022.02 | 河北正农牧业有限公司 | 协助开展新品种培育工作 |
-| 2022.10 ~ 2022.11 | 北京中育种猪有限责任公司 | 调研及技术培训 |
+| 2022.10 ~ 2022.11 | [北京中育种猪有限责任公司](https://www.bbsc.com.cn/) | 调研及技术培训 |
 
 ## <img src="/images/job-svgrepo-com.svg" width="30px"> 学生工作
 

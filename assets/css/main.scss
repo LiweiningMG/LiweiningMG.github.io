@@ -1392,3 +1392,521 @@ button.life-poster {
   }
 }
 @import "print";
+
+/* Refinements: homepage citations, CV, talks, and life culture cards */
+.home-publications--citations a {
+  grid-template-columns: 4.25rem minmax(0, 1fr);
+  align-items: start;
+}
+
+.home-publications--citations strong {
+  color: var(--home-ink);
+  font-size: 0.95rem;
+  font-weight: 800;
+  line-height: 1.45;
+}
+
+.home-publications--citations strong em {
+  font-style: italic;
+}
+
+.home-publications--citations p {
+  grid-column: 2;
+  margin: 0.45rem 0 0;
+  color: var(--home-muted);
+  font-size: 0.84rem;
+  line-height: 1.65;
+}
+
+.home-guestbook-item time {
+  min-height: 1em;
+}
+
+.cv-affiliation-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+  margin: 0.75rem 0 1.25rem;
+}
+
+.cv-affiliation-grid article {
+  padding: 0.85rem 1rem;
+  background: #f7fbf7;
+  border: 1px solid rgba(22, 131, 111, 0.14);
+  border-left: 4px solid #16a085;
+  border-radius: 10px;
+}
+
+.cv-affiliation-grid strong,
+.cv-affiliation-grid span {
+  display: block;
+}
+
+.cv-affiliation-grid strong {
+  color: #1d2530;
+  font-size: 0.98rem;
+}
+
+.cv-affiliation-grid span {
+  margin-top: 0.25rem;
+  color: #617083;
+  font-size: 0.86rem;
+}
+
+.talk-feature {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.9fr) minmax(0, 1.1fr);
+  gap: clamp(1rem, 2.5vw, 1.5rem);
+  align-items: stretch;
+  padding: clamp(1rem, 2.5vw, 1.4rem);
+  background: #fff;
+  border: 1px solid #e6edf2;
+  border-radius: 18px;
+  box-shadow: 0 16px 45px rgba(35, 52, 68, 0.08);
+}
+
+.talk-feature__media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 20rem;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+.talk-feature__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.talk-feature__eyebrow {
+  width: fit-content;
+  margin: 0 0 0.75rem;
+  padding: 0.25rem 0.55rem;
+  color: #0d6f61;
+  font-size: 0.74rem;
+  font-weight: 800;
+  background: rgba(22, 160, 133, 0.1);
+  border-radius: 999px;
+}
+
+.talk-feature h1 {
+  margin: 0;
+  color: #1d2530;
+  font-size: clamp(1.45rem, 3vw, 2.1rem);
+  line-height: 1.18;
+}
+
+.talk-feature dl {
+  display: grid;
+  gap: 0.55rem;
+  margin: 1rem 0;
+}
+
+.talk-feature dl div {
+  display: grid;
+  grid-template-columns: 3rem minmax(0, 1fr);
+  gap: 0.6rem;
+}
+
+.talk-feature dt {
+  color: #617083;
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.talk-feature dd {
+  margin: 0;
+  color: #1d2530;
+}
+
+.talk-feature__body > p:last-child {
+  margin-bottom: 0;
+  color: #4e5f70;
+  line-height: 1.75;
+}
+
+.life-culture-section {
+  background: #f8faf7;
+}
+
+.life-poster {
+  position: relative;
+  isolation: isolate;
+  background-position: center;
+  background-size: cover;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 14px 28px rgba(35, 52, 68, 0.12);
+}
+
+.life-poster::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: rgba(15, 20, 28, 0.48);
+}
+
+.life-poster--game {
+  background-image: linear-gradient(rgba(20, 26, 36, 0.2), rgba(20, 26, 36, 0.62)), url('/images/optimized/thumbs/personal-life/gaming-1.webp');
+}
+
+.life-poster--anime {
+  background-image: linear-gradient(rgba(28, 38, 72, 0.08), rgba(28, 38, 72, 0.58)), url('/images/personal-life/culture/anime.svg');
+}
+
+.life-poster--movie {
+  background-image: linear-gradient(rgba(15, 15, 18, 0.02), rgba(15, 15, 18, 0.62)), url('/images/personal-life/culture/movie.svg');
+}
+
+.life-poster--music {
+  color: #fff;
+  background-image: linear-gradient(rgba(7, 54, 48, 0.02), rgba(7, 54, 48, 0.62)), url('/images/personal-life/culture/music.svg');
+}
+
+.life-poster__hint {
+  display: inline-flex;
+  width: fit-content;
+  margin-left: auto;
+  padding: 0.25rem 0.5rem;
+  color: #10251f;
+  font-size: 0.72rem;
+  font-weight: 900;
+  background: #f7c948;
+  border-radius: 999px;
+}
+
+button.life-poster--game {
+  outline: 2px solid rgba(247, 201, 72, 0.85);
+  outline-offset: -7px;
+}
+
+button.life-poster--game:hover,
+button.life-poster--game:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 32px rgba(35, 52, 68, 0.18);
+}
+
+@media (max-width: 760px) {
+  .cv-affiliation-grid,
+  .talk-feature {
+    grid-template-columns: 1fr;
+  }
+
+  .talk-feature__media img {
+    min-height: 15rem;
+  }
+}
+
+/* Current refinements: cleaner homepage guestbook, aligned talks, sidebar overflow */
+.home-guestbook {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(220px, 0.9fr) minmax(320px, 1.35fr) auto;
+  gap: clamp(1.25rem, 3vw, 2.2rem);
+  align-items: center;
+  margin-top: clamp(1.5rem, 4vw, 2.4rem);
+  padding: clamp(2rem, 4vw, 3rem) clamp(1.5rem, 5vw, 3.5rem);
+  overflow: hidden;
+  background: linear-gradient(135deg, #f7fbf8 0%, #f4faf7 100%);
+  border: 1px solid rgba(8, 127, 104, 0.12);
+  border-radius: 22px;
+  box-shadow: 0 18px 46px rgba(35, 52, 68, 0.07);
+}
+
+.home-guestbook::after {
+  content: "";
+  position: absolute;
+  right: 1.2rem;
+  bottom: 0.9rem;
+  width: 7rem;
+  height: 3rem;
+  pointer-events: none;
+  opacity: 0.26;
+  background:
+    radial-gradient(circle at 12px 12px, #0b7f68 2px, transparent 3px),
+    radial-gradient(circle at 42px 26px, #0b7f68 2px, transparent 3px),
+    linear-gradient(90deg, transparent 0 12%, rgba(11, 127, 104, 0.35) 12% 88%, transparent 88%);
+  background-size: 52px 38px, 52px 38px, 100% 1px;
+  background-repeat: repeat-x, repeat-x, no-repeat;
+  background-position: 0 0, 18px 6px, center;
+}
+
+.home-guestbook__intro {
+  position: relative;
+  z-index: 1;
+}
+
+.home-guestbook__icon {
+  display: inline-flex;
+  width: 2.6rem;
+  height: 2.6rem;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  color: #087f68;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  background: #fff;
+  border: 1px solid rgba(8, 127, 104, 0.12);
+  border-radius: 999px;
+  box-shadow: 0 10px 24px rgba(8, 127, 104, 0.1);
+}
+
+.home-guestbook__intro h2 {
+  margin: 0;
+  color: #16362f;
+  font-size: clamp(1.35rem, 2.5vw, 1.75rem);
+  letter-spacing: 0;
+}
+
+.home-guestbook__intro p {
+  max-width: 19rem;
+  margin: 0.65rem 0 0;
+  color: #5f6f6b;
+  font-size: 0.96rem;
+  line-height: 1.75;
+}
+
+.home-guestbook__decoration {
+  width: 4.5rem;
+  height: 0.35rem;
+  margin-top: 1.15rem;
+  background: linear-gradient(90deg, #087f68, rgba(8, 127, 104, 0.08));
+  border-radius: 999px;
+}
+
+.home-guestbook__latest {
+  position: relative;
+  z-index: 1;
+  min-width: 0;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.58);
+  border: 1px solid rgba(8, 127, 104, 0.08);
+  border-radius: 20px;
+}
+
+.home-guestbook__eyebrow {
+  margin: 0 0 0.75rem;
+  color: #087f68;
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+.home-guestbook__messages {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.home-guestbook__message {
+  display: grid;
+  grid-template-columns: 2.5rem minmax(0, 1fr);
+  gap: 0.8rem;
+  align-items: start;
+  min-height: 6.1rem;
+  padding: 1rem;
+  background: #fff;
+  border: 1px solid rgba(8, 127, 104, 0.1);
+  border-radius: 18px;
+  box-shadow: 0 12px 28px rgba(35, 52, 68, 0.07);
+}
+
+.home-guestbook__avatar {
+  display: flex;
+  width: 2.5rem;
+  height: 2.5rem;
+  align-items: center;
+  justify-content: center;
+  background: #edf8f2;
+  border-radius: 50%;
+}
+
+.home-guestbook__message h3 {
+  margin: 0;
+  color: #16362f;
+  font-size: 0.98rem;
+  line-height: 1.25;
+}
+
+.home-guestbook__message p {
+  margin: 0.42rem 0 0;
+  color: #34443f;
+  font-size: 0.92rem;
+  line-height: 1.65;
+}
+
+.home-guestbook__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem 0.75rem;
+  margin-top: 0.55rem;
+  color: #6d7c78;
+  font-size: 0.76rem;
+}
+
+.home-guestbook__empty {
+  margin: 0;
+  padding: 1rem;
+  color: #5f6f6b;
+  background: #fff;
+  border: 1px solid rgba(8, 127, 104, 0.1);
+  border-radius: 16px;
+}
+
+.home-guestbook__button {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 7.5rem;
+  padding: 0.85rem 1.15rem;
+  color: #fff !important;
+  font-weight: 800;
+  text-decoration: none;
+  background: #087f68;
+  border-radius: 999px;
+  box-shadow: 0 12px 24px rgba(8, 127, 104, 0.2);
+  transition: transform 0.18s ease, background-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.home-guestbook__button:hover,
+.home-guestbook__button:focus-visible {
+  background: #066a58;
+  transform: translateY(-1px);
+  box-shadow: 0 15px 28px rgba(8, 127, 104, 0.25);
+}
+
+.talk-feature__facts {
+  display: grid;
+  gap: 0.6rem;
+  margin: 1rem 0;
+}
+
+.talk-feature__facts div {
+  display: grid;
+  grid-template-columns: 3.5rem minmax(0, 1fr);
+  gap: 0.75rem;
+  align-items: baseline;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid rgba(97, 112, 131, 0.12);
+}
+
+.talk-feature__facts span {
+  color: #617083;
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.talk-feature__facts strong {
+  color: #1d2530;
+  font-size: 0.94rem;
+  line-height: 1.45;
+}
+
+.cv-affiliation-grid a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.cv-affiliation-grid article:hover {
+  border-color: rgba(22, 131, 111, 0.32);
+  box-shadow: 0 10px 24px rgba(35, 52, 68, 0.07);
+}
+
+@media (min-width: 64em) {
+  .sidebar.sticky {
+    max-height: calc(100vh - 1.5rem);
+    overflow-y: auto;
+    padding-right: 0.35rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-guestbook {
+    grid-template-columns: 1fr;
+    padding: 1.6rem;
+  }
+
+  .home-guestbook__intro p {
+    max-width: none;
+  }
+
+  .home-guestbook__button {
+    width: 100%;
+  }
+
+  .talk-feature__facts div {
+    grid-template-columns: 2.8rem minmax(0, 1fr);
+  }
+}
+
+/* Brighter personal-life culture cards and inline Waline emoji previews. */
+.home-guestbook__message .wl-emoji,
+.home-guestbook__message p img {
+  display: inline-block;
+  width: 1.25em;
+  height: 1.25em;
+  margin: 0 0.12em;
+  vertical-align: -0.22em;
+}
+
+.life-culture-section {
+  background: #f7fbf8;
+}
+
+.life-culture-grid .life-poster {
+  color: #20312d;
+  border: 1px solid rgba(8, 127, 104, 0.14);
+  box-shadow: 0 12px 26px rgba(35, 52, 68, 0.08);
+}
+
+.life-culture-grid .life-poster::before {
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.life-culture-grid .life-poster span {
+  color: #0b7f68;
+  opacity: 1;
+}
+
+.life-culture-grid .life-poster h3 {
+  color: #172a25;
+}
+
+.life-culture-grid .life-poster p {
+  color: #40524d;
+  opacity: 1;
+}
+
+.life-culture-grid .life-poster--game {
+  background-color: #f0fbf5;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.62), rgba(240, 251, 245, 0.9)), url('/images/optimized/thumbs/personal-life/gaming-1.webp');
+}
+
+.life-culture-grid .life-poster--anime {
+  background-color: #fff8e7;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.68), rgba(255, 248, 231, 0.9)), url('/images/personal-life/culture/anime.svg');
+}
+
+.life-culture-grid .life-poster--movie {
+  background-color: #fff4ec;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.68), rgba(255, 244, 236, 0.9)), url('/images/personal-life/culture/movie.svg');
+}
+
+.life-culture-grid .life-poster--music {
+  background-color: #effaf7;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.68), rgba(239, 250, 247, 0.9)), url('/images/personal-life/culture/music.svg');
+}
+
+.life-culture-grid .life-poster__hint {
+  color: #fff;
+  background: #0b7f68;
+}
+
+.life-culture-grid button.life-poster--game {
+  outline-color: rgba(11, 127, 104, 0.35);
+}

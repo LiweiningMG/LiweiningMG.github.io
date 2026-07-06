@@ -1,25 +1,7 @@
 <!-- start custom footer snippets -->
-<span class="site-visit-stats">
-  累计访问量：
-  <span class="waline-site-total-count" data-path="/__site_total__">--</span>
+<div class="site-visit-stats" data-site-visit-endpoint="https://comments.liweining.cn/api/site-visits">
+  <span>今日访问人数：<strong data-site-visit-today>--</strong></span>
   <span aria-hidden="true"> | </span>
-  当前页面访问量：
-  <span class="waline-current-page-count">--</span>
-</span>
-
-<script type="module">
-  import { pageviewCount } from 'https://unpkg.com/@waline/client@v3/dist/pageview.js';
-
-  pageviewCount({
-    serverURL: 'https://comments.liweining.cn',
-    path: '/__site_total__',
-    selector: '.waline-site-total-count',
-  });
-
-  pageviewCount({
-    serverURL: 'https://comments.liweining.cn',
-    path: window.location.pathname,
-    selector: '.waline-current-page-count',
-  });
-</script>
+  <span>历史访问人数：<strong data-site-visit-total>--</strong></span>
+</div>
 <!-- end custom footer snippets -->

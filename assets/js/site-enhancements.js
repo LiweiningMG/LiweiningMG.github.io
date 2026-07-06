@@ -129,6 +129,37 @@
       });
   }
 
+
+  function renderSiteVisitStats() {
+    var root = document.querySelector('.site-visit-stats[data-site-visit-endpoint]');
+    if (!root || !window.fetch) {
+      return;
+    }
+
+    var endpoint = root.getAttribute('data-site-visit-endpoint');
+    var todayNode = root.querySelector('[data-site-visit-today]');
+    var totalNode = root.querySelector('[data-site-visit-total]');
+
+    fetch(endpoint, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ path: window.location.pathname })
+    })
+      .then(function (response) {
+        if (!response.ok) {
+          throw new Error('Visit stats request failed');
+        }
+        return response.json();
+      })
+      .then(function (data) {
+        if (todayNode) {
+          todayNode.textContent = Number(data.todayVisitors || 0).toLocaleString();
+        }
+        if (totalNode) {
+          totalNode.textContent = Number(data.totalVisitors || 0).toLocaleString();
+        }
+      });
+  }
   function setupLifeGalleries() {
     document.addEventListener('click', function (event) {
       var card = event.target.closest && event.target.closest('[data-gallery-images]');
@@ -242,6 +273,7 @@
   }
 
   renderHomeGuestbookPreview();
+  renderSiteVisitStats();
   setupLifeGalleries();
   setupShareButtons();
 })();

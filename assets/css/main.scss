@@ -40,10 +40,17 @@
 @import "vendor/magnific-popup/magnific-popup";
 
 .site-visit-stats {
-  display: inline-block;
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.45rem;
   margin-bottom: 0.5em;
+  color: #5f6f6b;
+  font-size: 0.84rem;
 }
 
+.site-visit-stats strong {
+  color: #0b7f68;
+}
 .guestbook-form label {
   display: block;
   margin-top: 1em;

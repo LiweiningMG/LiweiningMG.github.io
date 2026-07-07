@@ -29,8 +29,8 @@ redirect_from:
 
     <div class="home-collage" aria-label="个人照片拼贴">
       <img fetchpriority="high" loading="eager" decoding="async" class="home-collage__photo home-collage__photo--main" src="/images/optimized/thumbs/home-page-6.webp" alt="首页照片">
-      <img loading="eager" decoding="async" class="home-collage__photo home-collage__photo--small home-collage__photo--top" src="/images/optimized/thumbs/personal-life/badminton-2.webp" alt="羽毛球活动照片">
-      <img loading="eager" decoding="async" class="home-collage__photo home-collage__photo--small home-collage__photo--bottom" src="/images/optimized/thumbs/personal-life/food-cn-11.webp" alt="日常美食照片">
+      <img loading="lazy" fetchpriority="low" decoding="async" class="home-collage__photo home-collage__photo--small home-collage__photo--top" src="/images/optimized/thumbs/personal-life/badminton-2.webp" alt="羽毛球活动照片">
+      <img loading="lazy" fetchpriority="low" decoding="async" class="home-collage__photo home-collage__photo--small home-collage__photo--bottom" src="/images/optimized/thumbs/personal-life/food-cn-11.webp" alt="日常美食照片">
     </div>
   </div>
 
@@ -46,9 +46,9 @@ redirect_from:
         <p>跑步、球类和骑行，把身体先叫醒</p>
       </div>
       <div class="home-photo-strip">
-        <img loading="lazy" decoding="async" src="/images/optimized/thumbs/personal-life/running-total.webp" alt="跑步总里程记录">
-        <img loading="lazy" decoding="async" src="/images/optimized/thumbs/personal-life/pingpong.webp" alt="乒乓球活动">
-        <img loading="lazy" decoding="async" src="/images/optimized/thumbs/personal-life/badminton.webp" alt="羽毛球活动">
+        <img loading="lazy" decoding="async" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" data-lazy-src="/images/optimized/thumbs/personal-life/running-total.webp" alt="跑步总里程记录">
+        <img loading="lazy" decoding="async" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" data-lazy-src="/images/optimized/thumbs/personal-life/pingpong.webp" alt="乒乓球活动">
+        <img loading="lazy" decoding="async" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" data-lazy-src="/images/optimized/thumbs/personal-life/badminton.webp" alt="羽毛球活动">
       </div>
     </div>
 
@@ -58,9 +58,9 @@ redirect_from:
         <p>会吃，也愿意花时间把饭做好</p>
       </div>
       <div class="home-photo-strip">
-        <img loading="lazy" decoding="async" src="/images/optimized/thumbs/personal-life/cooking-cn.webp" alt="中餐菜品">
-        <img loading="lazy" decoding="async" src="/images/optimized/thumbs/personal-life/baking.webp" alt="烘焙或西餐">
-        <img loading="lazy" decoding="async" src="/images/optimized/thumbs/Toast-500x300.webp" alt="烘焙照片">
+        <img loading="lazy" decoding="async" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" data-lazy-src="/images/optimized/thumbs/personal-life/cooking-cn.webp" alt="中餐菜品">
+        <img loading="lazy" decoding="async" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" data-lazy-src="/images/optimized/thumbs/personal-life/baking.webp" alt="烘焙或西餐">
+        <img loading="lazy" decoding="async" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" data-lazy-src="/images/optimized/thumbs/Toast-500x300.webp" alt="烘焙照片">
       </div>
     </div>
 
@@ -70,9 +70,9 @@ redirect_from:
         <p>走出去看风景，也给日常换个空气</p>
       </div>
       <div class="home-photo-strip">
-        <img loading="lazy" decoding="async" src="/images/optimized/thumbs/home-page-2.webp" alt="旅行照片一">
-        <img loading="lazy" decoding="async" src="/images/optimized/thumbs/home-page-4.webp" alt="旅行照片二">
-        <img loading="lazy" decoding="async" src="/images/optimized/thumbs/home-page-5.webp" alt="旅行照片三">
+        <img loading="lazy" fetchpriority="low" decoding="async" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" data-lazy-src="/images/optimized/thumbs/home-page-2.webp" alt="旅行照片一">
+        <img loading="lazy" fetchpriority="low" decoding="async" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" data-lazy-src="/images/optimized/thumbs/home-page-4.webp" alt="旅行照片二">
+        <img loading="lazy" fetchpriority="low" decoding="async" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" data-lazy-src="/images/optimized/thumbs/home-page-5.webp" alt="旅行照片三">
       </div>
     </div>
   </section>

@@ -403,6 +403,10 @@
   isolation: isolate;
 }
 
+.is-deferred-image {
+  background: #edf6f1;
+}
+
 .home-life-card img {
   position: absolute;
   inset: 0;
@@ -1556,7 +1560,7 @@ button.life-poster {
 }
 
 .life-poster--game {
-  background-image: linear-gradient(rgba(20, 26, 36, 0.2), rgba(20, 26, 36, 0.62)), url('/images/optimized/thumbs/personal-life/gaming-1.webp');
+  background-image: linear-gradient(rgba(20, 26, 36, 0.2), rgba(20, 26, 36, 0.62)), url('/images/optimized/gallery/personal-life/gaming-3.webp');
 }
 
 .life-poster--anime {
@@ -1891,7 +1895,7 @@ button.life-poster--game:focus-visible {
 
 .life-culture-grid .life-poster--game {
   background-color: #f0fbf5;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.62), rgba(240, 251, 245, 0.9)), url('/images/optimized/thumbs/personal-life/gaming-1.webp');
+  background-image: linear-gradient(rgba(255, 255, 255, 0.62), rgba(240, 251, 245, 0.9)), url('/images/optimized/gallery/personal-life/gaming-3.webp');
 }
 
 .life-culture-grid .life-poster--anime {

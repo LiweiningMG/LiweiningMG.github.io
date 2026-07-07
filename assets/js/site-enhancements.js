@@ -130,6 +130,45 @@
   }
 
 
+
+  function setupDeferredImages() {
+    var images = Array.prototype.slice.call(document.querySelectorAll('img[data-lazy-src]'));
+    if (!images.length) {
+      return;
+    }
+
+    function loadImage(img) {
+      var src = img.getAttribute('data-lazy-src');
+      if (!src) {
+        return;
+      }
+      img.src = src;
+      img.removeAttribute('data-lazy-src');
+      img.classList.remove('is-deferred-image');
+    }
+
+    images.forEach(function (img) {
+      img.classList.add('is-deferred-image');
+    });
+
+    if (!('IntersectionObserver' in window)) {
+      images.forEach(loadImage);
+      return;
+    }
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          observer.unobserve(entry.target);
+          loadImage(entry.target);
+        }
+      });
+    }, { rootMargin: '180px 0px' });
+
+    images.forEach(function (img) {
+      observer.observe(img);
+    });
+  }
   function renderSiteVisitStats() {
     var root = document.querySelector('.site-visit-stats[data-site-visit-endpoint]');
     if (!root || !window.fetch) {
@@ -272,6 +311,7 @@
     document.body.appendChild(dialog);
   }
 
+  setupDeferredImages();
   renderHomeGuestbookPreview();
   renderSiteVisitStats();
   setupLifeGalleries();

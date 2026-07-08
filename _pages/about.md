@@ -28,11 +28,35 @@ redirect_from:
     </div>
 
     <div class="home-collage" aria-label="个人照片拼贴">
-      <img fetchpriority="high" loading="eager" decoding="async" class="home-collage__photo home-collage__photo--main" src="/images/optimized/thumbs/home-page-6.webp" alt="首页照片">
+      <img fetchpriority="high" loading="eager" decoding="async" class="home-collage__photo home-collage__photo--main" src="/images/optimized/thumbs/home-shunyi-farm.webp" alt="首页照片">
       <img loading="lazy" fetchpriority="low" decoding="async" class="home-collage__photo home-collage__photo--small home-collage__photo--top" src="/images/optimized/thumbs/personal-life/badminton-2.webp" alt="羽毛球活动照片">
       <img loading="lazy" fetchpriority="low" decoding="async" class="home-collage__photo home-collage__photo--small home-collage__photo--bottom" src="/images/optimized/thumbs/personal-life/food-cn-11.webp" alt="日常美食照片">
     </div>
   </div>
+
+  <section class="home-section">
+    <div class="home-section__heading">
+      <h2>最近的成果</h2>
+      <a href="/publications/">全部成果</a>
+    </div>
+    <div class="home-publications home-publications--citations">
+      <a href="/publication/2025-12-20-JASB">
+        <span>2025</span>
+        <strong>LI W, Li S, Du H, Huang Q, Zhuo Y, Zhou L, et al. Improving multibreed genomic prediction for breeds with small populations by modeling heterogeneous genetic (co)variance blockwise accounting for linkage disequilibrium. <em>Journal of Animal Science and Biotechnology</em>. 2025;16(1):176.</strong>
+        <p>提出 mbBayesABLD，用 LD 区块显式建模异质遗传协方差，在多品种联合预测中提升小规模品种的基因组预测准确性</p>
+      </a>
+      <a href="/publication/2024-04-16-Agriculture">
+        <span>2024</span>
+        <strong>Li W, Zhang M, Du H, Wu J, Zhou L, Liu J. Multi-Trait Bayesian Models Enhance the Accuracy of Genomic Prediction in Multi-Breed Reference Populations. <em>Agriculture</em>. 2024;14(4):626.</strong>
+        <p>将不同品种的同一性状视为遗传相关性状，并结合区块异质协方差建模，提高多品种参考群体中的预测表现</p>
+      </a>
+      <a href="/publication/2022-07-26-Animals">
+        <span>2022</span>
+        <strong>Li W, Wang Z, Luo S, Wu J, Zhou L, Liu J. Genome-Wide Association Analysis and Genetic Parameters for Feed Efficiency and Related Traits in Yorkshire and Duroc Pigs. <em>Animals</em>. 2022;12(15):1902.</strong>
+        <p>围绕猪饲料效率及相关性状估计遗传参数，鉴定显著 SNP 和候选基因，为提高饲料效率提供遗传线索</p>
+      </a>
+    </div>
+  </section>
 
   <section class="home-section home-section--moments">
     <div class="home-section__heading">
@@ -74,30 +98,6 @@ redirect_from:
         <img loading="lazy" fetchpriority="low" decoding="async" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" data-lazy-src="/images/optimized/thumbs/home-page-4.webp" alt="旅行照片二">
         <img loading="lazy" fetchpriority="low" decoding="async" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" data-lazy-src="/images/optimized/thumbs/home-page-5.webp" alt="旅行照片三">
       </div>
-    </div>
-  </section>
-
-  <section class="home-section">
-    <div class="home-section__heading">
-      <h2>最近的成果</h2>
-      <a href="/publications/">全部成果</a>
-    </div>
-    <div class="home-publications home-publications--citations">
-      <a href="/publication/2025-12-20-JASB">
-        <span>2025</span>
-        <strong>LI W, Li S, Du H, Huang Q, Zhuo Y, Zhou L, et al. Improving multibreed genomic prediction for breeds with small populations by modeling heterogeneous genetic (co)variance blockwise accounting for linkage disequilibrium. <em>Journal of Animal Science and Biotechnology</em>. 2025;16(1):176.</strong>
-        <p>提出 mbBayesABLD，用 LD 区块显式建模异质遗传协方差，在多品种联合预测中提升小规模品种的基因组预测准确性</p>
-      </a>
-      <a href="/publication/2024-04-16-Agriculture">
-        <span>2024</span>
-        <strong>Li W, Zhang M, Du H, Wu J, Zhou L, Liu J. Multi-Trait Bayesian Models Enhance the Accuracy of Genomic Prediction in Multi-Breed Reference Populations. <em>Agriculture</em>. 2024;14(4):626.</strong>
-        <p>将不同品种的同一性状视为遗传相关性状，并结合区块异质协方差建模，提高多品种参考群体中的预测表现</p>
-      </a>
-      <a href="/publication/2022-07-26-Animals">
-        <span>2022</span>
-        <strong>Li W, Wang Z, Luo S, Wu J, Zhou L, Liu J. Genome-Wide Association Analysis and Genetic Parameters for Feed Efficiency and Related Traits in Yorkshire and Duroc Pigs. <em>Animals</em>. 2022;12(15):1902.</strong>
-        <p>围绕猪饲料效率及相关性状估计遗传参数，鉴定显著 SNP 和候选基因，为提高饲料效率提供遗传线索</p>
-      </a>
     </div>
   </section>
 

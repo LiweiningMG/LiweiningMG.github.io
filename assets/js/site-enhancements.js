@@ -228,6 +228,9 @@
 
     var dialog = document.createElement('div');
     dialog.className = 'life-gallery-dialog';
+    if (/跑步|记录|截图/.test(title)) {
+      dialog.classList.add('life-gallery-dialog--contain');
+    }
     dialog.id = 'life-gallery-dialog';
     dialog.innerHTML = '<div class="life-gallery-dialog__panel" role="dialog" aria-modal="true" aria-label="' + escapeHtml(title) + '">' +
       '<button class="life-gallery-dialog__close" type="button" aria-label="关闭">×</button>' +

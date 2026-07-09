@@ -51,6 +51,19 @@
 .site-visit-stats strong {
   color: #0b7f68;
 }
+
+.site-policy-links {
+  margin-top: 0.35rem;
+  font-size: 0.8rem;
+  text-align: center;
+  opacity: 0.78;
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+}
 .guestbook-form label {
   display: block;
   margin-top: 1em;
@@ -2161,5 +2174,3 @@ button.life-poster--game:focus-visible {
 .talk-feature--stacked .talk-feature__body {
   justify-content: flex-start;
 }
-
-

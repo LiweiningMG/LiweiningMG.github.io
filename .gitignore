@@ -14,3 +14,14 @@ package-lock.json
 
 # 历史文件夹
 .history
+
+# Secrets and private exports
+.env
+.env.*
+*.pem
+*.key
+*.sql
+*.dump
+*.bak
+*.backup
+private-profile.secret.json

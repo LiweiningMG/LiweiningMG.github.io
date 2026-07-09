@@ -1,10 +1,20 @@
 {% include base_path %}
+{% assign footer_follow_label = site.data.ui-text[site.locale].follow_label %}
+{% assign footer_feed_label = site.data.ui-text[site.locale].feed_label | default: "Feed" %}
+{% assign footer_powered_by = site.data.ui-text[site.locale].powered_by | default: "Powered by" %}
+{% assign footer_owner = site.name | default: site.title %}
+{% if page.lang == 'en' %}
+  {% assign footer_follow_label = "Follow:" %}
+  {% assign footer_feed_label = "Feed" %}
+  {% assign footer_powered_by = "Powered by" %}
+  {% assign footer_owner = "Weining Li" %}
+{% endif %}
 
 {% if site.author.github or site.author.bitbucket or site.atom_feed.hide != true %}
 <div class="page__footer-follow">
   <ul class="social-icons">
-    {% if site.data.ui-text[site.locale].follow_label %}
-      <li><strong>{{ site.data.ui-text[site.locale].follow_label }}</strong></li>
+    {% if footer_follow_label %}
+      <li><strong>{{ footer_follow_label }}</strong></li>
     {% endif %}
     {% if site.author.github %}
       <li><a href="http://github.com/{{ site.author.github }}"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a></li>
@@ -13,13 +23,13 @@
       <li><a href="http://bitbucket.org/{{ site.author.bitbucket }}"><i class="fab fa-bitbucket" aria-hidden="true"></i> Bitbucket</a></li>
     {% endif %}
     {% if site.atom_feed.hide != true %}
-    <li><a href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ base_path }}/feed.xml{% endif %}"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].feed_label | default: "Feed" }}</a></li>
+    <li><a href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ base_path }}/feed.xml{% endif %}"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> {{ footer_feed_label }}</a></li>
     {% endif %}
   </ul>
 </div>
 {% endif %}
 
 <div class="page__footer-copyright">
-  &copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}, {{ site.data.ui-text[site.locale].powered_by | default: "Powered by" }} <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>, a fork of <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.<br />
+  &copy; {{ site.time | date: '%Y' }} {{ footer_owner }}, {{ footer_powered_by }} <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>, a fork of <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.<br />
   Site last updated {{ "now" | date: '%Y-%m-%d' %}}
 </div>

@@ -2,33 +2,42 @@
 layout: archive
 title: ""
 permalink: /publications/
+lang: zh
+translation_url: /en/publications/
 author_profile: true
 ---
 
 {% include base_path %}
 
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
+<h1>学术成果</h1>
+<p class="archive__subtitle">部分期刊论文和会议论文。点击条目可查看研究背景、结果和全文链接。{% if site.author.orcid %}最新文章发表情况请参见 <a href="{{ site.author.orcid }}">个人 ORCID 主页</a>。{% endif %}</p>
 
+<h2>期刊文章</h2>
+<hr />
+<div class="home-publications home-publications--citations">
+  <a href="/publication/2025-12-20-JASB">
+    <span>2025</span>
+    <strong>LI W, Li S, Du H, Huang Q, Zhuo Y, Zhou L, et al. Improving multibreed genomic prediction for breeds with small populations by modeling heterogeneous genetic (co)variance blockwise accounting for linkage disequilibrium. <em>Journal of Animal Science and Biotechnology</em>. 2025;16(1):176.</strong>
+    <p>提出 mbBayesABLD，用 LD 区块显式建模异质遗传协方差，在多品种联合预测中提升小规模品种的基因组预测准确性。</p>
+  </a>
+  <a href="/publication/2024-04-16-Agriculture">
+    <span>2024</span>
+    <strong>Li W, Zhang M, Du H, Wu J, Zhou L, Liu J. Multi-Trait Bayesian Models Enhance the Accuracy of Genomic Prediction in Multi-Breed Reference Populations. <em>Agriculture</em>. 2024;14(4):626.</strong>
+    <p>将不同品种的同一性状视为遗传相关性状，并结合区块异质协方差建模，提高多品种参考群体中的预测表现。</p>
+  </a>
+  <a href="/publication/2024-07-26-Animal">
+    <span>2022</span>
+    <strong>Li W, Wang Z, Luo S, Wu J, Zhou L, Liu J. Genome-Wide Association Analysis and Genetic Parameters for Feed Efficiency and Related Traits in Yorkshire and Duroc Pigs. <em>Animals</em>. 2022;12(15):1902.</strong>
+    <p>围绕猪饲料效率及相关性状估计遗传参数，鉴定显著 SNP 和候选基因，为提高饲料效率提供遗传线索。</p>
+  </a>
+</div>
 
-{% if site.author.orcid %}
-  <div class="wordwrap">最新文章发表情况请参见 <a href="{{site.author.orcid}}">个人ORCID主页</a>.</div>
-{% endif %}
+<h2>会议论文</h2>
+<hr />
+<div class="home-publications home-publications--citations">
+  <a href="/publication/2023-08-19-conference-1">
+    <span>2023</span>
+    <strong>李伟宁，李思雨，刘剑锋. 考虑协方差异质的多品种基因组选择贝叶斯模型: 第二十二次全国动物遗传育种学术讨论会[C]. 山西, 2023.</strong>
+    <p>介绍 mbBayesAS 多品种联合评估方法，在基因组不同区块拟合不同加性遗传协方差矩阵，提高小群体品种预测表现。</p>
+  </a>
+</div>

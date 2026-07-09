@@ -1,5 +1,7 @@
 ---
 permalink: /
+lang: zh
+translation_url: /en/
 title: ""
 author_profile: false
 classes: wide
@@ -28,9 +30,18 @@ redirect_from:
     </div>
 
     <div class="home-collage" aria-label="个人照片拼贴">
-      <img fetchpriority="high" loading="eager" decoding="async" class="home-collage__photo home-collage__photo--main" src="/images/optimized/thumbs/home-shunyi-farm.webp" alt="首页照片">
-      <img loading="lazy" fetchpriority="low" decoding="async" class="home-collage__photo home-collage__photo--small home-collage__photo--top" src="/images/optimized/thumbs/personal-life/badminton-2.webp" alt="羽毛球活动照片">
-      <img loading="lazy" fetchpriority="low" decoding="async" class="home-collage__photo home-collage__photo--small home-collage__photo--bottom" src="/images/optimized/thumbs/personal-life/food-cn-11.webp" alt="日常美食照片">
+      <figure class="home-collage__item home-collage__item--main">
+        <img fetchpriority="high" loading="eager" decoding="async" class="home-collage__photo home-collage__photo--main" src="/images/optimized/thumbs/home-shunyi-farm.webp" alt="饲喂实验时和饲喂笼里的猪对视">
+        <figcaption class="home-collage__caption">瞅我干啥？瞅你咋地！</figcaption>
+      </figure>
+      <figure class="home-collage__item home-collage__item--top">
+        <img loading="lazy" fetchpriority="low" decoding="async" class="home-collage__photo home-collage__photo--small" src="/images/optimized/thumbs/personal-life/badminton-2.webp" alt="农科院羽毛球赛起跳杀球照片">
+        <figcaption class="home-collage__caption">跳是跳了，球随缘吧</figcaption>
+      </figure>
+      <figure class="home-collage__item home-collage__item--bottom">
+        <img loading="lazy" fetchpriority="low" decoding="async" class="home-collage__photo home-collage__photo--small" src="/images/optimized/thumbs/personal-life/food-cn-11.webp" alt="小马生肖模具制作的月饼">
+        <figcaption class="home-collage__caption">小马送福，马到成功</figcaption>
+      </figure>
     </div>
   </div>
 

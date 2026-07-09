@@ -28,3 +28,22 @@ main:
 
   - title: "留言版"
     url: /guestbook/
+
+en:
+  - title: "CV"
+    url: /en/cv/
+
+  - title: "Research"
+    url: /en/publications/
+
+  - title: "Talks"
+    url: /en/talks/
+
+  - title: "Tutorials"
+    url: /en/teaching/
+
+  - title: "Life"
+    url: /en/personal-life/
+
+  - title: "Guestbook"
+    url: /en/guestbook/

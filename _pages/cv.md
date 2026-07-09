@@ -2,6 +2,8 @@
 layout: archive
 title: ""
 permalink: /cv/
+lang: zh
+translation_url: /en/cv/
 author_profile: true
 redirect_from:
   - /resume

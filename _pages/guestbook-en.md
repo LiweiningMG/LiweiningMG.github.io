@@ -1,20 +1,17 @@
 ---
 layout: single
-title: "留言板"
-permalink: /guestbook/
-lang: zh
-translation_url: /en/guestbook/
+title: "Guestbook"
+permalink: /en/guestbook/
+lang: en
+translation_url: /guestbook/
 author_profile: true
 ---
 
-欢迎在这里留言交流。
+Feel free to leave a message here.
 
 <div id="waline"></div>
 
-<link
-  rel="stylesheet"
-  href="https://unpkg.com/@waline/client@v3/dist/waline.css"
-/>
+<link rel="stylesheet" href="https://unpkg.com/@waline/client@v3/dist/waline.css" />
 
 <script type="module">
   import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
@@ -22,7 +19,7 @@ author_profile: true
   init({
     el: '#waline',
     serverURL: 'https://comments.liweining.cn',
-    lang: 'zh-CN',
+    lang: 'en',
     path: '/guestbook/',
   });
 </script>

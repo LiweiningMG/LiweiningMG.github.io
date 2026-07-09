@@ -90,7 +90,26 @@
     }
 
     var endpoint = 'https://comments.liweining.cn/comment?path=/guestbook/&page=1&pageSize=3&sortBy=insertedAt_desc';
-    preview.innerHTML = '<p class="home-guestbook__empty">正在读取最近留言...</p>';
+    var isEnglish = document.documentElement.lang === 'en';
+    var copy = isEnglish ? {
+      loading: 'Loading recent messages...',
+      empty: 'No messages yet. You are welcome to stop by the guestbook.',
+      visitor: 'Visitor',
+      fallback: 'Left a message',
+      liked: ' likes',
+      welcome: 'Welcome',
+      failed: 'Messages are temporarily unavailable. Visit the <a href="/en/guestbook/">guestbook</a> instead.'
+    } : {
+      loading: '正在读取最近留言...',
+      empty: '暂无留言，欢迎来留言板坐坐',
+      visitor: '访客',
+      fallback: '留下了一条留言',
+      liked: ' 个赞',
+      welcome: '欢迎',
+      failed: '暂时没有读取到留言，可前往 <a href="/guestbook/">留言板</a> 查看'
+    };
+
+    preview.innerHTML = '<p class="home-guestbook__empty">' + copy.loading + '</p>';
 
     fetch(endpoint)
       .then(function (response) {
@@ -102,30 +121,30 @@
       .then(function (payload) {
         var comments = withLocalGuestbookSamples(Array.isArray(payload.data) ? payload.data : []);
         if (!comments.length) {
-          preview.innerHTML = '<p class="home-guestbook__empty">暂无留言，欢迎来留言板坐坐</p>';
+          preview.innerHTML = '<p class="home-guestbook__empty">' + copy.empty + '</p>';
           return;
         }
 
         preview.innerHTML = comments.map(function (item) {
           var html = sanitizeCommentHtml(item.comment || item.orig || '');
-          var nick = item.nick || '访客';
+          var nick = item.nick || copy.visitor;
           var date = formatCommentDate(item.insertedAt || item.time);
           var like = Number(item.like || 0);
           return '<article class="home-guestbook__message">' +
             '<div class="home-guestbook__avatar" aria-hidden="true">🌱</div>' +
             '<div>' +
             '<h3>' + escapeHtml(nick) + '</h3>' +
-            '<p>' + (html || escapeHtml('留下了一条留言')) + '</p>' +
+            '<p>' + (html || escapeHtml(copy.fallback)) + '</p>' +
             '<div class="home-guestbook__meta">' +
             '<span>' + escapeHtml(date) + '</span>' +
-            '<span>' + (like ? like + ' 个赞' : '欢迎') + '</span>' +
+            '<span>' + (like ? like + copy.liked : copy.welcome) + '</span>' +
             '</div>' +
             '</div>' +
             '</article>';
         }).join('');
       })
       .catch(function () {
-        preview.innerHTML = '<p class="home-guestbook__empty">暂时没有读取到留言，可前往 <a href="/guestbook/">留言板</a> 查看</p>';
+        preview.innerHTML = '<p class="home-guestbook__empty">' + copy.failed + '</p>';
       });
   }
 
@@ -228,7 +247,7 @@
 
     var dialog = document.createElement('div');
     dialog.className = 'life-gallery-dialog';
-    if (/跑步|记录|截图/.test(title)) {
+    if (/跑步|记录|截图|running|record|screenshot/i.test(title)) {
       dialog.classList.add('life-gallery-dialog--contain');
     }
     dialog.id = 'life-gallery-dialog';

@@ -2,6 +2,8 @@
 layout: single
 title: "隐私说明"
 permalink: /privacy/
+lang: zh
+translation_url: /en/privacy/
 author_profile: true
 ---
 

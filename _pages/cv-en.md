@@ -67,6 +67,11 @@ author_profile: true
 - Zhuo Y, Du H, Diao C, **Li W**, Zhou L, Jiang L, et al. MAGE: metafounders-assisted genomic estimation of breeding value, a novel additive-dominance single-step model in crossbreeding systems. *Bioinformatics*. 2024;40(2):btae044. [10.1093/bioinformatics/btae044](https://doi.org/10.1093/bioinformatics/btae044).
 - Wang J, Wang X, **Li W**, et al. Canonical correlation analysis among feed intake, excretion, and growth traits in growing-finishing pigs in Beijing. *Chinese Journal of Animal Science*. 2020;56(01):100-104.
 
+## <img src="/images/intellectual-property.svg" width="30px"> Software Copyrights and Patents
+
+- Invention patent: Jianfeng Liu, **Weining Li**, A multibreed joint genomic genetic evaluation method and device, CN 118609649 B.
+- Software copyright: Jianfeng Liu, **Weining Li**, Multibreed genomic selection software fitting heterogeneous genetic covariance V1.0, 2024SR0343499.
+
 ## <img src="/images/Academic-Affiliations.png" width="30px"> Academic Service
 
 <div class="cv-affiliation-grid">

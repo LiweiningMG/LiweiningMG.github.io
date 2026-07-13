@@ -83,6 +83,11 @@ redirect_from:
 - Zhuo Y, Du H, Diao C, **Li W**, Zhou L, Jiang L, et al. MAGE: metafounders-assisted genomic estimation of breeding value, a novel additive-dominance single-step model in crossbreeding systems. Bioinformatics. 2024;40(2):btae044. [10.1093/bioinformatics/btae044](https://doi.org/10.1093/bioinformatics/btae044).
 - 王俊健, 王晓凤, **李伟宁**, 等. 北京地区生长育肥猪采食、排泄及生长性状间的典型相关分析[J]. 中国畜牧杂志,2020,56(01): 100-104.
 
+## <img src="/images/intellectual-property.svg" width="30px"> 专利与软著
+
+- 发明专利：刘剑锋，**李伟宁**，一种多品种基因组联合遗传评估方法及装置，CN 118609649 B
+- 软件著作权：刘剑锋，**李伟宁**，拟合遗传协方差异质的多品种基因组选择软件 V1.0，2024SR0343499
+
 ## <img src="/images/Academic-Affiliations.png" width="30px"> 学术兼职
 
 <div class="cv-affiliation-grid">

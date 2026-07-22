@@ -1114,8 +1114,8 @@ body {
     <button type="button" class="btn" data-stage="bole">1 表型选留</button>
     <button type="button" class="btn" data-stage="mendel">2 孟德尔遗传</button>
     <button type="button" class="btn" data-stage="quantitative">3 数量性状</button>
-    <button type="button" class="btn" data-stage="value">4 育种值与遗传力</button>
-    <button type="button" class="btn" data-stage="contemporary">5 同期群比较</button>
+    <button type="button" class="btn" data-stage="contemporary">4 环境影响校正</button>
+    <button type="button" class="btn" data-stage="value">5 育种值与遗传力</button>
     <button type="button" class="btn" data-stage="index">6 选择指数</button>
     <button type="button" class="btn" data-stage="reml">7 方差组分与REML</button>
     <button type="button" class="btn" data-stage="blup">8 BLUP</button>
@@ -1500,6 +1500,18 @@ body {
         <div class="bev-full bev-plain-language"><strong>这张图真正想说明什么</strong><p>日龄不是由一个“快基因”或“慢基因”决定，而是许多小效应基因、环境和随机波动共同叠加，所以群体里会出现一整条连续梯度</p></div>
         <div><strong>表型从哪里来</strong><div class="bev-equation"><span class="bev-token bev-token-y">表型 P</span> = 群体平均水平 μ + 遗传效应 + <span class="bev-token bev-token-env">环境与随机效应</span></div><p>同样的表型可能由不同的遗传和环境组合造成，因此“看起来好”还不能直接等同于“遗传能力好”</p></div>
         <div><strong>下一步要解决什么</strong><p>把遗传效应继续拆开：哪些能以平均规律传给后代，哪些只在特定基因组合中出现</p><p class="bev-result">育种决策的核心，是从连续表型中尽量提取可稳定传递的加性部分</p></div>`},
+      contemporary:{label:'环境影响校正',summary:'将个体与相同场次、相近时间和相似饲养条件下的动物比较，初步减少环境差异对表型比较的影响',winner:'同批内301更突出',title:'环境影响校正：与同批平均水平比较',used:['301','302'],winnerId:'301',infoLevel:3,decisionLevel:1,values:{'301':'同批内表型离差 −5d','302':'同批内表型离差 −2d'},detail:`
+        <div class="bev-full bev-contemporary-flow" aria-label="两头候选猪用各自同批平均水平进行比较">
+          <div class="bev-contemporary-row"><div class="bev-source-box raw"><strong>301自身</strong><br>age: 95d</div><span class="operator">−</span><div class="bev-source-box environment"><strong>同批平均水平</strong><br>同批均值100d</div><span class="operator">=</span><div class="bev-source-box comparison"><strong>同批内表型离差 −5d</strong><br>在同批比较中更突出</div></div>
+          <div class="bev-contemporary-row"><div class="bev-source-box raw"><strong>302自身</strong><br>age: 92d</div><span class="operator">−</span><div class="bev-source-box environment"><strong>同批平均水平</strong><br>同批均值94d</div><span class="operator">=</span><div class="bev-source-box comparison"><strong>同批内表型离差 −2d</strong><br>相对优势较小</div></div>
+        </div>
+        <div class="bev-full bev-step-compare">
+          <div class="bev-step-card"><strong>① 第一眼：只看原始表型</strong><p>92d小于95d，看上去302更快。但两头猪来自不同场次和季节，不能把所有差异都算在动物本身</p></div>
+          <div class="bev-step-card"><strong>② 再比较：寻找公平参照</strong><p>在相同场次、相近时间、相似饲养条件下比较，301比同批平均水平早5d，302只早2d</p></div>
+        </div>
+        <div class="bev-full"><p class="bev-result"><strong>核心计算</strong> 个体表现 − 同批平均水平 = 同批内表型离差</p></div>
+        <div class="bev-full bev-plain-language"><strong>生产人员先记住</strong><p>环境影响校正不是为了“改动数据”，而是尽量让动物在相近环境背景下比高低，避免把好饲料、好季节或好管理误当成好遗传</p></div>
+        <div class="bev-full bev-warning-box"><strong>重要边界</strong><p>这种比较只能初步减少已知环境差异的影响，得到的仍是表型离差，不是育种值</p></div><div class="bev-full bev-good-box"><strong>下一步</strong><p>同批内表型离差仍不等于育种值，育种中真正关心的是能够以平均规律传给后代的加性遗传值</p></div>`},
       value:{label:'育种值与遗传力',summary:'育种主要关心能够以平均规律传给后代的加性遗传值，而不是整个遗传值',winner:'加性育种值是核心',title:'从一代遗传传递中理解加性、显性与上位互作',used:[],pedigree:false,infoLevel:3,decisionLevel:1,detail:`
         <div class="bev-full bev-genetic-map">
           <svg class="bev-genetic-svg" viewBox="0 0 760 355" role="img" aria-labelledby="value-title value-desc">
@@ -1532,19 +1544,7 @@ body {
         <div><strong>狭义遗传力</strong><p class="bev-equation">h² = V<sub>A</sub> / V<sub>P</sub></p><p>它是群体层面的比例：在当前群体、环境和性状定义下，表型差异中有多少可由加性遗传差异解释，并不是某头猪“有多少遗传”</p></div>
         <div><strong>为什么加性部分最重要</strong><p>显性和互作可以影响个体表现，也能用于杂交组合设计；但常规纯种选育需要预测亲本对子代平均水平的贡献，因此核心指标仍是加性育种值</p></div>
         <div class="bev-full"><div class="bev-variance-grid"><span><strong>V<sub>A</sub></strong><br>加性遗传方差<br><b>稳定选择基础</b></span><span><strong>V<sub>D</sub></strong><br>显性方差<br>依赖位点内组合</span><span><strong>V<sub>I</sub></strong><br>互作方差<br>依赖位点间组合</span><span><strong>V<sub>E</sub></strong><br>环境方差<br>不属于遗传差异</span></div><p class="bev-equation">V<sub>P</sub> = V<sub>A</sub> + V<sub>D</sub> + V<sub>I</sub> + V<sub>E</sub></p></div>
-        <div class="bev-full bev-good-box"><strong>后续教学参数</strong><p>后续简化示例设V<sub>A</sub>=20、V<sub>E</sub>=40，并暂时忽略D和I，则h²=20/(20+40)=1/3。上述A、D、I数值仅用于直观说明个体遗传值的组成</p></div>`},
-      contemporary:{label:'同期群比较',summary:'先在相似环境中比较表型位置，但同期群偏差仍不是育种值',winner:'同期群内301更突出',title:'生产中怎样给原始表型找一个公平参照？',used:['301','302'],winnerId:'301',infoLevel:3,decisionLevel:1,values:{'301':'同期群偏差 −5d','302':'同期群偏差 −2d'},detail:`
-        <div class="bev-full bev-contemporary-flow" aria-label="两头候选猪用各自同期群进行公平比较">
-          <div class="bev-contemporary-row"><div class="bev-source-box raw"><strong>301自身</strong><br>age: 95d</div><span class="operator">−</span><div class="bev-source-box environment"><strong>相似环境参照</strong><br>同期均值100d</div><span class="operator">=</span><div class="bev-source-box comparison"><strong>同期群偏差 −5d</strong><br>在本群体中更突出</div></div>
-          <div class="bev-contemporary-row"><div class="bev-source-box raw"><strong>302自身</strong><br>age: 92d</div><span class="operator">−</span><div class="bev-source-box environment"><strong>相似环境参照</strong><br>同期均值94d</div><span class="operator">=</span><div class="bev-source-box comparison"><strong>同期群偏差 −2d</strong><br>相对优势较小</div></div>
-        </div>
-        <div class="bev-full bev-step-compare">
-          <div class="bev-step-card"><strong>① 第一眼：只看原始表型</strong><p>92d小于95d，看上去302更快。但两头猪来自不同场次和季节，不能把所有差异都算在动物本身</p></div>
-          <div class="bev-step-card"><strong>② 再比较：寻找公平参照</strong><p>在同场、同期、同性别、相近日龄和相似管理条件下比较，301比本群平均值早5d，302只早2d</p></div>
-        </div>
-        <div class="bev-full"><p class="bev-result"><strong>结论</strong> 相对各自同期群，301的优势更明显</p></div>
-        <div class="bev-full bev-plain-language"><strong>生产人员先记住</strong><p>同期群比较不是为了“改动数据”，而是尽量让动物在相近环境背景下比高低，避免把好饲料、好季节或好管理误当成好遗传</p></div>
-        <div class="bev-full bev-warning-box"><strong>重要边界</strong><p>“原始表型−同期群均值”只是同期群内表型偏差，不等于育种值。BLUP会把场别、季节等环境效应放进模型，并同时利用亲缘和全部记录</p></div>`},
+        <div class="bev-full bev-good-box"><strong>后续教学参数</strong><p>后续简化示例设V<sub>A</sub>=20、V<sub>E</sub>=40，并暂时忽略D和I，则h²=20/(20+40)=1/3。上述A、D、I数值仅用于直观说明个体遗传值的组成</p></div><div class="bev-full bev-good-box"><strong>下一步</strong><p>单条表型只能提供有限证据，还可以联合自身、父母和同胞记录，提高对育种值的预测准确性</p></div>`},
       index:{label:'选择指数',summary:'把自身、父母和同胞记录联合起来，预测同一个育种目标并避免重复计算信息',winner:'指数更低，选301',title:'选择指数：多种亲属信息怎样共同预测一个育种目标？',used:['201','202','301','302','303'],winnerId:'301',infoLevel:4,decisionLevel:2,detail:`
         <div class="bev-full bev-plain-language"><strong>先理解原则，再看矩阵</strong><p>目标只有一个，例如“达到100 kg日龄的遗传能力”；自身、父母和同胞只是从不同角度提供证据。信息越多不等于简单相加，重复的家系信息要自动扣除</p></div>
         <div class="bev-full"><div class="bev-index-flow" aria-label="自身、父母和同胞记录形成选择指数"><div class="bev-source-box bev-source-self self"><strong>自身信息</strong><br><span class="text-small">同期群偏差，最直接但受环境影响</span></div><div class="source-arrow self-arrow">━━→</div><div class="bev-source-box bev-source-parent parent"><strong>父母信息</strong><br><span class="text-small">上一代的遗传线索</span></div><div class="source-arrow parent-arrow">━━→</div><div class="bev-source-box bev-source-sib sib"><strong>同胞信息</strong><br><span class="text-small">补充家系和难测性状证据</span></div><div class="source-arrow sib-arrow">━━→</div><div class="bev-index-process"><strong>联合确定权重</strong><span><b>P</b>：信息之间有多少重复</span><span><b>c</b>：各类信息与目标有多相关</span><span><b>b=P⁻¹c</b>：扣除重复后得到权重</span></div><div class="result-arrow">━━→</div><div class="bev-index-node bev-index-result"><strong>同一个目标</strong><b>I=b′x</b><span class="text-small">日龄指数越低越有利</span></div></div></div>

@@ -55,7 +55,7 @@
 .site-policy-links {
   margin-top: 0.35rem;
   font-size: 0.8rem;
-  text-align: center;
+  text-align: left;
   opacity: 0.78;
 
   a {
@@ -63,6 +63,19 @@
     text-decoration: underline;
     text-underline-offset: 3px;
   }
+}
+.teaching-reprint-notice {
+  max-width: 58rem;
+  margin: 2rem auto 1rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid #d8dddd;
+  border-left: 4px solid #aeb8b5;
+  border-radius: 6px;
+  background: #f7f8f8;
+  color: #6f7a77;
+  font-size: 0.78rem;
+  line-height: 1.7;
+  text-align: left;
 }
 .guestbook-form label {
   display: block;
@@ -110,7 +123,7 @@
   position: relative;
   max-width: 320px;
   padding: 1.25em;
-  text-align: center;
+  text-align: left;
   background: #fff;
   border-radius: 4px;
 }
@@ -352,7 +365,7 @@
   font-size: clamp(0.8rem, 1.35vw, 0.92rem);
   font-weight: 800;
   line-height: 1.25;
-  text-align: center;
+  text-align: left;
   white-space: nowrap;
 }
 

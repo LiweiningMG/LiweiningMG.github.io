@@ -5,6 +5,7 @@ permalink: /en/teaching/supercomputing-platform-introduction/
 lang: en
 translation_url: /teaching/2014-spring-teaching-1
 author_profile: true
+teaching_reprint_notice: true
 ---
 
 # What is a supercomputing platform, and how do we use it?

@@ -47,6 +47,10 @@ layout: default
       <section class="page__content" itemprop="text">
         {{ content }}
 
+        {% if page.collection == 'teaching' or page.teaching_reprint_notice %}
+          {% include teaching-reprint-notice.html %}
+        {% endif %}
+
         {% if page.citation and page.paperurl and page.slidesurl %}
           <p style="font-size: smaller">Recommended citation: {{ page.citation }}<br /><a href="{{ page.paperurl }}">原文链接</a> | <a href="{{ page.slidesurl }}">pdf全文下载</a></p>
         {% elsif page.citation and page.paperurl %}

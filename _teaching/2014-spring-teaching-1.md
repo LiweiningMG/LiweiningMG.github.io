@@ -3,6 +3,8 @@ title: "超级计算平台简介"
 collection: teaching
 type: "超算平台系列"
 permalink: /teaching/2014-spring-teaching-1
+lang: zh
+translation_url: /en/teaching/supercomputing-platform-introduction/
 venue: "中国农业大学"
 date: 2023-09-27
 location: "北京"

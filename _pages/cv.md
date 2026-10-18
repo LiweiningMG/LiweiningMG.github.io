@@ -15,7 +15,7 @@ redirect_from:
 {% include base_path %}
 
  <center>
-     <h1>李伟宁</h1>
+     <h1>个人简历</h1>
      <div>
          <span>
              <img src="/images/envelope-solid.svg" width="18px">

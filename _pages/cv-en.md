@@ -13,7 +13,7 @@ author_profile: true
 {% include base_path %}
 
 <center>
-  <h1>Weining Li</h1>
+  <h1>CV</h1>
   <div>
     <span><img src="/images/envelope-solid.svg" width="18px"> <a href="mailto:{{ site.data.profile.email }}">{{ site.data.profile.email }}</a></span>
     ·

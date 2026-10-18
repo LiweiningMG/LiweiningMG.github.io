@@ -147,6 +147,150 @@ test('desktop sidebar stays visible as long-page content scrolls', async () => {
     }
   } finally { await page.close(); }
 });
+test('CV uses the page label instead of repeating the author name', async () => {
+  const page = await browser.newPage();
+  try {
+    for (const [route, heading] of [['/cv/', '个人简历'], ['/en/cv/', 'CV']]) {
+      await page.goto('http://127.0.0.1:4000' + route, { waitUntil: 'domcontentloaded' });
+      assert.equal((await page.locator('.cv-page center h1').innerText()).trim(), heading);
+      assert.equal(await page.locator('.sidebar .author__name').count(), 0);
+    }
+  } finally { await page.close(); }
+});
+test('personal-life hero heading stays on one line on desktop', async () => {
+  const page = await browser.newPage();
+  try {
+    for (const width of [981, 1024, 1100, 1280, 1440, 1920]) {
+      await page.setViewportSize({ width, height: 900 });
+      await page.goto('http://127.0.0.1:4000/personal-life/', { waitUntil: 'domcontentloaded' });
+      const layout = await page.locator('.life-hero h1').evaluate(element => {
+        const range = document.createRange();
+        range.selectNodeContents(element);
+        return {
+          lines: new Set(Array.from(range.getClientRects()).map(rect => Math.round(rect.top))).size,
+          titleRight: element.getBoundingClientRect().right,
+          copyRight: element.closest('.life-hero__copy').getBoundingClientRect().right
+        };
+      });
+      assert.equal(layout.lines, 1, `personal-life hero heading wrapped at ${width}px`);
+      assert.ok(layout.titleRight <= layout.copyRight + 1, `personal-life hero heading overlaps the collage at ${width}px`);
+    }
+  } finally { await page.close(); }
+});
+test('game gallery displays eight named games with PUBG fourth', async () => {
+  const page = await browser.newPage();
+  try {
+    for (const [route, fourthTitle] of [['/personal-life/', '绝地求生'], ['/en/personal-life/', 'PUBG']]) {
+      await page.goto('http://127.0.0.1:4000' + route, { waitUntil: 'domcontentloaded' });
+      const gameCard = page.locator('.life-poster--game');
+      assert.equal((await gameCard.getAttribute('data-gallery-images')).split('|').length, 8);
+      await gameCard.click();
+      const captions = await page.locator('.gallery-thumbnail__caption').allInnerTexts();
+      assert.equal(captions.length, 8);
+      assert.equal(captions[3], fourthTitle);
+      assert.equal(await page.locator('.gallery-thumbnail img').nth(3).getAttribute('alt'), fourthTitle);
+    }
+    await page.setViewportSize({ width: 390, height: 844 });
+    await page.goto('http://127.0.0.1:4000/personal-life/', { waitUntil: 'domcontentloaded' });
+    await page.locator('.life-poster--game').click();
+    const mobileCaption = await page.locator('.gallery-thumbnail__caption').first().evaluate(element => ({
+      fontSize: parseFloat(getComputedStyle(element).fontSize),
+      insideCard: element.getBoundingClientRect().right <= element.parentElement.getBoundingClientRect().right + 1
+    }));
+    assert.ok(mobileCaption.fontSize >= 12, `mobile caption font is ${mobileCaption.fontSize}px`);
+    assert.equal(mobileCaption.insideCard, true);
+    assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
+  } finally { await page.close(); }
+});
+test('every personal-life photo gallery displays a short caption for each image', async () => {
+  const page = await browser.newPage();
+  try {
+    await page.setViewportSize({ width: 390, height: 844 });
+    for (const [route, labelAttribute] of [['/personal-life/', 'data-gallery-labels-zh'], ['/en/personal-life/', 'data-gallery-labels-en']]) {
+      await page.goto('http://127.0.0.1:4000' + route, { waitUntil: 'domcontentloaded' });
+      const cards = await page.locator('.life-gallery-card[data-gallery-images]').all();
+      for (const card of cards) {
+        const expected = (await card.getAttribute(labelAttribute)).split('|');
+        assert.equal(expected.length, (await card.getAttribute('data-gallery-images')).split('|').length);
+        await card.click();
+        if (expected.length === 1) {
+          assert.equal(await page.locator('.life-gallery-dialog__grid').count(), 0);
+          assert.equal(await page.locator('.gallery-viewer').isVisible(), true);
+          assert.equal(await page.locator('.gallery-image-caption').innerText(), expected[0]);
+          await page.locator('.life-gallery-dialog__close').click();
+          continue;
+        }
+        const captions = await page.locator('.gallery-thumbnail__caption').allInnerTexts();
+        assert.deepEqual(captions, expected);
+        const captionLayout = await page.locator('.gallery-thumbnail__caption').first().evaluate(element => ({
+          fontSize: parseFloat(getComputedStyle(element).fontSize),
+          insideCard: element.getBoundingClientRect().right <= element.parentElement.getBoundingClientRect().right + 1
+        }));
+        assert.ok(captionLayout.fontSize >= 12);
+        assert.equal(captionLayout.insideCard, true);
+        assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
+        if (route === '/personal-life/') {
+          assert.ok(captions.every(caption => (caption.match(/[\u4e00-\u9fff]/g) || []).length <= 10), 'Chinese captions stay within ten Han characters');
+        }
+        await page.locator('.life-gallery-dialog__close').click();
+      }
+    }
+  } finally { await page.close(); }
+});
+test('personal-life captions and running/QR presentation follow the requested details', async () => {
+  const page = await browser.newPage();
+  try {
+    await page.setViewportSize({ width: 1440, height: 1000 });
+    await page.goto('http://127.0.0.1:4000/personal-life/', { waitUntil: 'domcontentloaded' });
+    const captions = async title => (await page.locator(`.life-gallery-card[data-gallery-title="${title}"]`).getAttribute('data-gallery-labels-zh')).split('|');
+    assert.deepEqual(await captions('乒乓球'), Array(3).fill('动医动科联谊赛'));
+    assert.deepEqual((await captions('羽毛球')).slice(-2), ['单打回合', '单打回合']);
+    assert.deepEqual(await captions('骑行'), ['本科期间骑行记录', '本科期间骑行记录']);
+    const chineseFood = await captions('日常中餐');
+    for (const [index, label] of [[1,'甜粄（客家年糕）'],[4,'酿茄子（茄子酿肉）'],[5,'炒河粉'],[6,'广式叉烧'],[7,'酿苦瓜'],[8,'酿春（鸡蛋酿肉沫）'],[10,'豆沙馅月饼'],[12,'烤猪蹄']]) assert.equal(chineseFood[index], label);
+    assert.equal((await captions('西点烘焙'))[0], '瑞士卷');
+    assert.equal((await captions('动手实验室'))[3], '补胎');
+    assert.match(await page.locator('[data-gallery-title="跑步"]').getAttribute('data-gallery-images'), /running-total\.webp/);
+    const qr = await page.locator('.life-qr-frame img').evaluate(img => {
+      const card = img.closest('.life-qr-card').getBoundingClientRect();
+      const frame = img.closest('.life-qr-frame').getBoundingClientRect();
+      return { width: frame.width, cardHeight: card.height, frameCenter: frame.left + frame.width / 2 - (card.left + card.width / 2) };
+    });
+    assert.ok(qr.width >= 220, `QR frame should be enlarged: ${qr.width}px`);
+    assert.ok(Math.abs(qr.frameCenter) < 4, `QR should be centered: ${qr.frameCenter}px`);
+    await page.locator('[data-gallery-title="跑步"]').click();
+    const runningRatios = await page.locator('.gallery-thumbnail img').evaluateAll(async images => {
+      await Promise.all(images.map(image => { image.loading = 'eager'; return image.decode().catch(() => null); }));
+      return images.map(image => {
+        const box = image.getBoundingClientRect();
+        return { source: image.naturalWidth / image.naturalHeight, rendered: box.width / box.height };
+      });
+    });
+    assert.ok(runningRatios.every(ratio => Math.abs(ratio.source - ratio.rendered) < 0.015), 'running screenshot frames retain their source aspect ratios without blank side areas');
+    assert.equal((await page.locator('[data-gallery-title="跑步"]').getAttribute('data-gallery-labels-zh')).split('|').at(-1), '累计跑量1207公里');
+    await page.locator('.life-gallery-dialog__close').click();
+    await page.locator('[data-gallery-title="骑行"]').click();
+    const cycling = await page.locator('.gallery-thumbnail').evaluateAll(cards => cards.map(card => {
+      const box = card.getBoundingClientRect();
+      return { width: box.width, height: box.height, image: card.querySelector('img').getBoundingClientRect().toJSON() };
+    }));
+    assert.ok(cycling[0].width > cycling[1].width * 1.7, 'landscape cycling photo gets the wider natural-ratio column');
+    assert.ok(Math.abs(cycling[0].height - cycling[1].height) < 2, 'paired cycling photos align to equal heights');
+  } finally { await page.close(); }
+});
+test('personal-life hero collage photos do not open redundant popups', async () => {
+  const page = await browser.newPage();
+  try {
+    for (const route of ['/personal-life/', '/en/personal-life/']) {
+      await page.goto('http://127.0.0.1:4000' + route, { waitUntil: 'domcontentloaded' });
+      assert.equal(await page.locator('.life-photo .photo-preview-link').count(), 0);
+      for (const photo of await page.locator('.life-photo img').all()) {
+        await photo.click();
+        assert.equal(await page.locator('#life-gallery-dialog').count(), 0);
+      }
+    }
+  } finally { await page.close(); }
+});
 async function fixture(lang = 'en', remote = 'ok') {
   const page = await browser.newPage();
   await page.route('https://comments.liweining.cn/**', async route => {

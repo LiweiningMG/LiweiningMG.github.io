@@ -178,9 +178,17 @@
   margin-left: auto;
 }
 
+.masthead__inner-wrap {
+  max-width: none;
+}
+
+#main:has(.sidebar) {
+  max-width: none;
+}
+
 @media (min-width: 80em) {
   #main:has(.page.wide) {
-    max-width: 1260px;
+    max-width: none;
   }
 }
 
@@ -800,6 +808,10 @@
   box-shadow: 0 20px 55px rgba(35, 52, 68, 0.09);
 }
 
+.life-hero__copy {
+  align-self: center;
+}
+
 .life-hero h1 {
   max-width: 9em;
   margin: 0 0 0.8rem;
@@ -1355,8 +1367,8 @@ button.life-poster {
 }
 
 .life-food-grid--with-qr {
-  grid-template-columns: minmax(180px, 0.78fr) repeat(2, minmax(0, 1fr));
-  align-items: stretch;
+  grid-template-columns: minmax(220px, 0.9fr) repeat(2, minmax(0, 1fr));
+  align-items: start;
 }
 
 .life-qr-card {
@@ -1387,26 +1399,21 @@ button.life-poster {
 }
 
 .life-qr-card::after {
-  bottom: 1rem;
-  left: 0.9rem;
-  width: 0.8rem;
-  height: 0.8rem;
-  background: #16a085;
-  box-shadow: 1.15rem -0.55rem 0 #f2c94c, 2.15rem 0.35rem 0 #2f80ed;
+  display: none;
 }
 
 .life-qr-frame {
   position: relative;
   display: grid;
   place-items: center;
-  width: min(100%, 12rem);
+  width: min(100%, 14rem);
   margin: 0 auto 0.85rem;
   padding: 0.8rem;
   background: repeating-linear-gradient(135deg, #fff 0 9px, #fff2df 9px 18px);
   border: 4px solid #ffb86c;
   border-radius: 22px;
   box-shadow: inset 0 0 0 5px #fff, 0 12px 28px rgba(148, 83, 21, 0.12);
-  transform: rotate(-1.2deg);
+  transform: none;
 }
 
 .life-qr-frame img {

@@ -140,51 +140,64 @@
     root.querySelector('.life-gallery-dialog__close').focus();
     return root;
   }
-  function showGallery(title, images, origin) {
+  function showGallery(title, images, origin, labels, layout) {
     if (!images.length) return;
-    var grid = '<div class="life-gallery-dialog__grid">' + images.map(function (src,index) {
-      return '<button type="button" class="gallery-thumbnail" data-photo-index="' + index + '" aria-label="' + (english ? 'View photo ' : '查看照片 ') + (index+1) +
-        '"><img loading="lazy" decoding="async" src="' + escapeHtml(src) + '" alt="' + escapeHtml(title) + ' ' + (index+1) + '"><span>' + (index+1) + '</span></button>';
+    var gridLayout = layout === 'natural-pair' || layout === 'natural-images' ? ' life-gallery-dialog__grid--' + layout : '';
+    var grid = '<div class="life-gallery-dialog__grid' + gridLayout + '">' + images.map(function (src,index) {
+      var label=labels && labels[index], photoAlt=label || (title + ' ' + (index+1));
+      return '<button type="button" class="gallery-thumbnail' + (label?' gallery-thumbnail--captioned':'') + '" data-photo-index="' + index + '" aria-label="' + (label ? escapeHtml(photoAlt) : (english ? 'View photo ' : '查看照片 ') + (index+1)) +
+        '"><img loading="lazy" decoding="async" src="' + escapeHtml(src) + '" alt="' + escapeHtml(photoAlt) + '">' + (label ? '<span class="gallery-thumbnail__caption">' + escapeHtml(label) + '</span>' : '<span class="gallery-thumbnail__index">' + (index+1) + '</span>') + '</button>';
     }).join('') + '</div>';
-    var viewer = '<section class="gallery-viewer" hidden><div class="gallery-toolbar"><button type="button" data-gallery-back>' + copy.back +
-      '</button><span data-photo-counter aria-live="polite"></span><button type="button" data-gallery-zoom aria-label="' + copy.zoom +
+    var singleImage = images.length === 1;
+    var viewer = '<section class="gallery-viewer' + (singleImage ? ' gallery-viewer--single' : '') + '"' + (singleImage ? '' : ' hidden') + '><div class="gallery-toolbar">' + (singleImage ? '' : '<button type="button" data-gallery-back>' + copy.back + '</button>') +
+      (singleImage ? '' : '<span data-photo-counter aria-live="polite"></span>') + '<button type="button" data-gallery-zoom aria-label="' + copy.zoom +
       '" aria-pressed="false">＋</button></div><div class="gallery-image-stage"><button class="gallery-arrow" type="button" data-gallery-prev aria-label="' + copy.previous +
-      '">‹</button><div class="gallery-image-scroll"><img decoding="async" alt=""><p class="gallery-image-error" hidden>' + copy.imageFailed +
+      '">‹</button><div class="gallery-image-scroll"><img decoding="async" alt=""><p class="gallery-image-caption"></p><p class="gallery-image-error" hidden>' + copy.imageFailed +
       '</p></div><button class="gallery-arrow" type="button" data-gallery-next aria-label="' + copy.next + '">›</button></div></section>';
-    var root = openModal(title,grid+viewer,origin), index = 0;
+    var root = openModal(title,(singleImage ? '' : grid)+viewer,origin), index = 0;
     var overview = root.querySelector('.life-gallery-dialog__grid'), detail = root.querySelector('.gallery-viewer');
     var image = detail.querySelector('img'), zoom = detail.querySelector('[data-gallery-zoom]');
     function displayPhoto(next) {
       index = (next + images.length) % images.length;
       detail.classList.remove('is-zoomed'); zoom.setAttribute('aria-pressed','false');
       detail.querySelector('.gallery-image-error').hidden = true; image.hidden = false;
-      image.src = images[index]; image.alt = title + ' ' + (index+1);
-      detail.querySelector('[data-photo-counter]').textContent = (index+1) + ' / ' + images.length;
+      image.src = images[index]; image.alt = labels && labels[index] ? labels[index] : title + ' ' + (index+1);
+      var counter = detail.querySelector('[data-photo-counter]');
+      if (counter) counter.textContent = (index+1) + ' / ' + images.length;
+      detail.querySelector('.gallery-image-caption').textContent = labels && labels[index] ? labels[index] : '';
     }
     image.addEventListener('error',function () { image.hidden=true; detail.querySelector('.gallery-image-error').hidden=false; });
-    root.querySelectorAll('[data-photo-index]').forEach(function (button) {
+    if (overview) root.querySelectorAll('[data-photo-index]').forEach(function (button) {
       button.addEventListener('click',function () { overview.hidden=true; detail.hidden=false; displayPhoto(Number(button.dataset.photoIndex)); detail.querySelector('[data-gallery-back]').focus(); });
     });
-    detail.querySelector('[data-gallery-back]').addEventListener('click',function () { detail.hidden=true; overview.hidden=false; overview.querySelector('[data-photo-index="' + index + '"]').focus(); });
-    detail.querySelector('[data-gallery-prev]').addEventListener('click',function () { displayPhoto(index-1); });
-    detail.querySelector('[data-gallery-next]').addEventListener('click',function () { displayPhoto(index+1); });
+    var back = detail.querySelector('[data-gallery-back]');
+    if (back) back.addEventListener('click',function () { detail.hidden=true; overview.hidden=false; overview.querySelector('[data-photo-index="' + index + '"]').focus(); });
+    var previous = detail.querySelector('[data-gallery-prev]'), next = detail.querySelector('[data-gallery-next]');
+    if (previous) previous.addEventListener('click',function () { displayPhoto(index-1); });
+    if (next) next.addEventListener('click',function () { displayPhoto(index+1); });
     zoom.addEventListener('click',function () { var active=zoom.getAttribute('aria-pressed')!=='true'; zoom.setAttribute('aria-pressed',String(active)); detail.classList.toggle('is-zoomed',active); });
-    modalState.viewer=detail; modalState.move=function (direction) { displayPhoto(index+direction); };
+    modalState.viewer=detail; modalState.move=function (direction) { if (!singleImage) displayPhoto(index+direction); };
+    if (singleImage) displayPhoto(0);
   }
   document.addEventListener('click',function (event) {
     var card=event.target.closest('[data-gallery-images]'); if (!card) return;
-    event.preventDefault(); showGallery(card.dataset.galleryTitle || (english?'Photo gallery':'生活图集'),card.dataset.galleryImages.split('|').filter(Boolean),card);
+    event.preventDefault();
+    var labels = (english ? card.dataset.galleryLabelsEn : card.dataset.galleryLabelsZh);
+    showGallery(card.dataset.galleryTitle || (english?'Photo gallery':'生活图集'),card.dataset.galleryImages.split('|').filter(Boolean),card,labels ? labels.split('|') : null,card.dataset.galleryLayout);
   });
   // Original photo links stay usable when scripts are disabled.
-  document.querySelectorAll('.home-collage__item img, .home-photo-strip img, .life-photo img').forEach(function (img) {
+  document.querySelectorAll('.home-collage__item img, .home-photo-strip img').forEach(function (img) {
     var anchor = document.createElement('a'); anchor.className='photo-preview-link'; anchor.href=img.getAttribute('src');
     anchor.dataset.galleryImages=img.getAttribute('src'); anchor.dataset.galleryTitle=img.alt;
+    var caption = img.closest('figure') && img.closest('figure').querySelector('figcaption');
+    anchor.dataset.galleryLabelsZh=anchor.dataset.galleryLabelsEn=caption ? caption.textContent.trim() : img.alt;
     anchor.setAttribute('aria-label',(english?'Enlarge photo: ':'放大照片：')+img.alt);
     img.replaceWith(anchor); anchor.appendChild(img);
   });
   document.querySelectorAll('.page__content > p a[href]').forEach(function (link) {
     if (/\.(jpe?g|png|webp)$/i.test(link.getAttribute('href'))) {
       link.dataset.galleryImages=link.getAttribute('href'); link.dataset.galleryTitle=link.textContent || (english?'Photo':'照片');
+      link.dataset.galleryLabelsZh=link.dataset.galleryLabelsEn=link.textContent.trim() || link.dataset.galleryTitle;
     }
   });
   document.querySelectorAll('[data-share-target]').forEach(function (button) {

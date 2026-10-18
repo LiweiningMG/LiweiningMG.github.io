@@ -1,0 +1,6 @@
+{% assign service_lang = page.lang | default: 'zh' %}
+<div class="cv-affiliation-grid">
+  {% for service in site.data.academic-service %}
+  <article><a href="{{ service.url | escape }}"><strong>{{ service.name[service_lang] | escape }}</strong><span>{{ service.role[service_lang] | escape }}</span></a></article>
+  {% endfor %}
+</div>

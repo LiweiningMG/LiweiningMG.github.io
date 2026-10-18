@@ -1,43 +1,20 @@
-{% include base_path %}
+{% assign nav_lang = page.lang | default: 'zh' %}
 {% assign nav_links = site.data.navigation.main %}
 {% assign nav_home_url = '/' %}
-{% assign nav_site_title = site.title %}
-{% assign language_url = page.translation_url | default: '/en/' %}
-{% assign language_label = 'EN' %}
-{% assign language_title = 'English version' %}
-{% if page.lang == 'en' %}
-  {% assign nav_links = site.data.navigation.en %}
-  {% assign nav_home_url = '/en/' %}
-  {% assign nav_site_title = 'Li Weining' %}
-  {% assign language_url = page.translation_url | default: '/' %}
-  {% assign language_label = '中文' %}
-  {% assign language_title = '中文版' %}
-{% endif %}
-
-<div class="masthead">
+{% assign nav_site_title = '李伟宁' %}
+{% assign language_url = page.translation_url %}
+{% if nav_lang == 'en' %}{% assign nav_links = site.data.navigation.en %}{% assign nav_home_url = '/en/' %}{% assign nav_site_title = 'Weining Li' %}{% endif %}
+<header class="masthead">
   <div class="masthead__inner-wrap">
-    <div class="masthead__menu">
-      <nav id="site-nav" class="greedy-nav">
-        <button><div class="navicon"></div></button>
-        <ul class="visible-links">
-          <li class="masthead__menu-item masthead__menu-item--lg"><a href="{{ base_path }}{{ nav_home_url }}">{{ nav_site_title }}</a></li>
-          {% for link in nav_links %}
-            {% if link.url contains 'http' %}
-              {% assign domain = '' %}
-            {% else %}
-              {% assign domain = base_path %}
-            {% endif %}
-            <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
-          {% endfor %}
-          {% if language_url contains 'http' %}
-            {% assign language_domain = '' %}
-          {% else %}
-            {% assign language_domain = base_path %}
-          {% endif %}
-          <li class="masthead__menu-item masthead__menu-item--language"><a href="{{ language_domain }}{{ language_url }}" title="{{ language_title }}" aria-label="{{ language_title }}">{{ language_label }}</a></li>
-        </ul>
-        <ul class="hidden-links hidden"></ul>
-      </nav>
-    </div>
+    <nav id="site-nav" class="site-nav" aria-label="{% if nav_lang == 'en' %}Main navigation{% else %}主导航{% endif %}">
+      <a class="site-nav__brand" href="{{ nav_home_url | relative_url }}"{% if page.url == nav_home_url %} aria-current="page"{% endif %}><img src="{{ '/images/icons/site-icon.svg' | relative_url }}" width="34" height="34" alt=""><span>{{ nav_site_title }}<small>{% if nav_lang == 'en' %}Research & life{% else %}工作与生活{% endif %}</small></span></a>
+      <button class="site-nav__toggle" data-menu-toggle type="button" aria-controls="site-menu" aria-expanded="false" aria-label="{% if nav_lang == 'en' %}Open navigation menu{% else %}打开导航菜单{% endif %}"><span aria-hidden="true">☰</span><span class="site-nav__toggle-text">{% if nav_lang == 'en' %}Menu{% else %}菜单{% endif %}</span></button>
+      <ul id="site-menu" class="site-nav__links">
+        {% for link in nav_links %}
+        <li><a href="{{ link.url | relative_url }}"{% if page.url contains link.url %} aria-current="page"{% endif %}>{{ link.title }}</a></li>
+        {% endfor %}
+        {% if language_url %}<li class="masthead__menu-item--language"><a href="{{ language_url | relative_url }}" lang="{% if nav_lang == 'en' %}zh-CN{% else %}en{% endif %}" aria-label="{% if nav_lang == 'en' %}中文版{% else %}English version{% endif %}">{% if nav_lang == 'en' %}中文{% else %}EN{% endif %}</a></li>{% endif %}
+      </ul>
+    </nav>
   </div>
-</div>
+</header>

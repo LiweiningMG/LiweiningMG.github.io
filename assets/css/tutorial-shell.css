@@ -1,0 +1,24 @@
+/* Shared site identity without changing the scientific figure's own styles. */
+.masthead { position:sticky; top:0; z-index:100; margin:0 0 24px; padding:0; background:#fff; border-bottom:1px solid #dce6df; }
+.masthead__inner-wrap { width:100%; max-width:none; margin:auto; padding:12px clamp(24px,2vw,40px); }
+.site-nav { display:flex; align-items:center; justify-content:space-between; gap:16px; min-height:46px; }
+.site-nav__brand { display:flex; align-items:center; gap:10px; white-space:nowrap; color:#146b5b; font-size:24px; font-weight:700; text-decoration:none; }
+.site-nav__brand small { display:block; margin-top:2px; font-size:12px; font-weight:500; letter-spacing:.08em; color:#60776c; }
+.site-nav__brand img { flex:none; }
+.site-nav__links { display:flex; gap:6px; list-style:none; margin:0; padding:0; }
+.site-nav__links li { margin:0; }
+.site-nav__links a { display:block; padding:7px 10px; color:#586d65; font-size:16px; text-decoration:none; border-radius:8px; }
+.site-nav__links a:hover,.site-nav__links a[aria-current=page] { background:#edf6ef; color:#146b5b; }
+.site-nav__toggle { display:none; align-items:center; gap:7px; background:#edf6ef; color:#146b5b; padding:7px 10px; border:1px solid #dce6df; border-radius:8px; }
+.site-nav__toggle-text { font-size:16px; }
+.site-nav :focus-visible { outline:3px solid #9ac8b6; outline-offset:3px; }
+@media(max-width:1039px) {
+  .site-nav__toggle { display:inline-flex; }
+  .site-nav__links { display:none; position:absolute; top:100%; margin-top:6px; right:12px; left:12px; padding:12px; background:#fff; border:1px solid #dce6df; border-radius:12px; box-shadow:0 8px 24px #253d351a; flex-direction:column; }
+  .site-nav.is-open .site-nav__links { display:flex; }
+  .no-js .site-nav { flex-wrap:wrap; }
+  .no-js .site-nav__links { display:flex; position:static; width:100%; flex-direction:row; flex-wrap:wrap; box-shadow:none; }
+  .no-js .site-nav__toggle { display:none; }
+}
+@media(prefers-reduced-motion:reduce) { *,*::before,*::after { animation:none!important; transition:none!important; } }
+@media(max-width:760px) { .masthead__inner-wrap { padding:12px 18px; } }

@@ -1,0 +1,5 @@
+{% assign entry = site.data.publications | where: 'id', page.publication_id | first %}
+<div class="publication-detail-actions">
+  {% if entry.doi %}<a class="btn btn--primary" href="{{ entry.doi }}">{% if page.lang == 'en' %}Full text{% else %}原文链接{% endif %} ↗</a>{% endif %}
+  {% if entry.pdf %}<a class="btn" href="{{ entry.pdf | relative_url }}">PDF ↗</a>{% endif %}
+</div>

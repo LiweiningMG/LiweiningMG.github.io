@@ -1,0 +1,5 @@
+<div class="guestbook-load-state" id="guestbook-status" role="status" data-email="{{ site.data.profile.email }}">{% if page.lang == 'en' %}Loading the guestbook…{% else %}正在加载留言板…{% endif %}</div>
+<div id="waline"></div>
+<noscript><p>{% if page.lang == 'en' %}Enable JavaScript to use the guestbook, or contact me by{% else %}留言功能需要启用 JavaScript，也可以通过邮箱联系我：{% endif %} <a href="mailto:{{ site.data.profile.email }}">{{ site.data.profile.email }}</a></p></noscript>
+<link rel="stylesheet" href="https://unpkg.com/@waline/client@3.16.1/dist/waline.css">
+<script type="module" src="{{ '/assets/js/guestbook-loader.js' | relative_url }}"></script>

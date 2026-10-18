@@ -1,0 +1,10 @@
+{% assign cv_lang = page.lang | default: 'zh' %}
+{% for group in (1..2) %}
+{% if group == 1 %}{% assign group_name = 'first' %}{% else %}{% assign group_name = 'coauthor' %}{% endif %}
+<h3>{% if cv_lang == 'en' %}{% if group == 1 %}First-author publications{% else %}Co-authored publications{% endif %}{% else %}{% if group == 1 %}第一作者文章与会议论文{% else %}合作发表{% endif %}{% endif %}</h3>
+<ul class="cv-publication-list">
+{% for paper in site.data.publications %}{% if paper.cv_group == group_name %}
+<li>{% include publication-citation.html paper=paper %}{% if paper.doi %} <a href="{{ paper.doi }}">DOI ↗</a>{% endif %}{% if paper.note %}<small>{{ paper.note[cv_lang] }}</small>{% endif %}</li>
+{% endif %}{% endfor %}
+</ul>
+{% endfor %}

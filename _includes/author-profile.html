@@ -9,15 +9,20 @@
 {% assign author_employer = author.employer %}
 {% assign author_uri_label = author.uri_label | default: site.data.ui-text[site.locale].website_label | default: "Website" %}
 {% assign author_email_label = site.data.ui-text[site.locale].email_label | default: "Email" %}
+{% assign author_lang = page.lang | default: 'zh' %}
+{% assign author_name = site.data.profile.name[author_lang] %}
+{% assign author_location = site.data.profile.location[author_lang] %}
+{% assign current_consultant = site.data.profile.roles | where: 'featured', true | first %}
 {% if page.lang == 'en' %}
   {% assign author_name = "Weining Li" %}
   {% assign author_bio = "Postdoctoral Researcher" %}
-  {% assign author_location = "Nanjing, Jiangsu" %}
   {% assign author_employer = "Institute of Animal Science, JAAS" %}
-  {% assign author_uri_label = "Lihua Food Group Co." %}
   {% assign author_email_label = "Email" %}
 {% endif %}
 
+{% assign postdoc_role = site.data.profile.roles | where: 'id', 'postdoc' | first %}
+{% assign author_bio = postdoc_role.title[author_lang] %}
+{% assign author_employer = postdoc_role.organization[author_lang] %}
 <div itemscope itemtype="http://schema.org/Person">
 
   <div class="author__avatar">
@@ -35,7 +40,7 @@
   </div>
 
   <div class="author__urls-wrapper">
-    <button class="btn btn--inverse">Follow</button>
+    <button class="btn btn--inverse" type="button" aria-expanded="false">{% if page.lang == 'en' %}Contact & links{% else %}联系与链接{% endif %}</button>
     <ul class="author__urls social-icons">
       <!-- Font Awesome icons / Biographic information  -->
       {% if author.location %}
@@ -46,15 +51,19 @@
         {% endif %}
       {% endif %}
       {% if author.employer %}
-        {% if author.employer_url %}
-          <li class="author__desktop"><a href="{{ author.employer_url }}"><i class="fas fa-fw fa-building-columns icon-pad-right" aria-hidden="true"></i>{{ author_employer }}</a></li>
-        {% else %}
-          <li class="author__desktop"><i class="fas fa-fw fa-building-columns icon-pad-right" aria-hidden="true"></i>{{ author_employer }}</li>
-        {% endif %}
+        {% assign employer_url = postdoc_role.url | default: author.employer_url %}
+        <li class="author__desktop author__affiliation">
+          <i class="fas fa-fw fa-building-columns" aria-hidden="true"></i>
+          <div class="author__affiliation-text">{% if employer_url %}<a href="{{ employer_url }}">{{ author_employer }}</a>{% else %}<span>{{ author_employer }}</span>{% endif %}</div>
+        </li>
       {% endif %}
-      {% if author.uri %}
-        <li><a href="{{ author.uri }}"><i class="fas fa-fw fa-link icon-pad-right" aria-hidden="true"></i>{{ author_uri_label }}</a></li>
-      {% endif %}
+      <li class="author__role author__affiliation">
+        <i class="fas fa-fw fa-briefcase" aria-hidden="true"></i>
+        <div class="author__affiliation-text">
+          {% if current_consultant.url %}<a href="{{ current_consultant.url }}">{{ current_consultant.organization[author_lang] }}</a>{% else %}<span>{{ current_consultant.organization[author_lang] }}</span>{% endif %}
+          <span class="author__affiliation-detail">{{ current_consultant.title[author_lang] }}</span>
+        </div>
+      </li>
       {% if author.email %}
         <li><a href="mailto:{{ author.email }}"><i class="fas fa-fw fa-envelope icon-pad-right" aria-hidden="true"></i>{{ author_email_label }}</a></li>
       {% endif %}

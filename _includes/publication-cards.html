@@ -1,0 +1,24 @@
+{% assign cards_lang = page.lang | default: 'zh' %}
+<div class="publication-cards{% if include.compact %} publication-cards--compact{% endif %}">
+{% for paper in site.data.publications %}
+{% assign show_paper = false %}
+{% if include.compact and paper.featured %}{% assign show_paper = true %}{% endif %}
+{% unless include.compact %}{% if paper.category == include.category and paper.route %}{% assign show_paper = true %}{% endif %}{% endunless %}
+{% if show_paper %}
+  <article class="publication-card">
+    <span class="publication-card__year">{{ paper.year }}</span>
+    <div>
+      {% if include.compact %}
+      <h3><a href="{{ paper.route[cards_lang] | relative_url }}">{{ paper.short_title[cards_lang] }}</a></h3>
+      <p>{{ paper.summary[cards_lang] }}</p>
+      <span class="publication-card__journal">{{ paper.journal }}</span>
+      {% else %}
+      <h3><a href="{{ paper.route[cards_lang] | relative_url }}">{% include publication-citation.html paper=paper %}</a></h3>
+      <p>{{ paper.technical_summary[cards_lang] }}</p>
+      {% if paper.doi %}<a class="publication-card__link" href="{{ paper.doi }}">{% if cards_lang == 'en' %}Full text{% else %}原文{% endif %} ↗</a>{% endif %}
+      {% if paper.pdf %}<a class="publication-card__link" href="{{ paper.pdf | relative_url }}">PDF ↗</a>{% endif %}
+      {% endif %}
+    </div>
+  </article>
+{% endif %}{% endfor %}
+</div>

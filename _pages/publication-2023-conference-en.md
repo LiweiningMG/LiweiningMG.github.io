@@ -3,13 +3,12 @@ layout: single
 title: "Bayesian models for multibreed genomic selection considering covariance heterogeneity"
 permalink: /en/publication/2023-08-19-conference-1/
 lang: en
+publication_id: conference-2023
 translation_url: /publication/2023-08-19-conference-1
 author_profile: true
 ---
 
-**Citation**: Li W, Li S, Liu J. Bayesian models for multibreed genomic selection considering covariance heterogeneity. The 22nd National Symposium on Animal Genetics and Breeding, Shanxi, 2023.
-
-[Talk page](https://liweining.cn/en/talks/){: .btn .btn--primary}
+[Talk page](/en/talks/){: .btn .btn--primary}
 
 ## Introduction
 

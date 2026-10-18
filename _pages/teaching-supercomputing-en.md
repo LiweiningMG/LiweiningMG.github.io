@@ -1,6 +1,7 @@
 ---
 layout: single
 title: "Introduction to Supercomputing Platforms"
+description: "An introduction to HPC platforms, remote access, Linux, job scheduling, and choosing a computing environment."
 permalink: /en/teaching/supercomputing-platform-introduction/
 lang: en
 translation_url: /teaching/2014-spring-teaching-1

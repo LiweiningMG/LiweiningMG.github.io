@@ -1,0 +1,77 @@
+# Project names marked *** are deliberately omitted from the public CV.
+- period:
+    zh: 2026.07 – 2029.06
+    en: 2026.07 – 2029.06
+  name:
+    zh: '***'
+    en: '***'
+  category:
+    zh: 江苏省自然科学基金青年基金项目
+    en: Jiangsu Provincial Natural Science Foundation — Young Scientists Fund
+  category_source: https://kjj.nanjing.gov.cn/njskxjswyh/202604/P020260430538813076168.pdf
+  funding:
+    zh: 20万元
+    en: CNY 200,000
+  role:
+    zh: 主持
+    en: PI
+- period:
+    zh: 2024.08 – 2027.01
+    en: 2024.08 – 2027.01
+  name:
+    zh: 《多品种基因组联合遗传评估方法研发与应用》
+    en: Development and application of multibreed joint genomic genetic evaluation methods
+  category:
+    zh: 南京市博士后科研资助项目
+    en: Nanjing Postdoctoral Research Funding
+  funding:
+    zh: 5万元
+    en: CNY 50,000
+  role:
+    zh: 主持
+    en: PI
+- period:
+    zh: 2021.12 – 2026.11
+    en: 2021.12 – 2026.11
+  name:
+    zh: '***'
+    en: '***'
+  category:
+    zh: 重点研发子课题
+    en: Key R&D subproject
+  funding:
+    zh: 255万元
+    en: CNY 2.55 million
+  role:
+    zh: 参与
+    en: Participant
+- period:
+    zh: 2022.12 – 2025.11
+    en: 2022.12 – 2025.11
+  name:
+    zh: 《贵州地方猪新品种培育及良繁》
+    en: Breeding and propagation of a new Guizhou local pig breed
+  category:
+    zh: 贵州省科技支撑计划农业领域重点项目
+    en: Guizhou Provincial Agricultural Science and Technology Support Project
+  funding:
+    zh: 52万元
+    en: CNY 520,000
+  role:
+    zh: 参与
+    en: Participant
+- period:
+    zh: 2020.01 – 2023.12
+    en: 2020.01 – 2023.12
+  name:
+    zh: 《基于多组学整合和特征提取策略建立基因组选择新方法》
+    en: New genomic selection methods based on multi-omics integration and feature extraction
+  category:
+    zh: 国自然面上
+    en: NSFC General Program
+  funding:
+    zh: 57万元
+    en: CNY 570,000
+  role:
+    zh: 参与
+    en: Participant

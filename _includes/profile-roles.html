@@ -1,0 +1,19 @@
+{% assign profile_lang = page.lang | default: 'zh' %}
+{% if include.compact %}
+  {% for role in site.data.profile.roles %}{% if role.current %}
+  <span>{{ role.title[profile_lang] }} · {{ role.organization[profile_lang] }}</span>
+  {% endif %}{% endfor %}
+{% else %}
+<ul class="role-timeline">
+  {% for role in site.data.profile.roles %}
+  <li{% if role.current %} class="is-current"{% endif %}>
+    <div class="role-timeline__meta">
+      <span class="role-timeline__date">{{ role.period[profile_lang] }}</span>
+      {% if role.status %}<span class="role-timeline__status">{{ role.status[profile_lang] }}</span>{% elsif role.current %}<span class="role-timeline__status">{% if profile_lang == 'en' %}Current{% else %}在任{% endif %}</span>{% endif %}
+    </div>
+    <div class="role-timeline__heading"><strong>{{ role.title[profile_lang] }}</strong><span aria-hidden="true"> · </span>{% if role.url %}<a href="{{ role.url }}">{{ role.organization[profile_lang] }}</a>{% else %}{{ role.organization[profile_lang] }}{% endif %}</div>
+    {% if role.team %}<p class="role-timeline__team">{{ role.team[profile_lang] }}</p>{% endif %}
+  </li>
+  {% endfor %}
+</ul>
+{% endif %}

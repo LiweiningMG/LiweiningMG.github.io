@@ -1,17 +1,17 @@
 ---
 title: Multi-Trait Bayesian Models Enhance the Accuracy of Genomic Prediction in Multi-Breed Reference Populations
 collection: publications
+publication_id: agriculture-2024
+lang: zh
+translation_url: /en/publication/2024-04-16-Agriculture/
 category: manuscripts
 permalink: /publication/2024-04-16-Agriculture
 excerpt: '提出了一个多品种联合基因组预测模型mbBayesAB，该模型将不同品种的相同性状视为可能具有遗传相关的不同性状，并将染色体划分为不同区块以拟合异质遗传(协)方差，从而提高基因组育种值预测准确性。'
 date: 2024-04-16
 venue: 'Agriculture'
-slidesurl: 'https://liweining.cn/files/Agriculture_2024-04-16_manuscript.pdf'
-paperurl: 'https://doi.org/10.3390/agriculture14040626'
-citation: 'Weining Li, Meilin Zhang, Heng Du, Jianliang Wu, Lei Zhou and Jianfeng Liu，Multi-Trait Bayesian Models Enhance the Accuracy of Genomic Prediction in Multi-Breed Reference Populations，Agriculture，2024，14(4)：626'
 ---
 
-[全文链接](https://doi.org/10.3390/agriculture14040626){: .btn .btn--primary} [PDF](https://liweining.cn/files/Agriculture_2024-04-16_manuscript.pdf){: .btn}
+{% include publication-primary-links.html %}
 
 ## 背景
 

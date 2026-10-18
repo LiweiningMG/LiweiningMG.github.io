@@ -3,13 +3,12 @@ layout: single
 title: "Improving multibreed genomic prediction for breeds with small populations by modeling heterogeneous genetic (co)variance blockwise accounting for linkage disequilibrium"
 permalink: /en/publication/2025-12-20-JASB/
 lang: en
+publication_id: jasb-2025
 translation_url: /publication/2025-12-20-JASB
 author_profile: true
 ---
 
-**Citation**: LI W, Li S, Du H, Huang Q, Zhuo Y, Zhou L, et al. Improving multibreed genomic prediction for breeds with small populations by modeling heterogeneous genetic (co)variance blockwise accounting for linkage disequilibrium. *Journal of Animal Science and Biotechnology*. 2025;16(1):176. [10.1186/s40104-025-01303-9](https://doi.org/10.1186/s40104-025-01303-9).
-
-[Full text](https://doi.org/10.1186/s40104-025-01303-9){: .btn .btn--primary} [PDF](https://liweining.cn/files/JASB_2025-12-20_manuscript.pdf){: .btn}
+{% include publication-primary-links.html %}
 
 ## Background
 

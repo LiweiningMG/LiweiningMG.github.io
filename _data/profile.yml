@@ -1,0 +1,61 @@
+name:
+  zh: 李伟宁
+  en: Weining Li
+email: liwn@jaas.ac.cn
+avatar: /images/profile.png
+location:
+  zh: 福建福州
+  en: Fuzhou, Fujian
+research:
+  zh: 动物基因组选择与遗传评估
+  en: Animal genomic selection and genetic evaluation
+roles:
+  - id: yongcheng
+    current: true
+    featured: true
+    title:
+      zh: 技术顾问
+      en: Technical Consultant
+    organization:
+      zh: 福建永诚育种科技集团有限公司
+      en: Fujian Yongcheng Breeding Technology Group Co., Ltd.
+    url: https://www.ycxm.com/
+    team:
+      zh: 育种研发部
+      en: Breeding Research and Development Department
+    period:
+      zh: 2026.09 至今
+      en: September 2026 – present
+  - id: postdoc
+    current: true
+    title:
+      zh: 博士后
+      en: Postdoctoral Researcher
+    organization:
+      zh: 江苏省农业科学院畜牧研究所
+      en: Institute of Animal Science, Jiangsu Academy of Agricultural Sciences
+    url: https://newias.jaas.ac.cn/
+    team:
+      zh: 猪育种与生产创新团队
+      en: Pig Breeding and Production Innovation Team
+    period:
+      zh: 2024.08 至今
+      en: August 2024 – present
+    status:
+      zh: 当前在站
+      en: Currently in residence
+  - id: lihua
+    current: false
+    title:
+      zh: 技术顾问
+      en: Technical Consultant
+    organization:
+      zh: 江苏立华食品集团股份有限公司
+      en: Jiangsu Lihua Food Group Co., Ltd.
+    url: http://www.lihuamuye.com/
+    team:
+      zh: 养猪部育种室
+      en: Pig Breeding Unit
+    period:
+      zh: 2025.11 – 2026.08
+      en: November 2025 – August 2026

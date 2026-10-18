@@ -1,0 +1,161 @@
+- id: jasb-2025
+  year: 2025
+  category: journal
+  cv_group: first
+  featured: true
+  title: Improving multibreed genomic prediction for breeds with small populations by modeling heterogeneous genetic (co)variance blockwise accounting for linkage disequilibrium
+  short_title:
+    zh: 让小规模品种也能用好基因组预测
+    en: Better genomic prediction for small-population breeds
+  authors: '<strong>Li W</strong>, Li S, Du H, Huang Q, Zhuo Y, Zhou L, et al.'
+  journal: Journal of Animal Science and Biotechnology
+  volume: '16(1):176'
+  doi: https://doi.org/10.1186/s40104-025-01303-9
+  pdf: /files/JASB_2025-12-20_manuscript.pdf
+  route:
+    zh: /publication/2025-12-20-JASB
+    en: /en/publication/2025-12-20-JASB/
+  summary:
+    zh: 用遗传信息帮助小规模品种提高预测准确性，让有限的数据发挥更大作用。
+    en: A Bayesian model uses information across breeds to improve predictions for small populations.
+  technical_summary:
+    zh: 提出 mbBayesABLD，用 LD 区块显式建模异质遗传协方差，在多品种联合预测中提升小规模品种的基因组预测准确性。
+    en: Models heterogeneous genetic covariance by LD blocks to improve multibreed genomic prediction, especially for small-population breeds.
+  note:
+    zh: IF=6.5，中科院一区 TOP
+    en: IF=6.5, CAS Q1 TOP
+- id: agriculture-2024
+  year: 2024
+  category: journal
+  cv_group: first
+  featured: true
+  title: Multi-Trait Bayesian Models Enhance the Accuracy of Genomic Prediction in Multi-Breed Reference Populations
+  short_title:
+    zh: 让不同品种的数据互相帮忙
+    en: Helping breeds learn from one another
+  authors: '<strong>Li W</strong>, Zhang M, Du H, Wu J, Zhou L, Liu J.'
+  journal: Agriculture
+  volume: '14(4):626'
+  doi: https://doi.org/10.3390/agriculture14040626
+  pdf: /files/Agriculture_2024-04-16_manuscript.pdf
+  route:
+    zh: /publication/2024-04-16-Agriculture
+    en: /en/publication/2024-04-16-Agriculture/
+  summary:
+    zh: 结合不同品种之间的联系，探索更准确的遗传评估方法。
+    en: Multi-trait Bayesian models borrow information across breeds for more accurate prediction.
+  technical_summary:
+    zh: 将不同品种的同一性状视为遗传相关性状，结合区块异质协方差建模，提高多品种参考群体中的预测表现。
+    en: Uses multi-trait Bayesian models and block-wise covariance modeling to improve genomic prediction in multibreed reference populations.
+  note:
+    zh: IF=3.6，中科院二区
+    en: IF=3.6, CAS Q2
+- id: animals-2022
+  year: 2022
+  category: journal
+  cv_group: first
+  featured: true
+  title: Genome-Wide Association Analysis and Genetic Parameters for Feed Efficiency and Related Traits in Yorkshire and Duroc Pigs
+  short_title:
+    zh: 从遗传数据里寻找饲料效率的线索
+    en: Finding genetic clues to feed efficiency
+  authors: '<strong>Li W</strong>, Wang Z, Luo S, Wu J, Zhou L, Liu J.'
+  journal: Animals
+  volume: '12(15):1902'
+  doi: https://doi.org/10.3390/ani12151902
+  pdf: /files/Animals_2022-07-26_manuscript.pdf
+  route:
+    zh: /publication/2022-07-26-Animals
+    en: /en/publication/2022-07-26-Animals/
+  summary:
+    zh: 研究猪的生长与采食表现，寻找与饲料效率相关的遗传线索。
+    en: Studies growth and feeding traits to identify genetic signals related to feed efficiency.
+  technical_summary:
+    zh: 估计猪饲料效率及相关性状的遗传参数，鉴定显著 SNP 和候选基因，为提高饲料效率提供遗传线索。
+    en: Estimates genetic parameters and identifies SNPs and candidate genes related to feed efficiency traits in Yorkshire and Duroc pigs.
+  note:
+    zh: IF=3.2，中科院二区
+    en: IF=3.2, CAS Q2
+- id: imputation-2026
+  year: 2026
+  category: journal
+  cv_group: first
+  citation:
+    zh: '<strong>李伟宁</strong>, 郁辰龙, 付言峰, 等. 参考群构建策略对苏紫猪基因型填充准确性的影响. <em>中国农业大学学报</em>. 2026;31(5):143-153.'
+    en: '<strong>Li W</strong>, Yu C, Fu Y, et al. Effects of reference panel construction strategies on genotype imputation accuracy in Suzi pigs. <em>Journal of China Agricultural University</em>. 2026;31(5):143-153.'
+- id: conference-2023
+  year: 2023
+  category: conference
+  cv_group: first
+  title: 考虑协方差异质的多品种基因组选择贝叶斯模型
+  title_en: Bayesian models for multibreed genomic selection considering covariance heterogeneity
+  citation:
+    zh: '<strong>李伟宁</strong>, 李思雨, 刘剑锋. 考虑协方差异质的多品种基因组选择贝叶斯模型. 第二十二次全国动物遗传育种学术讨论会, 山西, 2023.（优秀汇报论文）'
+    en: '<strong>Li W</strong>, Li S, Liu J. Bayesian models for multibreed genomic selection considering covariance heterogeneity. The 22nd National Symposium on Animal Genetics and Breeding, Shanxi, 2023. Excellent presentation paper.'
+  route:
+    zh: /publication/2023-08-19-conference-1
+    en: /en/publication/2023-08-19-conference-1/
+  technical_summary:
+    zh: 介绍 mbBayesAS 多品种联合评估方法，在不同基因组区块拟合不同遗传协方差矩阵，提高小群体品种预测表现。
+    en: Presented a Bayesian multibreed genomic selection model accounting for heterogeneous covariance across chromosome blocks.
+- id: sequencing-2021
+  year: 2021
+  category: journal
+  cv_group: first
+  citation:
+    zh: '<strong>李伟宁</strong>, 刘刚, 周荣, 等. MGISEQ-2000、HiSeq 2000与NovaSeq 6000平台全基因组重测序数据的比较分析. <em>中国畜牧杂志</em>. 2021;57(11):156-162.'
+    en: '<strong>Li W</strong>, Liu G, Zhou R, et al. Comparative analysis of whole-genome resequencing data from MGISEQ-2000, HiSeq 2000, and NovaSeq 6000 platforms. <em>Chinese Journal of Animal Science</em>. 2021;57(11):156-162.'
+- id: feeding-2020
+  year: 2020
+  category: journal
+  cv_group: first
+  citation:
+    zh: '<strong>李伟宁</strong>, 周磊, 李步高, 等. 智能化饲喂对晋汾白猪哺乳母猪生产性能的影响. <em>现代畜牧兽医</em>. 2020(11):27-31.'
+    en: '<strong>Li W</strong>, Zhou L, Li B, et al. Effects of intelligent feeding on production performance of lactating sows in Jinfen White pigs. <em>Modern Animal Husbandry and Veterinary Medicine</em>. 2020(11):27-31.'
+- id: suzi-2025
+  year: 2025
+  category: journal
+  cv_group: coauthor
+  citation:
+    zh: 'Fu Y, <strong>Li W</strong>, Dai C, Liao C, Cheng J, Li H, et al. Genome-Wide Association Study of First-Parity Reproductive Traits in Suzi Pig. <em>Genes</em>. 2025;16(11):1335.'
+    en: 'Fu Y, <strong>Li W</strong>, Dai C, Liao C, Cheng J, Li H, et al. Genome-Wide Association Study of First-Parity Reproductive Traits in Suzi Pig. <em>Genes</em>. 2025;16(11):1335.'
+  doi: https://doi.org/10.3390/genes16111335
+- id: goat-2023
+  year: 2023
+  category: journal
+  cv_group: coauthor
+  citation:
+    zh: 'Guan S, <strong>Li W</strong>, Jin H, Zhang L, Liu G. Development and Validation of a 54K Genome-Wide Liquid SNP Chip Panel by Target Sequencing for Dairy Goat. <em>Genes</em>. 2023;14(5):1122.'
+    en: 'Guan S, <strong>Li W</strong>, Jin H, Zhang L, Liu G. Development and Validation of a 54K Genome-Wide Liquid SNP Chip Panel by Target Sequencing for Dairy Goat. <em>Genes</em>. 2023;14(5):1122.'
+  doi: https://doi.org/10.3390/genes14051122
+- id: growth-2022
+  year: 2022
+  category: journal
+  cv_group: coauthor
+  citation:
+    zh: 'Xue Y, Liu S, <strong>Li W</strong>, Mao R, Zhuo Y, Xing W, et al. Genome-Wide Association Study Reveals Additive and Non-Additive Effects on Growth Traits in Duroc Pigs. <em>Genes</em>. 2022;13(8):1454.'
+    en: 'Xue Y, Liu S, <strong>Li W</strong>, Mao R, Zhuo Y, Xing W, et al. Genome-Wide Association Study Reveals Additive and Non-Additive Effects on Growth Traits in Duroc Pigs. <em>Genes</em>. 2022;13(8):1454.'
+  doi: https://doi.org/10.3390/genes13081454
+- id: kernel-2025
+  year: 2025
+  category: journal
+  cv_group: coauthor
+  citation:
+    zh: 'Diao C, Zhuo Y, Mao R, <strong>Li W</strong>, Du H, Zhou L, et al. Weighted Kernel Ridge Regression to Improve Genomic Prediction. <em>Agriculture</em>. 2025;15(5):445.'
+    en: 'Diao C, Zhuo Y, Mao R, <strong>Li W</strong>, Du H, Zhou L, et al. Weighted Kernel Ridge Regression to Improve Genomic Prediction. <em>Agriculture</em>. 2025;15(5):445.'
+  doi: https://doi.org/10.3390/agriculture15050445
+- id: mage-2024
+  year: 2024
+  category: journal
+  cv_group: coauthor
+  citation:
+    zh: 'Zhuo Y, Du H, Diao C, <strong>Li W</strong>, Zhou L, Jiang L, et al. MAGE: metafounders-assisted genomic estimation of breeding value, a novel additive-dominance single-step model in crossbreeding systems. <em>Bioinformatics</em>. 2024;40(2):btae044.'
+    en: 'Zhuo Y, Du H, Diao C, <strong>Li W</strong>, Zhou L, Jiang L, et al. MAGE: metafounders-assisted genomic estimation of breeding value, a novel additive-dominance single-step model in crossbreeding systems. <em>Bioinformatics</em>. 2024;40(2):btae044.'
+  doi: https://doi.org/10.1093/bioinformatics/btae044
+- id: canonical-2020
+  year: 2020
+  category: journal
+  cv_group: coauthor
+  citation:
+    zh: '王俊健, 王晓凤, <strong>李伟宁</strong>, 等. 北京地区生长育肥猪采食、排泄及生长性状间的典型相关分析. <em>中国畜牧杂志</em>. 2020;56(01):100-104.'
+    en: 'Wang J, Wang X, <strong>Li W</strong>, et al. Canonical correlation analysis among feed intake, excretion, and growth traits in growing-finishing pigs in Beijing. <em>Chinese Journal of Animal Science</em>. 2020;56(01):100-104.'

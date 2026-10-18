@@ -3,13 +3,12 @@ layout: single
 title: "Multi-Trait Bayesian Models Enhance the Accuracy of Genomic Prediction in Multi-Breed Reference Populations"
 permalink: /en/publication/2024-04-16-Agriculture/
 lang: en
+publication_id: agriculture-2024
 translation_url: /publication/2024-04-16-Agriculture
 author_profile: true
 ---
 
-**Citation**: Li W, Zhang M, Du H, Wu J, Zhou L, Liu J. Multi-Trait Bayesian Models Enhance the Accuracy of Genomic Prediction in Multi-Breed Reference Populations. *Agriculture*. 2024;14(4):626. [10.3390/agriculture14040626](https://doi.org/10.3390/agriculture14040626).
-
-[Full text](https://doi.org/10.3390/agriculture14040626){: .btn .btn--primary} [PDF](https://liweining.cn/files/Agriculture_2024-04-16_manuscript.pdf){: .btn}
+{% include publication-primary-links.html %}
 
 ## Background
 

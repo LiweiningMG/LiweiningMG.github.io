@@ -1,0 +1,11 @@
+{% assign detail_paper = site.data.publications | where: 'id', page.publication_id | first %}
+{% assign detail_lang = page.lang | default: 'zh' %}
+<aside class="publication-detail-links">
+  <h2>{% if detail_lang == 'en' %}Citation & links{% else %}引用与全文{% endif %}</h2>
+  <p>{% include publication-citation.html paper=detail_paper %}</p>
+  <div class="publication-detail-actions">
+  {% if detail_paper.doi %}<a class="btn btn--primary" href="{{ detail_paper.doi }}">{% if detail_lang == 'en' %}Full text{% else %}原文链接{% endif %} ↗</a>{% endif %}
+  {% if detail_paper.pdf %}<a class="btn" href="{{ detail_paper.pdf | relative_url }}">PDF ↗</a>{% endif %}
+  <a class="btn" href="{% if detail_lang == 'en' %}/en/publications/{% else %}/publications/{% endif %}">{% if detail_lang == 'en' %}All research{% else %}全部成果{% endif %}</a>
+  </div>
+</aside>

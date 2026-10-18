@@ -1,21 +1,12 @@
-<!-- start custom footer snippets -->
-{% if page.lang == 'en' %}
-<div class="site-visit-stats" data-site-visit-endpoint="https://comments.liweining.cn/api/site-visits">
-  <span>Visitors today: <strong data-site-visit-today>--</strong></span>
-  <span aria-hidden="true"> | </span>
-  <span>Total visitors: <strong data-site-visit-total>--</strong></span>
+{% assign footer_lang = page.lang | default: 'zh' %}
+<div class="site-footer-top">
+  <div class="site-visit-stats" data-site-visit-endpoint="https://comments.liweining.cn/api/site-visits" role="status">
+    <span>{% if footer_lang == 'en' %}Today{% else %}今日访问{% endif %} <strong data-site-visit-today>{% if footer_lang == 'en' %}Loading{% else %}读取中{% endif %}</strong></span>
+    <span>{% if footer_lang == 'en' %}Total{% else %}累计访问{% endif %} <strong data-site-visit-total>{% if footer_lang == 'en' %}Loading{% else %}读取中{% endif %}</strong></span>
+    <noscript>{% if footer_lang == 'en' %}Statistics need JavaScript.{% else %}访问统计需启用 JavaScript。{% endif %}</noscript>
+  </div>
+  <div class="site-footer-links">
+    <a href="mailto:{{ site.data.profile.email }}">{% if footer_lang == 'en' %}Contact{% else %}联系我{% endif %}</a>
+    <a href="{% if footer_lang == 'en' %}/en/privacy/{% else %}/privacy/{% endif %}">{% if footer_lang == 'en' %}Privacy{% else %}隐私说明{% endif %}</a>
+  </div>
 </div>
-<div class="site-policy-links">
-  <a href="/en/privacy/">Privacy notice</a>
-</div>
-{% else %}
-<div class="site-visit-stats" data-site-visit-endpoint="https://comments.liweining.cn/api/site-visits">
-  <span>今日访问人数：<strong data-site-visit-today>--</strong></span>
-  <span aria-hidden="true"> | </span>
-  <span>历史访问人数：<strong data-site-visit-total>--</strong></span>
-</div>
-<div class="site-policy-links">
-  <a href="/privacy/">隐私说明</a>
-</div>
-{% endif %}
-<!-- end custom footer snippets -->

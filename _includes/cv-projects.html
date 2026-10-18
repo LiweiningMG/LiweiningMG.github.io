@@ -1,0 +1,9 @@
+{% assign project_lang = page.lang | default: 'zh' %}
+<table class="cv-project-table">
+  <thead><tr>{% if project_lang == 'en' %}<th scope="col">Period</th><th scope="col">Project</th><th scope="col">Funding</th><th scope="col">Role</th>{% else %}<th scope="col">起止时间</th><th scope="col">项目</th><th scope="col">经费</th><th scope="col">角色</th>{% endif %}</tr></thead>
+  <tbody>
+    {% for project in site.data.projects %}
+    <tr><td>{{ project.period[project_lang] | escape }}</td><td><div class="cv-project-info"><strong class="cv-project-category">{{ project.category[project_lang] | escape }}</strong><span class="cv-project-name">{{ project.name[project_lang] | escape }}</span></div></td><td>{{ project.funding[project_lang] | default: '—' | escape }}</td><td><span class="cv-project-role">{{ project.role[project_lang] | escape }}</span></td></tr>
+    {% endfor %}
+  </tbody>
+</table>

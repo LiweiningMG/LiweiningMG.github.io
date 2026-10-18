@@ -26,7 +26,7 @@ main:
   - title: "个人生活"
     url: /personal-life/
 
-  - title: "留言版"
+  - title: "留言板"
     url: /guestbook/
 
 en:

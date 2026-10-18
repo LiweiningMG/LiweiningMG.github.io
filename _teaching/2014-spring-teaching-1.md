@@ -1,5 +1,7 @@
 ---
 title: "超级计算平台简介"
+description: "认识超算平台、远程连接、Linux、作业调度，以及选择计算平台的基本方法。"
+excerpt: "认识超算平台、远程连接、Linux 和作业调度，从基础概念走向日常使用。"
 collection: teaching
 type: "超算平台系列"
 permalink: /teaching/2014-spring-teaching-1

@@ -11,8 +11,8 @@ locale                   : "zh-CN"
 title                    : "李伟宁的个人网站"
 title_separator          : "-"
 name                     : &name "李伟宁"
-description              : &description "做人呢，最重要就是开心~"
-url                      : https://liweiningmg.github.io # the base hostname & protocol for your site e.g. "https://[username].github.io"
+description              : &description "李伟宁的个人网站，记录动物育种研究、产业实践，也分享运动、烹饪与日常生活。"
+url                      : https://liweining.cn
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "liweiningmg/liweiningmg.github.io"
 
@@ -25,12 +25,13 @@ author:
   name             : "李伟宁"
   pronouns         : # example: "she/her"  
   bio              : "博士后"
-  location         : "江苏南京"
-  location_url     : "https://zh-classical.wikipedia.org/wiki/%E5%8D%97%E4%BA%AC%E5%B8%82"
+  location         : "福建福州"
+  location_url     :
   employer         : "江苏省农科院畜牧所"
   employer_url     : "https://newias.jaas.ac.cn/"
-  uri              : "http://www.lihuamuye.com/"
-  uri_label        : "江苏立华食品集团股份有限公司"
+  # Current/past roles are maintained in _data/profile.yml.
+  uri              :
+  uri_label        :
   email            : "liwn@jaas.ac.cn" 
 
   # Academic websites
@@ -90,7 +91,7 @@ publication_category:
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
-future                   : true
+future                   : false
 read_more                : "disabled" # if enabled, adds "Read more" links to excerpts
 talkmap_link             : false #change to true to add link to talkmap on talks page
 comments:
@@ -120,7 +121,6 @@ staticman:
       options:
         format           : "iso8601" # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
 atom_feed:
-  hide                   : false     # change to true to hide the RSS feed in the footer
   hide                   : true
   path                   : "feed.xml"  # blank (default) uses 
 
@@ -139,7 +139,7 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 :  # Open Graph/Twitter default site image
+og_image                 : "site-share-cover.png"
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
@@ -184,6 +184,12 @@ exclude:
   - node_modules
   - package.json*
   - Rakefile
+  - scripts
+  - docs
+  - database
+  - markdown_generator
+  - CONTRIBUTING.md
+  - Gemfile.lock
   - README
   - tmp
   - vendor
@@ -232,7 +238,7 @@ collections:
     output: true
     permalink: /:collection/:path/
   personal-life:
-    output: true
+    output: false
     permalink: /personal-life/:path/
 
 # These settings control how pages and collections are included in the site
@@ -330,6 +336,7 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jemoji
+  - jekyll-redirect-from
 
 # Mimic GitHub Pages with --safe
 whitelist:
@@ -338,6 +345,7 @@ whitelist:
   - jekyll-paginate
   - jekyll-sitemap
   - jemoji
+  - jekyll-redirect-from
 
 
 # Archives

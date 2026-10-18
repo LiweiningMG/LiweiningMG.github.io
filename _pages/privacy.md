@@ -1,6 +1,7 @@
 ---
 layout: single
 title: "隐私说明"
+description: "了解本站留言、访问统计与个人信息处理方式，以及如何联系站长删除相关信息。"
 permalink: /privacy/
 lang: zh
 translation_url: /en/privacy/
@@ -41,3 +42,9 @@ author_profile: true
 ## 删除与联系
 
 如果你希望删除自己的留言或相关信息，可以通过本站公开邮箱联系站长：
+
+[liwn@jaas.ac.cn](mailto:liwn@jaas.ac.cn)。请说明留言的昵称、日期或页面地址，以及需要删除的内容，以便核实和处理。合理的请求会尽快处理。
+
+## 第三方服务
+
+本站使用 GitHub Pages 托管静态页面；留言与访问统计使用 Waline、Vercel 和 Neon 等服务。相关服务可能依据各自的隐私政策处理必要的技术信息。

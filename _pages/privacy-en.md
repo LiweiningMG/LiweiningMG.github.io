@@ -1,6 +1,7 @@
 ---
 layout: single
 title: "Privacy Notice"
+description: "How this website handles guestbook messages, visitor statistics, and requests to remove personal information."
 permalink: /en/privacy/
 lang: en
 translation_url: /privacy/

@@ -1,14 +1,18 @@
 ---
 layout: archive
-title: ""
+show_title: false
+title: "教程文章"
+description: "关于计算环境、动物育种和遗传评估的实用教程与互动讲解。"
 permalink: /teaching/
 lang: zh
 translation_url: /en/teaching/
 author_profile: true
 ---
 
-{% include base_path %}
-
-{% for post in site.teaching reversed %}
-  {% include archive-single.html %}
+<h1>教程文章</h1>
+<p class="archive__subtitle">把复杂问题拆开讲：计算环境、动物育种与遗传评估。</p>
+<div class="tutorial-cards">
+{% for tutorial in site.teaching reversed %}
+<article class="tutorial-card"><span class="section-eyebrow">{{ tutorial.type }}</span><h2><a href="{{ tutorial.url | relative_url }}">{{ tutorial.title }}</a></h2><p>{{ tutorial.excerpt | strip_html | truncate: 100 }}</p><span class="tutorial-card__date">{{ tutorial.date | date: '%Y-%m' }}</span><a class="text-link" href="{{ tutorial.url | relative_url }}">阅读教程 →</a></article>
 {% endfor %}
+</div>

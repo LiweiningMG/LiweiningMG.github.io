@@ -1,6 +1,9 @@
 ---
 layout: archive
-title: ""
+show_title: false
+classes: cv-page
+title: "个人简历"
+description: "李伟宁的工作经历、教育背景、科研项目、文章发表与实践经历。"
 permalink: /cv/
 lang: zh
 translation_url: /en/cv/
@@ -16,7 +19,7 @@ redirect_from:
      <div>
          <span>
              <img src="/images/envelope-solid.svg" width="18px">
-             <a href="mailto:liwn@jaas.ac.cn">liwn@jaas.ac.cn</a>
+             <a href="mailto:{{ site.data.profile.email }}">{{ site.data.profile.email }}</a>
          </span>
          ·
          <span>
@@ -42,8 +45,7 @@ redirect_from:
 
 ## <img src="/images/briefcase-solid.svg" width="30px"> 工作经历
 
-- 博士后，[江苏省农业科学院畜牧研究所](https://newias.jaas.ac.cn/)，猪育种与生产创新团队，2024.8 ~ 2027.1 （当前在站）
-- 技术顾问，[江苏立华食品集团股份有限公司](http://www.lihuamuye.com/)，养猪部育种室，2025.11 至今
+{% include profile-roles.html %}
 
 ## <img src="/images/graduation-cap-solid.svg" width="30px"> 教育经历
 
@@ -56,32 +58,12 @@ redirect_from:
 ## <img src="/images/icons8-project.png" width="30px"> 科研项目
 
 
-| 起止时间 | 项目名称 | 项目类别 | 经费 | 角色 |
-|------|------|------|------|------|
-| 2024.08 ~ 2027.01 | 《多品种基因组联合遗传评估方法研发与应用》 | 南京市博士后科研资助项目 | 5万元 | 主持 |
-| 2021.12 ~ 2026.11 | 《XXXX》  | 重点研发子课题 | 255万元 | 参与 |
-| 2022.12 ~ 2025.11 | 《贵州地方猪新品种培育及良繁》 | 贵州省科技支撑计划农业领域重点项目 | 52万元 | 参与 |
-| 2020.01 ~ 2023.12 | 《基于多组学整合和特征提取策略建立基因组选择新方法》 | 国自然面上 | 57万元 | 参与 |
+{% include cv-projects.html %}
 
 
 ## <img src="/images/paper-publications.svg" width="30px"> 文章发表
 
-- **LI W**, Li S, Du H, Huang Q, Zhuo Y, Zhou L, et al. Improving multibreed genomic prediction for breeds with small populations by modeling heterogeneous genetic (co)variance blockwise accounting for linkage disequilibrium. *Journal of Animal Science and Biotechnology*. 2025;16(1):176. [10.1186/s40104-025-01303-9](https://doi.org/10.1186/s40104-025-01303-9). (IF=6.5，中科院一区TOP)
-- **LI W**, Zhang M, Du H, Wu J, Zhou L, Liu J. Multi-Trait Bayesian Models Enhance the Accuracy of Genomic Prediction in Multi-Breed Reference Populations. Agriculture. 2024;14(4):626. [10.3390/agriculture14040626](https://doi.org/10.3390/agriculture14040626). (IF=3.6，中科院二区)
-- **LI W**, Wang Z, Luo S, Wu J, Zhou L, Liu J. Genome-Wide Association Analysis and Genetic Parameters for Feed Efficiency and Related Traits in Yorkshire and Duroc Pigs. Animals (Basel). 2022;12(15):1902. [10.3390/ani12151902](https://www.mdpi.com/2076-2615/12/15/1902). (IF=3.2，中科院二区)<br>
-
-- **李伟宁**, 郁辰龙, 付言峰, 等. 参考群构建策略对苏紫猪基因型填充准确性的影响. 中国农业大学学报 2026;31(5):143-153.
-- **李伟宁**, 李思雨, 刘剑锋. 考虑协方差异质的多品种基因组选择贝叶斯模型: 第二十二次全国动物遗传育种学术讨论会[C]. 山西, 2023. (优秀汇报论文)
-- **李伟宁**, 刘刚, 周荣, 等. MGISEQ-2000、HiSeq 2000与NovaSeq 6000平台全基因组重测序数据的比较分析[J]. 中国畜牧杂志, 2021,57(11): 156-162.
-- **李伟宁**, 周磊, 李步高, 等. 智能化饲喂对晋汾白猪哺乳母猪生产性能的影响[J]. 现代畜牧兽医, 2020(11): 27-31.<br><br>
-
-
-- Fu Y, **Li W**, Dai C, Liao C, Cheng J, Li H, et al. Genome-Wide Association Study of First-Parity Reproductive Traits in Suzi Pig. Genes (Basel). 2025;16(11):1335. [10.3390/genes16111335](https://doi.org/10.3390/genes16111335).
-- Guan S, **Li W**, Jin H, Zhang L, Liu G. Development and Validation of a 54K Genome-Wide Liquid SNP Chip Panel by Target Sequencing for Dairy Goat. Genes (Basel). 2023;14(5):1122. [10.3390/genes14051122](https://www.mdpi.com/2073-4425/14/5/1122)
-- Xue Y, Liu S, **Li W**, Mao R, Zhuo Y, Xing W, et al. Genome-Wide Association Study Reveals Additive and Non-Additive Effects on Growth Traits in Duroc Pigs. Genes (Basel). 2022;13(8):1454. [10.3390/genes13081454](https://www.mdpi.com/2073-4425/13/8/1454).
-- Diao C, Zhuo Y, Mao R, **Li W**, Du H, Zhou L, et al. Weighted Kernel Ridge Regression to Improve Genomic Prediction. Agriculture. 2025;15(5). [10.3390/agriculture15050445](https://doi.org/10.3390/agriculture15050445).
-- Zhuo Y, Du H, Diao C, **Li W**, Zhou L, Jiang L, et al. MAGE: metafounders-assisted genomic estimation of breeding value, a novel additive-dominance single-step model in crossbreeding systems. Bioinformatics. 2024;40(2):btae044. [10.1093/bioinformatics/btae044](https://doi.org/10.1093/bioinformatics/btae044).
-- 王俊健, 王晓凤, **李伟宁**, 等. 北京地区生长育肥猪采食、排泄及生长性状间的典型相关分析[J]. 中国畜牧杂志,2020,56(01): 100-104.
+{% include cv-publications.html %}
 
 ## <img src="/images/intellectual-property.svg" width="30px"> 专利与软著
 
@@ -90,10 +72,7 @@ redirect_from:
 
 ## <img src="/images/Academic-Affiliations.png" width="30px"> 学术兼职
 
-<div class="cv-affiliation-grid">
-  <article><a href="https://animal-journal.eu/animal-journal/"><strong>Animal</strong><span>期刊审稿人</span></a></article>
-  <article><a href="http://zgxmsy.ndhx.net/"><strong>中国畜牧兽医</strong><span>青年编委</span></a></article>
-</div>
+{% include cv-academic-service.html %}
 
 ## <img src="/images/project-diagram-solid.svg" width="30px"> 实践经历
 

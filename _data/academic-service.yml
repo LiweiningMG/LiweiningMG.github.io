@@ -1,0 +1,28 @@
+- name:
+    zh: Animal
+    en: Animal
+  url: https://animal-journal.eu/animal-journal/
+  role:
+    zh: 期刊审稿人
+    en: Reviewer
+- name:
+    zh: Applied Animal Behaviour Science
+    en: Applied Animal Behaviour Science
+  url: https://www.applied-ethology.org/Applied_Animal_Behaviour_Science.html
+  role:
+    zh: 期刊审稿人
+    en: Reviewer
+- name:
+    zh: Veterinary and Animal Science
+    en: Veterinary and Animal Science
+  url: https://www.sciencedirect.com/journal/veterinary-and-animal-science
+  role:
+    zh: 期刊审稿人
+    en: Reviewer
+- name:
+    zh: 中国畜牧兽医
+    en: Chinese Animal Husbandry and Veterinary Medicine
+  url: http://zgxmsy.ndhx.net/
+  role:
+    zh: 青年编委
+    en: Young Editorial Board Member

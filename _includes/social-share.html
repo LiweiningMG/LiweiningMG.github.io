@@ -1,20 +1,20 @@
 <section class="page__share">
   {% if site.data.ui-text[site.locale].share_on_label %}
-    <h4 class="page__share-title">{{ site.data.ui-text[site.locale].share_on_label }}</h4>
+    <h4 class="page__share-title">{% if page.lang == 'en' %}Share this page{% else %}分享这篇文章{% endif %}</h4>
   {% endif %}
 
   {% assign share_url = page.url | absolute_url %}
   {% assign share_title = page.title | default: site.title %}
 
-  <a href="#" class="btn btn--wechat" title="分享到微信" data-share-target="wechat" data-share-url="{{ share_url }}" data-share-title="{{ share_title | escape }}">
-    <i class="fab fa-weixin" aria-hidden="true"></i><span> 微信</span>
+  <a href="#" class="btn btn--wechat" title="{% if page.lang == 'en' %}Share on WeChat{% else %}分享到微信{% endif %}" data-share-target="wechat" data-share-url="{{ share_url }}" data-share-title="{{ share_title | escape }}">
+    <i class="fab fa-weixin" aria-hidden="true"></i><span> {% if page.lang == 'en' %}WeChat{% else %}微信{% endif %}</span>
   </a>
 
-  <a href="#" class="btn btn--bilibili" title="分享到B站" data-share-target="bilibili" data-share-url="{{ share_url }}" data-share-title="{{ share_title | escape }}">
-    <i class="fab fa-bilibili" aria-hidden="true"></i><span> B站</span>
+  <a href="#" class="btn btn--bilibili" title="{% if page.lang == 'en' %}Share on Bilibili{% else %}分享到B站{% endif %}" data-share-target="bilibili" data-share-url="{{ share_url }}" data-share-title="{{ share_title | escape }}">
+    <i class="fab fa-bilibili" aria-hidden="true"></i><span> {% if page.lang == 'en' %}Bilibili{% else %}B站{% endif %}</span>
   </a>
 
-  <a href="https://www.zhihu.com/share?url={{ share_url | url_encode }}&title={{ share_title | url_encode }}" class="btn btn--zhihu" title="分享到知乎" target="_blank" rel="noopener">
-    <i class="fab fa-zhihu" aria-hidden="true"></i><span> 知乎</span>
+  <a href="https://www.zhihu.com/share?url={{ share_url | url_encode }}&title={{ share_title | url_encode }}" class="btn btn--zhihu" title="{% if page.lang == 'en' %}Share on Zhihu{% else %}分享到知乎{% endif %}" target="_blank" rel="noopener">
+    <i class="fab fa-zhihu" aria-hidden="true"></i><span> {% if page.lang == 'en' %}Zhihu{% else %}知乎{% endif %}</span>
   </a>
 </section>

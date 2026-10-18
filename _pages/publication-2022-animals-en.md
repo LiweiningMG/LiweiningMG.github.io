@@ -3,13 +3,12 @@ layout: single
 title: "Genome-Wide Association Analysis and Genetic Parameters for Feed Efficiency and Related Traits in Yorkshire and Duroc Pigs"
 permalink: /en/publication/2022-07-26-Animals/
 lang: en
-translation_url: /publication/2024-07-26-Animal
+translation_url: /publication/2022-07-26-Animals
+publication_id: animals-2022
 author_profile: true
 ---
 
-**Citation**: Li W, Wang Z, Luo S, Wu J, Zhou L, Liu J. Genome-Wide Association Analysis and Genetic Parameters for Feed Efficiency and Related Traits in Yorkshire and Duroc Pigs. *Animals*. 2022;12(15):1902. [10.3390/ani12151902](https://doi.org/10.3390/ani12151902).
-
-[Full text](https://doi.org/10.3390/ani12151902){: .btn .btn--primary} [PDF](https://liweining.cn/files/Animals_2022-07-26_manuscript.pdf){: .btn}
+{% include publication-primary-links.html %}
 
 ## Background
 

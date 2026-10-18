@@ -1,13 +1,14 @@
 ---
 title: "考虑协方差异质的多品种基因组选择贝叶斯模型"
 collection: publications
+publication_id: conference-2023
+lang: zh
+translation_url: /en/publication/2023-08-19-conference-1/
 category: conferences
 permalink: /publication/2023-08-19-conference-1
 excerpt: '介绍了一种新的多品种联合评估方法mbBayesAS。该方法将来不同品种的同一性状视为存在遗传相关的不同性状，基于连锁不平衡信息将染色体划分为不重叠的片段，并假设同一片段内的标记遵循相同的正态分布，模型中未知参数均通过吉布斯抽样获得，最终估计得到个体基因组育种值'
 date: 2023-08-19
 venue: '第二十二次全国动物遗传育种学术讨论会'
-paperurl: 'http://academicpages.github.io/files/paper3.pdf'
-citation: '李伟宁，李思雨，刘剑锋，考虑协方差异质的多品种基因组选择贝叶斯模型: 第二十二次全国动物遗传育种学术讨论会，山西，2023，63'
 ---
 
 # 引言

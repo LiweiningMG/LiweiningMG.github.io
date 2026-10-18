@@ -1,0 +1,1 @@
+{% assign citation_lang = page.lang | default: 'zh' %}{% assign paper = include.paper %}{% if paper.citation %}{{ paper.citation[citation_lang] }}{% else %}{{ paper.authors }} {{ paper.title }}. <em>{{ paper.journal }}</em>. {{ paper.year }};{{ paper.volume }}.{% endif %}

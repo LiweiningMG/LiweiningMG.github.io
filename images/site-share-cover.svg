@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#eff8f3"/><stop offset="1" stop-color="#fbf5e9"/></linearGradient></defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="42" y="42" width="1116" height="546" rx="32" fill="none" stroke="#caddd0"/>
+  <rect x="80" y="92" width="70" height="70" rx="19" fill="#146b5b"/>
+  <path d="M96 109v35h18m2-35 7 35 10-23 10 23 7-35" fill="none" stroke="#fffdf5" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <g font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#203d35">
+    <text x="174" y="137" font-size="26">李伟宁的个人网站</text>
+    <text x="80" y="286" font-size="82" font-weight="700">认真工作，</text>
+    <text x="80" y="390" font-size="82" font-weight="700">也认真生活。</text>
+    <text x="84" y="472" font-size="25" fill="#60776c">研究与实践 · 运动与烹饪 · 生活里的小故事</text>
+    <text x="84" y="548" font-size="22" fill="#146b5b">liweining.cn</text>
+  </g>
+  <g transform="translate(850 192)" fill="none" stroke="#146b5b" stroke-width="8" stroke-linecap="round">
+    <path d="M0 0c190 40 15 200 180 240M180 0C-10 40 165 200 0 240"/>
+    <path d="M25 35h130M55 90h70M55 150h70M25 205h130" stroke-width="5" opacity=".42"/>
+  </g>
+  <circle cx="1037" cy="118" r="29" fill="#efc167"/>
+  <circle cx="816" cy="476" r="12" fill="#146b5b" opacity=".25"/>
+</svg>

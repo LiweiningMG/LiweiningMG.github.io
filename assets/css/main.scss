@@ -1367,11 +1367,14 @@ button.life-poster {
 }
 
 .life-food-grid--with-qr {
-  grid-template-columns: minmax(220px, 0.9fr) repeat(2, minmax(0, 1fr));
-  align-items: start;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
 }
 
 .life-qr-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   position: relative;
   min-width: 0;
   padding: 1rem;
@@ -1406,9 +1409,9 @@ button.life-poster {
   position: relative;
   display: grid;
   place-items: center;
-  width: min(100%, 14rem);
+  width: min(100%, 17rem);
   margin: 0 auto 0.85rem;
-  padding: 0.8rem;
+  padding: 0.55rem;
   background: repeating-linear-gradient(135deg, #fff 0 9px, #fff2df 9px 18px);
   border: 4px solid #ffb86c;
   border-radius: 22px;
@@ -1494,6 +1497,10 @@ button.life-poster {
 
   .life-repair__media {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .life-qr-frame {
+    width: min(100%, 16rem);
   }
 }
 

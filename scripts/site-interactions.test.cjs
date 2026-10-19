@@ -258,6 +258,17 @@ test('personal-life captions and running/QR presentation follow the requested de
     });
     assert.ok(qr.width >= 220, `QR frame should be enlarged: ${qr.width}px`);
     assert.ok(Math.abs(qr.frameCenter) < 4, `QR should be centered: ${qr.frameCenter}px`);
+    const foodModuleWidths = await page.locator('.life-food-grid--with-qr > *').evaluateAll(cards => cards.map(card => card.getBoundingClientRect().width));
+    assert.equal(foodModuleWidths.length, 3);
+    assert.ok(Math.max(...foodModuleWidths) - Math.min(...foodModuleWidths) < 1, `food modules should have equal widths: ${foodModuleWidths.join(', ')}`);
+    const foodModuleMetrics = await page.locator('.life-food-grid--with-qr > *').evaluateAll(cards => cards.map(card => {
+      const cardBox = card.getBoundingClientRect();
+      const frameBox = card.querySelector('.life-qr-frame')?.getBoundingClientRect();
+      const copyBox = card.querySelector('.life-qr-card p')?.getBoundingClientRect();
+      return { height: cardBox.height, cardCenter: cardBox.top + cardBox.height / 2, contentCenter: frameBox && copyBox ? (frameBox.top + copyBox.bottom) / 2 : null };
+    }));
+    assert.ok(foodModuleMetrics[0].height >= Math.max(foodModuleMetrics[1].height, foodModuleMetrics[2].height) - 1, 'QR module fills the same row height as both food cards');
+    assert.ok(Math.abs(foodModuleMetrics[0].contentCenter - foodModuleMetrics[0].cardCenter) < 3, 'QR card content is vertically centered inside the taller module');
     await page.locator('[data-gallery-title="跑步"]').click();
     const runningRatios = await page.locator('.gallery-thumbnail img').evaluateAll(async images => {
       await Promise.all(images.map(image => { image.loading = 'eager'; return image.decode().catch(() => null); }));

@@ -41,13 +41,14 @@ window.fetch = function (input, options) {
 let importTimer;
 try {
   const module = await Promise.race([
-    import('https://unpkg.com/@waline/client@3.16.1/dist/waline.js'),
+    import('../vendor/waline-3.16.1/waline.js'),
     new Promise((_, reject) => { importTimer = setTimeout(() => reject(new Error('Guestbook import timed out')), 8000); })
   ]);
   clearTimeout(importTimer);
   // Keep the status visible until the actual comments request succeeds.
   serviceTimer = setTimeout(showFailure, 8000);
-  module.init({el:'#waline',serverURL,lang:english?'en':'zh-CN',path:'/guestbook/'});
+  const emojiURL = new URL('../vendor/waline-emojis-1.1.0/weibo/', import.meta.url).href;
+  module.init({el:'#waline',serverURL,lang:english?'en':'zh-CN',path:'/guestbook/',emoji:[emojiURL]});
 } catch (error) {
   clearTimeout(importTimer);
   clearTimeout(serviceTimer);

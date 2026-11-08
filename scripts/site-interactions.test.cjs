@@ -7,6 +7,60 @@ const { chromium } = require('playwright');
 let browser;
 before(async () => { browser = await chromium.launch({headless:true,channel:process.env.PLAYWRIGHT_CHANNEL || 'msedge'}); });
 after(async () => { await browser?.close(); });
+
+test('guestbook editor and sharing work without third-party CDNs', {timeout:30000}, async () => {
+  const page = await browser.newPage();
+  const externalRequests = [];
+  const errors = [];
+  page.on('pageerror', error => errors.push(error.message));
+  await page.route('**/*', route => {
+    if (new URL(route.request().url()).hostname === '127.0.0.1') return route.continue();
+    externalRequests.push(route.request().url());
+    return route.abort();
+  });
+  try {
+    for (const route of ['/guestbook/', '/en/guestbook/']) {
+      await page.goto('http://127.0.0.1:4000' + route, {waitUntil:'domcontentloaded'});
+      await page.locator('.wl-editor').waitFor();
+      assert.ok(await page.locator('.wl-editor').isVisible());
+      assert.equal(await page.locator('#guestbook-status').isVisible(), true);
+    }
+    await page.goto('http://127.0.0.1:4000/publication/2025-12-20-JASB.html', {waitUntil:'domcontentloaded'});
+    await page.locator('[data-share-target="wechat"]').click();
+    const image = page.locator('.share-qr');
+    assert.match(await image.getAttribute('src'), /^data:image\/gif;base64,/);
+    await image.evaluate(image => image.decode());
+    assert.ok(await image.evaluate(image => image.naturalWidth > 200));
+    await page.keyboard.press('Escape');
+    assert.equal(await page.locator('#life-gallery-dialog').count(), 0);
+    assert.ok(!externalRequests.some(url => /unpkg\.com|jsdelivr\.net|api\.qrserver\.com/.test(url)), 'essential UI never attempts to reach external CDN or QR services');
+    assert.deepEqual(errors, []);
+  } finally { await page.close(); }
+});
+
+test('formulas render with local MathJax components and fonts', {timeout:30000}, async () => {
+  const page = await browser.newPage();
+  const externalRequests = [];
+  await page.route('**/*', route => {
+    if (new URL(route.request().url()).hostname === '127.0.0.1') return route.continue();
+    externalRequests.push(route.request().url());
+    return route.abort();
+  });
+  try {
+    await page.goto('http://127.0.0.1:4000/cv/', {waitUntil:'domcontentloaded'});
+    await page.evaluate(() => {
+      const formula = document.createElement('p'); formula.id = 'offline-math';
+      formula.textContent = String.raw`\[\frac{a^2+b^2}{\sqrt{c}}\]`;
+      document.querySelector('.archive').appendChild(formula);
+    });
+    await page.addScriptTag({url:'/assets/vendor/mathjax-3.2.2/es5/tex-mml-chtml.js'});
+    await page.evaluate(() => MathJax.startup.promise);
+    await page.locator('#offline-math mjx-container').waitFor();
+    await page.evaluate(() => document.fonts.ready);
+    assert.ok(await page.locator('#offline-math mjx-mfrac').count() > 0);
+    assert.ok(!externalRequests.some(url => /jsdelivr\.net|unpkg\.com/.test(url)));
+  } finally { await page.close(); }
+});
 test('wide-screen layouts use the viewport with aligned modest gutters', async () => {
   const page=await browser.newPage();
   try {

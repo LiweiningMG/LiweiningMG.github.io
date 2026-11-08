@@ -205,7 +205,15 @@
       var target=button.dataset.shareTarget, url=button.dataset.shareUrl || location.href;
       if (target==='wechat') {
         event.preventDefault();
-        var root=openModal(copy.wechat,'<p>'+copy.qr+'</p><img class="share-qr" src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&amp;data='+encodeURIComponent(url)+'" alt="'+copy.wechat+'"><p><a href="'+escapeHtml(url)+'">'+escapeHtml(url)+'</a></p>',button);
+        var qrImage = '';
+        try {
+          var code = window.qrcode(0, 'M');
+          code.addData(url); code.make();
+          qrImage = '<img class="share-qr" src="' + code.createDataURL(6, 24) + '" alt="' + copy.wechat + '">';
+        } catch (_) {
+          qrImage = '<p role="status">' + (english ? 'Copy the link below to share this page.' : '可复制下方链接分享当前页面。') + '</p>';
+        }
+        var root=openModal(copy.wechat,'<p>'+copy.qr+'</p>'+qrImage+'<p><a href="'+escapeHtml(url)+'">'+escapeHtml(url)+'</a></p>',button);
         root.querySelector('.gallery-header p').textContent='';
       }
       if (target==='bilibili') {
